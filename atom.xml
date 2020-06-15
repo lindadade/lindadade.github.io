@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>林大大的小屋</title>
+  
+  <subtitle>| 爱前端 | 爱摄影 | 爱做梦 | 想吃糖 | 爱一切切❤ |</subtitle>
+  <link href="/lindada-blog/atom.xml" rel="self"/>
+  
+  <link href="https://lin_daren.gitee.io/lindada-blog/"/>
+  <updated>2020-06-15T10:30:56.290Z</updated>
+  <id>https://lin_daren.gitee.io/lindada-blog/</id>
+  
+  <author>
+    <name>dadaLin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>完美一步步解决hexo博客部署到gitee后样式bug</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</id>
+    <published>2020-06-13T14:46:53.000Z</published>
+    <updated>2020-06-15T10:30:56.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题来源&quot;&gt;&lt;a href=&quot;#问题来源&quot; class=&quot;headerlink&quot; title=&quot;问题来源&quot;&gt;&lt;/a&gt;问题来源&lt;/h2&gt;&lt;p&gt;✨将hexo博客部署成功到gitee上后&lt;br&gt;也可以根据gitee Pages服务成功线上访问博客&lt;/p&gt;
+&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="block  hexo" scheme="https://lin_daren.gitee.io/lindada-blog/tags/block-hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小屋的第一份惊喜</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/</id>
+    <published>2020-06-12T14:43:36.602Z</published>
+    <updated>2020-06-12T15:19:30.645Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;将hexo博客常用的格式🌰放入呀&quot;&gt;&lt;a href=&quot;#将hexo博客常用的格式🌰放入呀&quot; class=&quot;headerlink&quot; title=&quot;将hexo博客常用的格式🌰放入呀~&quot;&gt;&lt;/a&gt;将hexo博客常用的格式🌰放入呀~&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;报块～～&quot;&gt;&lt;a href=&quot;#报块～～&quot; class=&quot;headerlink&quot; title=&quot;报块～～&quot;&gt;&lt;/a&gt;报块～～&lt;/h2&gt;&lt;h3 id=&quot;1-在帖子中添加引号，并带有可选的作者，来源和标题信息&quot;&gt;&lt;a href=&quot;#1-在帖子中添加引号，并带有可选的作者，来源和标题信息&quot; class=&quot;headerlink&quot; title=&quot;1.在帖子中添加引号，并带有可选的作者，来源和标题信息&quot;&gt;&lt;/a&gt;1.在帖子中添加引号，并带有可选的作者，来源和标题信息&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;content&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;[author[&lt;/strong&gt;&lt;cite&gt;source]] [link] [source_link_title]&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-没有参数。普通的blockquote&quot;&gt;&lt;a href=&quot;#2-没有参数。普通的blockquote&quot; class=&quot;headerlink&quot; title=&quot;2.没有参数。普通的blockquote&quot;&gt;&lt;/a&gt;2.没有参数。普通的blockquote&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-从书中引用&quot;&gt;&lt;a href=&quot;#3-从书中引用&quot; class=&quot;headerlink&quot; title=&quot;3.从书中引用&quot;&gt;&lt;/a&gt;3.从书中引用&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;David Levithan&lt;/strong&gt;&lt;cite&gt;Wide Awake&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;4-语法突出显示功能&quot;&gt;&lt;a href=&quot;#4-语法突出显示功能&quot; class=&quot;headerlink&quot; title=&quot;4.语法突出显示功能&quot;&gt;&lt;/a&gt;4.语法突出显示功能&lt;/h3&gt;&lt;p&gt;{％blockquote @DevDocs &lt;a href=&quot;https://twitter.com/devdocs/status/356095192085962752％}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://twitter.com/devdocs/status/356095192085962752％}&lt;/a&gt;&lt;br&gt;新功能：DevDocs现在带有语法高亮功能。&lt;a href=&quot;http://devdocs.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://devdocs.io&lt;/a&gt;&lt;br&gt;{％endblockquote％}&lt;/p&gt;
+&lt;h3 id=&quot;5-引用网络上的文章&quot;&gt;&lt;a href=&quot;#5-引用网络上的文章&quot; class=&quot;headerlink&quot; title=&quot;5.引用网络上的文章&quot;&gt;&lt;/a&gt;5.引用网络上的文章&lt;/h3&gt;&lt;p&gt;{％blockquote塞斯·戈丁（Seth Godin）&lt;a href=&quot;http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}&lt;/a&gt;&lt;br&gt;每次互动都是宝贵的，也是一次欢愉的机会。&lt;br&gt;{％endblockquote％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;代码块&quot;&gt;&lt;a href=&quot;#代码块&quot; class=&quot;headerlink&quot; title=&quot;代码块&quot;&gt;&lt;/a&gt;代码块&lt;/h2&gt;&lt;h3 id=&quot;1-普通代码块&quot;&gt;&lt;a href=&quot;#1-普通代码块&quot; class=&quot;headerlink&quot; title=&quot;1.普通代码块&quot;&gt;&lt;/a&gt;1.普通代码块&lt;/h3&gt;&lt;p&gt;{％codeblock％}&lt;br&gt;alert（’Hello World！’）;&lt;br&gt;{％endcodeblock％}&lt;/p&gt;
+&lt;h3 id=&quot;2-指定语言如objc&quot;&gt;&lt;a href=&quot;#2-指定语言如objc&quot; class=&quot;headerlink&quot; title=&quot;2.指定语言如objc&quot;&gt;&lt;/a&gt;2.指定语言如objc&lt;/h3&gt;&lt;p&gt;{％codeblock lang：objc％}&lt;br&gt;[矩形setX：10 y：10宽度：20高度：20]；&lt;br&gt;{％endcodeblock％}&lt;/p&gt;
+&lt;h3 id=&quot;3-在代码块中添加标题&quot;&gt;&lt;a href=&quot;#3-在代码块中添加标题&quot; class=&quot;headerlink&quot; title=&quot;3.在代码块中添加标题&quot;&gt;&lt;/a&gt;3.在代码块中添加标题&lt;/h3&gt;&lt;p&gt;{％codeblock Array.map％}&lt;br&gt;array.map（callback [，thisArg]）&lt;br&gt;{％endcodeblock％}&lt;/p&gt;
+&lt;h3 id=&quot;4-添加标题和URL&quot;&gt;&lt;a href=&quot;#4-添加标题和URL&quot; class=&quot;headerlink&quot; title=&quot;4.添加标题和URL&quot;&gt;&lt;/a&gt;4.添加标题和URL&lt;/h3&gt;&lt;p&gt;{％codeblock _.compact &lt;a href=&quot;http://underscorejs.org/#compact&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://underscorejs.org/#compact&lt;/a&gt; Underscore.js％}&lt;br&gt;_.compact（[0，1，false，2，``，3]）;&lt;br&gt;=&amp;gt; [1、2、3]&lt;br&gt;{％endcodeblock％}&lt;/p&gt;
+&lt;h2 id=&quot;反引号代码块&quot;&gt;&lt;a href=&quot;#反引号代码块&quot; class=&quot;headerlink&quot; title=&quot;反引号代码块&quot;&gt;&lt;/a&gt;反引号代码块&lt;/h2&gt;&lt;p&gt;这与使用代码块相同，但是使用三个反引号来分隔该块。&lt;br&gt;&lt;code&gt;[语言] [标题] [URL] [链接文本]代码段&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;拉报价&quot;&gt;&lt;a href=&quot;#拉报价&quot; class=&quot;headerlink&quot; title=&quot;拉报价&quot;&gt;&lt;/a&gt;拉报价&lt;/h2&gt;&lt;p&gt;{％pullquote [class]％}&lt;br&gt;内容&lt;br&gt;{％endpullquote％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;jsFiddle&quot;&gt;&lt;a href=&quot;#jsFiddle&quot; class=&quot;headerlink&quot; title=&quot;jsFiddle&quot;&gt;&lt;/a&gt;jsFiddle&lt;/h2&gt;&lt;iframe scrolling=&quot;no&quot; width=&quot;[width]&quot; height=&quot;[height]&quot; src=&quot;https://jsfiddle.net/shorttag/embedded/[tabs]/[skin]&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;要旨&quot;&gt;&lt;a href=&quot;#要旨&quot; class=&quot;headerlink&quot; title=&quot;要旨&quot;&gt;&lt;/a&gt;要旨&lt;/h2&gt;&lt;p&gt;嵌入要点代码段：&lt;/p&gt;
+&lt;script src=&quot;//gist.github.com/gist_id.js?file=[filename]&quot;&gt;&lt;/script&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;iframe&quot;&gt;&lt;a href=&quot;#iframe&quot; class=&quot;headerlink&quot; title=&quot;iframe&quot;&gt;&lt;/a&gt;iframe&lt;/h2&gt;&lt;p&gt;嵌入iframe：&lt;/p&gt;
+&lt;iframe src=&quot;url&quot; width=&quot;[width]&quot; height=&quot;[height]&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h2&gt;&lt;p&gt;插入具有指定尺寸的图像。&lt;/p&gt;
+&lt;img src=&quot;/lindada-blog/path/to/image&quot; class=&quot;[class names]&quot; title=&quot;[width] [height] &quot; alt=&quot;title text&quot;&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;插入具有target=”_blank”属性的链接。&lt;/p&gt;
+&lt;a href title target&gt;text url [external] [title]&lt;/a&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;包含代码&quot;&gt;&lt;a href=&quot;#包含代码&quot; class=&quot;headerlink&quot; title=&quot;包含代码&quot;&gt;&lt;/a&gt;包含代码&lt;/h2&gt;&lt;p&gt;在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。&lt;/p&gt;
+
+
+&lt;h3 id=&quot;嵌入test-js的全部内容&quot;&gt;&lt;a href=&quot;#嵌入test-js的全部内容&quot; class=&quot;headerlink&quot; title=&quot;嵌入test.js的全部内容&quot;&gt;&lt;/a&gt;嵌入test.js的全部内容&lt;/h3&gt;&lt;p&gt;{％include_code lang：javascript test.js％}&lt;/p&gt;
+&lt;h3 id=&quot;仅嵌入第3行&quot;&gt;&lt;a href=&quot;#仅嵌入第3行&quot; class=&quot;headerlink&quot; title=&quot;仅嵌入第3行&quot;&gt;&lt;/a&gt;仅嵌入第3行&lt;/h3&gt;&lt;p&gt;{％include_code lang：javascript from：3 to：3 test.js％}&lt;/p&gt;
+&lt;h3 id=&quot;嵌入第5至8行&quot;&gt;&lt;a href=&quot;#嵌入第5至8行&quot; class=&quot;headerlink&quot; title=&quot;嵌入第5至8行&quot;&gt;&lt;/a&gt;嵌入第5至8行&lt;/h3&gt;&lt;p&gt;{％include_code lang：javascript from：5 to：8 test.js％}&lt;/p&gt;
+&lt;h3 id=&quot;将第5行嵌入到文件末尾&quot;&gt;&lt;a href=&quot;#将第5行嵌入到文件末尾&quot; class=&quot;headerlink&quot; title=&quot;将第5行嵌入到文件末尾&quot;&gt;&lt;/a&gt;将第5行嵌入到文件末尾&lt;/h3&gt;&lt;p&gt;{％include_code lang：javascript from：5 test.js％}&lt;/p&gt;
+&lt;h3 id=&quot;嵌入第1至8行&quot;&gt;&lt;a href=&quot;#嵌入第1至8行&quot; class=&quot;headerlink&quot; title=&quot;嵌入第1至8行&quot;&gt;&lt;/a&gt;嵌入第1至8行&lt;/h3&gt;&lt;h2 id=&quot;％include-code-lang：javascript-to：8-test-js％&quot;&gt;&lt;a href=&quot;#％include-code-lang：javascript-to：8-test-js％&quot; class=&quot;headerlink&quot; title=&quot;{％include_code lang：javascript to：8 test.js％}&quot;&gt;&lt;/a&gt;{％include_code lang：javascript to：8 test.js％}&lt;/h2&gt;&lt;h2 id=&quot;YouTube&quot;&gt;&lt;a href=&quot;#YouTube&quot; class=&quot;headerlink&quot; title=&quot;YouTube&quot;&gt;&lt;/a&gt;YouTube&lt;/h2&gt;&lt;p&gt;插入YouTube视频。&lt;br&gt;{％youtube video_id％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Vimeo&quot;&gt;&lt;a href=&quot;#Vimeo&quot; class=&quot;headerlink&quot; title=&quot;Vimeo&quot;&gt;&lt;/a&gt;Vimeo&lt;/h2&gt;&lt;p&gt;插入自适应或指定大小的Vimeo视频。&lt;br&gt;{％vimeo video_id [宽度] [高度]％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;包括帖子&quot;&gt;&lt;a href=&quot;#包括帖子&quot; class=&quot;headerlink&quot; title=&quot;包括帖子&quot;&gt;&lt;/a&gt;包括帖子&lt;/h2&gt;&lt;p&gt;包括指向其他​​帖子的链接。&lt;br&gt;{％post_path文件名％}&lt;br&gt;{％post_link文件名[标题] [转义]％}&lt;/p&gt;
+&lt;h3 id=&quot;转义标题&quot;&gt;&lt;a href=&quot;#转义标题&quot; class=&quot;headerlink&quot; title=&quot;转义标题&quot;&gt;&lt;/a&gt;转义标题&lt;/h3&gt;&lt;p&gt;{％post_link hexo-4-released’如何在标题中使用&lt;b&gt;标记’％}&lt;/b&gt;&lt;/p&gt;
+&lt;h3 id=&quot;不要逃脱标题&quot;&gt;&lt;a href=&quot;#不要逃脱标题&quot; class=&quot;headerlink&quot; title=&quot;不要逃脱标题&quot;&gt;&lt;/a&gt;不要逃脱标题&lt;/h3&gt;&lt;h2 id=&quot;％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％&quot;&gt;&lt;a href=&quot;#％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％&quot; class=&quot;headerlink&quot; title=&quot;{％post_link hexo-4-released’粗体&amp;lt;/ b&amp;gt;自定义标题’false％}&quot;&gt;&lt;/a&gt;{％post_link hexo-4-released’&lt;b&gt;粗体&amp;lt;/ b&amp;gt;自定义标题’false％}&lt;/b&gt;&lt;/h2&gt;&lt;h2 id=&quot;包括资产&quot;&gt;&lt;a href=&quot;#包括资产&quot; class=&quot;headerlink&quot; title=&quot;包括资产&quot;&gt;&lt;/a&gt;包括资产&lt;/h2&gt;&lt;p&gt;{％asset_path文件名％}&lt;br&gt;{％asset_img文件名[标题]％}&lt;br&gt;{％asset_link文件名[标题] [转义]％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Raw&quot;&gt;&lt;a href=&quot;#Raw&quot; class=&quot;headerlink&quot; title=&quot;Raw&quot;&gt;&lt;/a&gt;Raw&lt;/h2&gt;&lt;p&gt;如果某些内容导致帖子中的处理问题，请使用raw标记将其包裹起来，以避免呈现错误。&lt;br&gt;{％原始％}的&lt;br&gt;含量&lt;br&gt;{％endraw％}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;摘录后&quot;&gt;&lt;a href=&quot;#摘录后&quot; class=&quot;headerlink&quot; title=&quot;摘录后&quot;&gt;&lt;/a&gt;摘录后&lt;/h2&gt;&lt;p&gt;使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

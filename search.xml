@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>完美一步步解决hexo博客部署到gitee后样式bug</title>
+    <url>/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</url>
+    <content><![CDATA[<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class>
+
+<blockquote>
+<p><strong>可是！！本地的样式css和js文件在线上并没有加载出来!</strong></p>
+</blockquote>
+<ul>
+<li><p>本地跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class>
+</li>
+<li><p>gitee跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class>
+</li>
+</ul>
+<hr>
+<h2 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h2><p>🌛这个问题是怎么导致的呢？？</p>
+<ul>
+<li><p>第一步：直觉打开开发者工具</p>
+<blockquote>
+<p>(Google) F12 或 检查</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class>
+<blockquote>
+<p><strong>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</strong></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>第二步：为啥没有加载出来</p>
+<blockquote>
+<p>粘贴网站进行查看</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class>
+<blockquote>
+<p><strong>完美地404了！！</strong></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>第三步：猜测</p>
+<blockquote>
+<p>这些文件应该在哪？</p>
+<blockquote>
+<p>查看网址的前缀仅仅只是自己gitee的主网</p>
+<blockquote>
+<p><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>可是文件应该都在这个博客项目中才对…</p>
+<blockquote>
+<p>将前缀添加自己项目地址变为</p>
+<blockquote>
+<p><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
+</blockquote>
+</blockquote>
+<p>这样就成功访问到目标文件了！！</p>
+</blockquote>
+<p><strong>这样我们就成功找到样式仅在本地显示而不在gitee线上显示的原因了</strong></p>
+<hr>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>上度娘去看如何hexo修改线上访问地址的前缀</p>
+<p><em>简单来说只用两步</em></p>
+<ul>
+<li><p>1.修改_config.yml文件</p>
+<blockquote>
+<p>将 url: / </p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class>
+<blockquote>
+<p>修改为 rul: 图片上框的地址</p>
+</blockquote>
+<p>将 root: /</p>
+<blockquote>
+<p>修改为 root: /博客项目名称/</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>2.重新打包上传hexo</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo d</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="再遇问题"><a href="#再遇问题" class="headerlink" title="再遇问题"></a>再遇问题</h2><p><strong>可是即便这样gitee上Pages也仍没有变化这是为什么呢</strong></p>
+<blockquote>
+<p>找啊找…找啊找…没找到一堆好朋友…掉几根头发…</p>
+</blockquote>
+<p><strong>原来是因为gitee的Pages服务是不会自动更新的需要手动更新</strong></p>
+<blockquote>
+<p>github 就没有这个烦恼 会自动进行更新</p>
+</blockquote>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class>
+<blockquote>
+<p><strong>点击更新！完美解决🌟🌟</strong></p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦~</strong><br>要是这篇文章对您有那么一丢丢的帮助</p>
+<hr>
+<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟吧!<br>(悄悄说~ 点了🌟的你会更加幸运de ！)</p>
+]]></content>
+      <tags>
+        <tag>block  hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小屋的第一份惊喜</title>
+    <url>/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/</url>
+    <content><![CDATA[<h1 id="将hexo博客常用的格式🌰放入呀"><a href="#将hexo博客常用的格式🌰放入呀" class="headerlink" title="将hexo博客常用的格式🌰放入呀~"></a>将hexo博客常用的格式🌰放入呀~</h1><hr>
+<h2 id="报块～～"><a href="#报块～～" class="headerlink" title="报块～～"></a>报块～～</h2><h3 id="1-在帖子中添加引号，并带有可选的作者，来源和标题信息"><a href="#1-在帖子中添加引号，并带有可选的作者，来源和标题信息" class="headerlink" title="1.在帖子中添加引号，并带有可选的作者，来源和标题信息"></a>1.在帖子中添加引号，并带有可选的作者，来源和标题信息</h3><blockquote><p>content</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
+
+<h3 id="2-没有参数。普通的blockquote"><a href="#2-没有参数。普通的blockquote" class="headerlink" title="2.没有参数。普通的blockquote"></a>2.没有参数。普通的blockquote</h3><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+
+<h3 id="3-从书中引用"><a href="#3-从书中引用" class="headerlink" title="3.从书中引用"></a>3.从书中引用</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<h3 id="4-语法突出显示功能"><a href="#4-语法突出显示功能" class="headerlink" title="4.语法突出显示功能"></a>4.语法突出显示功能</h3><p>{％blockquote @DevDocs <a href="https://twitter.com/devdocs/status/356095192085962752％}" target="_blank" rel="noopener">https://twitter.com/devdocs/status/356095192085962752％}</a><br>新功能：DevDocs现在带有语法高亮功能。<a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a><br>{％endblockquote％}</p>
+<h3 id="5-引用网络上的文章"><a href="#5-引用网络上的文章" class="headerlink" title="5.引用网络上的文章"></a>5.引用网络上的文章</h3><p>{％blockquote塞斯·戈丁（Seth Godin）<a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}" target="_blank" rel="noopener">http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}</a><br>每次互动都是宝贵的，也是一次欢愉的机会。<br>{％endblockquote％}</p>
+<hr>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="1-普通代码块"><a href="#1-普通代码块" class="headerlink" title="1.普通代码块"></a>1.普通代码块</h3><p>{％codeblock％}<br>alert（’Hello World！’）;<br>{％endcodeblock％}</p>
+<h3 id="2-指定语言如objc"><a href="#2-指定语言如objc" class="headerlink" title="2.指定语言如objc"></a>2.指定语言如objc</h3><p>{％codeblock lang：objc％}<br>[矩形setX：10 y：10宽度：20高度：20]；<br>{％endcodeblock％}</p>
+<h3 id="3-在代码块中添加标题"><a href="#3-在代码块中添加标题" class="headerlink" title="3.在代码块中添加标题"></a>3.在代码块中添加标题</h3><p>{％codeblock Array.map％}<br>array.map（callback [，thisArg]）<br>{％endcodeblock％}</p>
+<h3 id="4-添加标题和URL"><a href="#4-添加标题和URL" class="headerlink" title="4.添加标题和URL"></a>4.添加标题和URL</h3><p>{％codeblock _.compact <a href="http://underscorejs.org/#compact" target="_blank" rel="noopener">http://underscorejs.org/#compact</a> Underscore.js％}<br>_.compact（[0，1，false，2，``，3]）;<br>=&gt; [1、2、3]<br>{％endcodeblock％}</p>
+<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>这与使用代码块相同，但是使用三个反引号来分隔该块。<br><code>[语言] [标题] [URL] [链接文本]代码段</code></p>
+<hr>
+<h2 id="拉报价"><a href="#拉报价" class="headerlink" title="拉报价"></a>拉报价</h2><p>{％pullquote [class]％}<br>内容<br>{％endpullquote％}</p>
+<hr>
+<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><iframe scrolling="no" width="[width]" height="[height]" src="https://jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<hr>
+<h2 id="要旨"><a href="#要旨" class="headerlink" title="要旨"></a>要旨</h2><p>嵌入要点代码段：</p>
+<script src="//gist.github.com/gist_id.js?file=[filename]"></script>
+<hr>
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>嵌入iframe：</p>
+<iframe src="url" width="[width]" height="[height]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<hr>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>插入具有指定尺寸的图像。</p>
+<img src="/lindada-blog/path/to/image" class="[class names]" title="[width] [height] " alt="title text">
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>插入具有target=”_blank”属性的链接。</p>
+<a href title target>text url [external] [title]</a>
+<hr>
+<h2 id="包含代码"><a href="#包含代码" class="headerlink" title="包含代码"></a>包含代码</h2><p>在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。</p>
+
+
+<h3 id="嵌入test-js的全部内容"><a href="#嵌入test-js的全部内容" class="headerlink" title="嵌入test.js的全部内容"></a>嵌入test.js的全部内容</h3><p>{％include_code lang：javascript test.js％}</p>
+<h3 id="仅嵌入第3行"><a href="#仅嵌入第3行" class="headerlink" title="仅嵌入第3行"></a>仅嵌入第3行</h3><p>{％include_code lang：javascript from：3 to：3 test.js％}</p>
+<h3 id="嵌入第5至8行"><a href="#嵌入第5至8行" class="headerlink" title="嵌入第5至8行"></a>嵌入第5至8行</h3><p>{％include_code lang：javascript from：5 to：8 test.js％}</p>
+<h3 id="将第5行嵌入到文件末尾"><a href="#将第5行嵌入到文件末尾" class="headerlink" title="将第5行嵌入到文件末尾"></a>将第5行嵌入到文件末尾</h3><p>{％include_code lang：javascript from：5 test.js％}</p>
+<h3 id="嵌入第1至8行"><a href="#嵌入第1至8行" class="headerlink" title="嵌入第1至8行"></a>嵌入第1至8行</h3><h2 id="％include-code-lang：javascript-to：8-test-js％"><a href="#％include-code-lang：javascript-to：8-test-js％" class="headerlink" title="{％include_code lang：javascript to：8 test.js％}"></a>{％include_code lang：javascript to：8 test.js％}</h2><h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>插入YouTube视频。<br>{％youtube video_id％}</p>
+<hr>
+<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>插入自适应或指定大小的Vimeo视频。<br>{％vimeo video_id [宽度] [高度]％}</p>
+<hr>
+<h2 id="包括帖子"><a href="#包括帖子" class="headerlink" title="包括帖子"></a>包括帖子</h2><p>包括指向其他​​帖子的链接。<br>{％post_path文件名％}<br>{％post_link文件名[标题] [转义]％}</p>
+<h3 id="转义标题"><a href="#转义标题" class="headerlink" title="转义标题"></a>转义标题</h3><p>{％post_link hexo-4-released’如何在标题中使用<b>标记’％}</b></p>
+<h3 id="不要逃脱标题"><a href="#不要逃脱标题" class="headerlink" title="不要逃脱标题"></a>不要逃脱标题</h3><h2 id="％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％"><a href="#％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％" class="headerlink" title="{％post_link hexo-4-released’粗体&lt;/ b&gt;自定义标题’false％}"></a>{％post_link hexo-4-released’<b>粗体&lt;/ b&gt;自定义标题’false％}</b></h2><h2 id="包括资产"><a href="#包括资产" class="headerlink" title="包括资产"></a>包括资产</h2><p>{％asset_path文件名％}<br>{％asset_img文件名[标题]％}<br>{％asset_link文件名[标题] [转义]％}</p>
+<hr>
+<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果某些内容导致帖子中的处理问题，请使用raw标记将其包裹起来，以避免呈现错误。<br>{％原始％}的<br>含量<br>{％endraw％}</p>
+<hr>
+<h2 id="摘录后"><a href="#摘录后" class="headerlink" title="摘录后"></a>摘录后</h2><p>使用<a id="more"></a>标签前面的文字作为帖子的摘录。如果已指定，则最重要的excerpt:值将优先。<br>Lorem ipsum dolor坐镇，奉献自若，sius do eiusmod tempor incididunt ut Labore et dolore magna aliqua。<br>&lt;！-更多-&gt;<br>尽量减少使用veniam，不要进行任何锻炼，而要获得commodo的结果。Duis aute irure dolor in reprehenderit in volttable velit esse cillum dolore eu fugiat nulla pariatur。不擅长于圣人的情节，应在负责任的犯罪活动中动手</p>
+]]></content>
+  </entry>
+</search>

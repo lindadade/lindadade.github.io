@@ -1,145 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   
-
   
-  <title>完美一步步解决hexo博客部署到gitee后样式bug | 林大大的小屋</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题来源✨将hexo博客部署成功到gitee上后也可以根据gitee Pages服务成功线上访问博客   可是！！本地的样式css和js文件在线上并没有加载出来!   本地跑的hexo博客样式   gitee跑的hexo博客样式     查找问题🌛这个问题是怎么导致的呢？？  第一步：直觉打开开发者工具   (Google) F12 或 检查  可以清楚得看到console中报了很多得错误——">
-<meta property="og:type" content="article">
-<meta property="og:title" content="完美一步步解决hexo博客部署到gitee后样式bug">
-<meta property="og:url" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/index.html">
-<meta property="og:site_name" content="林大大的小屋">
-<meta property="og:description" content="问题来源✨将hexo博客部署成功到gitee上后也可以根据gitee Pages服务成功线上访问博客   可是！！本地的样式css和js文件在线上并没有加载出来!   本地跑的hexo博客样式   gitee跑的hexo博客样式     查找问题🌛这个问题是怎么导致的呢？？  第一步：直觉打开开发者工具   (Google) F12 或 检查  可以清楚得看到console中报了很多得错误——">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png">
-<meta property="og:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png">
-<meta property="article:published_time" content="2020-06-13T14:46:53.000Z">
-<meta property="article:modified_time" content="2020-06-15T07:24:01.196Z">
-<meta property="article:author" content="dadaLin">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png">
+  <title>
+    完美一步步解决hexo博客部署到gitee后样式bug |
+    
+    林大大的小屋</title>
   
-    <link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
   
   
 <link rel="stylesheet" href="/lindada-blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/lindada-blog/" id="logo">林大大的小屋</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+<main class="content">
+  <section class="outer">
+  <article id="post-完美一步步解决hexo博客部署到gitee后样式bug" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
         
-          <a class="main-nav-link" href="/lindada-blog/">Home</a>
-        
-          <a class="main-nav-link" href="/lindada-blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/lindada-blog/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lin_daren.gitee.io/lindada-blog"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-完美一步步解决hexo博客部署到gitee后样式bug" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" class="article-date">
-  <time datetime="2020-06-13T14:46:53.000Z" itemprop="datePublished">2020-06-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+            <header class="article-header">
+                
   
     <h1 class="article-title" itemprop="name">
       完美一步步解决hexo博客部署到gitee后样式bug
     </h1>
   
+  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" class="article-date">
+  <time datetime="2020-06-13T14:46:53.000Z" itemprop="datePublished">2020-06-13</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+  <div class="article-gallery">
+    <div class="article-gallery-photos">
       
-        <hr>
-<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class="">
+        
+          <img src="/lindada-blog/%20hexo-inverted.svg%20" itemprop="image">
+        
+      
+    </div>
+  </div>
+
+
+                                                
+                                                                    <h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class>
+
 <blockquote>
 <p><strong>可是！！本地的样式css和js文件在线上并没有加载出来!</strong></p>
 </blockquote>
 <ul>
 <li><p>本地跑的hexo博客样式</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class="">
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class>
 </li>
 <li><p>gitee跑的hexo博客样式</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class="">
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class>
 </li>
 </ul>
 <hr>
 <h2 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h2><p>🌛这个问题是怎么导致的呢？？</p>
 <ul>
-<li>第一步：直觉打开开发者工具</li>
-</ul>
+<li><p>第一步：直觉打开开发者工具</p>
 <blockquote>
 <p>(Google) F12 或 检查</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class="">
-<p>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class>
+<blockquote>
+<p><strong>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</strong></p>
 </blockquote>
-<ul>
+</blockquote>
+</li>
 <li><p>第二步：为啥没有加载出来</p>
 <blockquote>
 <p>粘贴网站进行查看</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class="">
-<p>完美地404了！！</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class>
+<blockquote>
+<p><strong>完美地404了！！</strong></p>
+</blockquote>
 </blockquote>
 </li>
 <li><p>第三步：猜测</p>
 <blockquote>
-<p>这些文件应该在哪？<br>查看网址的前缀仅仅只是自己gitee的主网<br><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
+<p>这些文件应该在哪？</p>
+<blockquote>
+<p>查看网址的前缀仅仅只是自己gitee的主网</p>
+<blockquote>
+<p><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
+</blockquote>
+</blockquote>
 </blockquote>
 </li>
 </ul>
 <blockquote>
 <p>可是文件应该都在这个博客项目中才对…</p>
-</blockquote>
 <blockquote>
-<p>将前缀添加自己项目地址变为<br><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
-</blockquote>
+<p>将前缀添加自己项目地址变为</p>
 <blockquote>
+<p><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
+</blockquote>
+</blockquote>
 <p>这样就成功访问到目标文件了！！</p>
 </blockquote>
 <p><strong>这样我们就成功找到样式仅在本地显示而不在gitee线上显示的原因了</strong></p>
@@ -150,8 +142,14 @@
 <li><p>1.修改_config.yml文件</p>
 <blockquote>
 <p>将 url: / </p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class="">
-<p>修改为 rul: 图片上框的地址<br>将 root: /<br>修改为 root: /博客项目名称/</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class>
+<blockquote>
+<p>修改为 rul: 图片上框的地址</p>
+</blockquote>
+<p>将 root: /</p>
+<blockquote>
+<p>修改为 root: /博客项目名称/</p>
+</blockquote>
 </blockquote>
 </li>
 <li><p>2.重新打包上传hexo</p>
@@ -170,121 +168,151 @@
 <p>github 就没有这个烦恼 会自动进行更新</p>
 </blockquote>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class="">
-<p>点击更新！完美解决🌟🌟</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class>
+<blockquote>
+<p><strong>点击更新！完美解决🌟🌟</strong></p>
+</blockquote>
 </blockquote>
 <hr>
-<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦</strong><br>要是这篇文章对您有那么一丢丢的帮助</p>
+<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦~</strong><br>要是这篇文章对您有那么一丢丢的帮助</p>
 <hr>
-<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a><br>花10秒钟帮我的博客点个🌟吧!<br>(悄悄说~ 点了🌟的你会更加幸运哦！)</p>
+<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟吧!<br>(悄悄说~ 点了🌟的你会更加幸运de ！)</p>
 
-      
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" data-id="ckbgdc1830000fq5fdcib2wot" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lindada-blog/tags/block-hexo/" rel="tag">block  hexo</a></li></ul>
+
+                                    </footer>
+
     </div>
-    <footer class="article-footer">
-      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" data-id="ckbg69wyp0000ws5fafpsd7c8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">小屋的第一份惊喜</div>
-    </a>
-  
-</nav>
 
-  
+    
+        
+  <nav class="article-nav">
+    
+    
+      <a href="/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">小屋的第一份惊喜</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+                            
+
 </article>
-
 </section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/lindada-blog/archives/2020/06/">June 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/">完美一步步解决hexo博客部署到gitee后样式bug</a>
-          </li>
-        
-          <li>
-            <a href="/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/">小屋的第一份惊喜</a>
-          </li>
-        
-          <li>
-            <a href="/lindada-blog/2020/06/07/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
+  <footer class="footer">
   <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 dadaLin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
     </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 林大大的小屋</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
   </div>
 </footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/images/hexo.svg" alt="林大大的小屋"></a>
     </div>
-    <nav id="mobile-nav">
   
-    <a href="/lindada-blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/lindada-blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+  <ul class="nav nav-main">
     
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
 
 
   
-<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.css">
-
-  
-<script src="/lindada-blog/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/lindada-blog/js/script.js"></script>
 
 
+<script src="/lindada-blog/js/ocean.js"></script>
 
 
-  </div>
 </body>
 </html>
