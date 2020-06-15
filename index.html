@@ -11,7 +11,6 @@
 <meta property="og:title" content="林大大的小屋">
 <meta property="og:url" content="https://lin_daren.gitee.io/lindada-blog/index.html">
 <meta property="og:site_name" content="林大大的小屋">
-<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="dadaLin">
 <meta name="twitter:card" content="summary">
   
@@ -53,7 +52,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/lindada-blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lin_daren.gitee.io/lindada-blog"></form>
@@ -64,9 +63,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-将博客部署到gitee上" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-完美一步步解决hexo博客部署到gitee后样式bug" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/lindada-blog/2020/06/13/%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E4%B8%8A/" class="article-date">
+    <a href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" class="article-date">
   <time datetime="2020-06-13T14:46:53.000Z" itemprop="datePublished">2020-06-13</time>
 </a>
     
@@ -78,7 +77,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/lindada-blog/2020/06/13/%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E4%B8%8A/">将博客部署到gitee上</a>
+      <a class="article-title" href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/">完美一步步解决hexo博客部署到gitee后样式bug</a>
     </h1>
   
 
@@ -86,11 +85,93 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class="">
+<blockquote>
+<p><strong>可是！！本地的样式css和js文件在线上并没有加载出来!</strong></p>
+</blockquote>
+<ul>
+<li><p>本地跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class="">
+</li>
+<li><p>gitee跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class="">
+</li>
+</ul>
+<hr>
+<h2 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h2><p>🌛这个问题是怎么导致的呢？？</p>
+<ul>
+<li>第一步：直觉打开开发者工具</li>
+</ul>
+<blockquote>
+<p>(Google) F12 或 检查</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class="">
+<p>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</p>
+</blockquote>
+<ul>
+<li><p>第二步：为啥没有加载出来</p>
+<blockquote>
+<p>粘贴网站进行查看</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class="">
+<p>完美地404了！！</p>
+</blockquote>
+</li>
+<li><p>第三步：猜测</p>
+<blockquote>
+<p>这些文件应该在哪？<br>查看网址的前缀仅仅只是自己gitee的主网<br><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>可是文件应该都在这个博客项目中才对…</p>
+</blockquote>
+<blockquote>
+<p>将前缀添加自己项目地址变为<br><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
+</blockquote>
+<blockquote>
+<p>这样就成功访问到目标文件了！！</p>
+</blockquote>
+<p><strong>这样我们就成功找到样式仅在本地显示而不在gitee线上显示的原因了</strong></p>
+<hr>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>上度娘去看如何hexo修改线上访问地址的前缀</p>
+<p><em>简单来说只用两步</em></p>
+<ul>
+<li><p>1.修改_config.yml文件</p>
+<blockquote>
+<p>将 url: / </p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class="">
+<p>修改为 rul: 图片上框的地址<br>将 root: /<br>修改为 root: /博客项目名称/</p>
+</blockquote>
+</li>
+<li><p>2.重新打包上传hexo</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo d</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="再遇问题"><a href="#再遇问题" class="headerlink" title="再遇问题"></a>再遇问题</h2><p><strong>可是即便这样gitee上Pages也仍没有变化这是为什么呢</strong></p>
+<blockquote>
+<p>找啊找…找啊找…没找到一堆好朋友…掉几根头发…</p>
+</blockquote>
+<p><strong>原来是因为gitee的Pages服务是不会自动更新的需要手动更新</strong></p>
+<blockquote>
+<p>github 就没有这个烦恼 会自动进行更新</p>
+</blockquote>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class="">
+<p>点击更新！完美解决🌟🌟</p>
+</blockquote>
+<hr>
+<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦</strong><br>要是这篇文章对您有那么一丢丢的帮助</p>
+<hr>
+<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a><br>花10秒钟帮我的博客点个🌟吧!<br>(悄悄说~ 点了🌟的你会更加幸运哦！)</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E4%B8%8A/" data-id="ckbdr8lkw0000mp5f65dydsms" class="article-share-link">Share</a>
+      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/" data-id="ckbg69wyp0000ws5fafpsd7c8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +264,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/" data-id="ckbdr8ll50002mp5f5lephfn8" class="article-share-link">Share</a>
+      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/" data-id="ckbg69wyz0002ws5fgm8m58tb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/07/hello-world/" data-id="ckbdr8ll30001mp5f3ybedd41" class="article-share-link">Share</a>
+      <a data-url="https://lin_daren.gitee.io/lindada-blog/2020/06/07/hello-world/" data-id="ckbg69wyw0001ws5f5v9abdx3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,9 +339,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/lindada-blog/archives/2020/06/">六月 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/lindada-blog/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -268,12 +349,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/lindada-blog/2020/06/13/%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E4%B8%8A/">将博客部署到gitee上</a>
+            <a href="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/">完美一步步解决hexo博客部署到gitee后样式bug</a>
           </li>
         
           <li>
