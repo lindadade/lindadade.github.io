@@ -860,6 +860,12 @@ template {
 [hidden] {
   display: none;
 }
+* {
+  cursor: url("../images/cursor2.png"), default !important;
+}
+a:hover {
+  cursor: url("../images/cursor1.png"), default !important;
+}
 *,
 *::before,
 *::after {
@@ -1321,7 +1327,10 @@ img {
   padding: 3rem 0 0;
 }
 .article {
-  padding: 3rem 0;
+  padding: 4.5rem !important;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 .article-topping {
   position: absolute;
