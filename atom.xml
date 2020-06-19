@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2020-06-15T12:53:31.870Z</updated>
+  <updated>2020-06-19T12:41:49.538Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>终于等到你！不蒜子-统计工具和萌萌哒-2D模型~</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</id>
+    <published>2020-06-19T10:58:19.000Z</published>
+    <updated>2020-06-19T12:41:49.538Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;✨这里是林大大的小屋子~&lt;br&gt;小屋子也要统计访问量和访问的人数噢~&lt;br&gt;当然！还必不可缺少一位可爱的姑娘&lt;br&gt;来营造小屋中的浪漫气息噢✨&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="busuanzi  hexo  live2d" scheme="https://lin_daren.gitee.io/lindada-blog/tags/busuanzi-hexo-live2d/"/>
+    
+  </entry>
+  
+  <entry>
     <title>完美一步步解决hexo博客部署到gitee后样式bug</title>
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</id>
     <published>2020-06-13T14:46:53.000Z</published>
-    <updated>2020-06-15T12:53:31.870Z</updated>
+    <updated>2020-06-19T12:41:29.304Z</updated>
     
     <summary type="html">
     
@@ -40,7 +59,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/</id>
     <published>2020-06-12T14:43:36.602Z</published>
-    <updated>2020-06-17T14:37:57.549Z</updated>
+    <updated>2020-06-19T11:00:25.625Z</updated>
     
     <summary type="html">
     
@@ -49,6 +68,8 @@
     </summary>
     
     
+    
+      <category term="hexo" scheme="https://lin_daren.gitee.io/lindada-blog/tags/hexo/"/>
     
   </entry>
   
