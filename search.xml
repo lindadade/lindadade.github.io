@@ -307,7 +307,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>插入具有target=”_blank”属性的链接。</p>
 <a href title target>text url [external] [title]</a>
 <hr>
-<h2 id="包含代码"><a href="#包含代码" class="headerlink" title="包含代码"></a>包含代码</h2><p>在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。</p>
+<h2 id="包含代码"><a href="#包含代码" class="headerlink" title="包含代码~"></a>包含代码<del>~</del></h2><p>在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。</p>
 
 
 <h3 id="嵌入test-js的全部内容"><a href="#嵌入test-js的全部内容" class="headerlink" title="嵌入test.js的全部内容"></a>嵌入test.js的全部内容</h3><p>{％include_code lang：javascript test.js％}</p>
