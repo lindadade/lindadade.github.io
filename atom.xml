@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2020-06-25T15:00:30.118Z</updated>
+  <updated>2020-06-29T15:22:35.372Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</id>
+    <published>2020-06-29T13:34:20.000Z</published>
+    <updated>2020-06-29T15:22:35.372Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;古时候，我们见字如面！&lt;br&gt;到如今，手上的简历可谓见证我们以往的人生。&lt;br&gt;你是否还在对没有一份精美的简历而忧愁&lt;br&gt;是否羡慕那些大牛们高大上的简历&lt;br&gt;看完这一篇文章！&lt;br&gt;你也能打造属于自己的”完美简历”✨&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="简历  CakereSume" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%80%E5%8E%86-CakereSume/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始初尝Three.js</title>
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/</id>
     <published>2020-06-25T12:12:04.000Z</published>
-    <updated>2020-06-25T15:00:30.118Z</updated>
+    <updated>2020-06-29T15:17:49.198Z</updated>
     
     <summary type="html">
     
@@ -41,7 +60,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</id>
     <published>2020-06-19T10:58:19.000Z</published>
-    <updated>2020-06-19T13:07:41.430Z</updated>
+    <updated>2020-06-29T15:18:02.120Z</updated>
     
     <summary type="html">
     
@@ -60,7 +79,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</id>
     <published>2020-06-13T14:46:53.000Z</published>
-    <updated>2020-06-25T14:59:10.512Z</updated>
+    <updated>2020-06-29T15:17:49.188Z</updated>
     
     <summary type="html">
     
