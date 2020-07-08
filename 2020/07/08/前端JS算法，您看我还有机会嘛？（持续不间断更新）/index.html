@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    前端JS算法，您看我还有机会嘛？（持续不间断更新） |
+    
+    林大大的小屋</title>
+  
+    <link rel="shortcut icon" href="/lindada-blog/fav.svg">
+  
+  
+<link rel="stylesheet" href="/lindada-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-前端JS算法，您看我还有机会嘛？（持续不间断更新）" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      前端JS算法，您看我还有机会嘛？（持续不间断更新）
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/" class="article-date">
+  <time datetime="2020-07-08T14:39:25.000Z" itemprop="datePublished">2020-07-08</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <img src="/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/1.png" class>  
+<p>暑假到了…作为算法小渣的我来说<br>很有必要开启算法的上山之路！<br>本文章用于记录在路途中的一步一脚印<br><em>~不拍照的那种</em><br>坚持周期性更新（一天3篇Easy, 一天2篇Mid, 一天1篇Hard）<br>为了两年后毕业后面试的自己打下基础<br>奋进吧！少儿郎…  </p>
+<blockquote>
+<p>提示: 每一道题均有实例、解题思路、解答代码、执行结果</p>
+</blockquote>
+<blockquote>
+<p>要是对您有所帮助启发点个小赞噢~  </p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="第一天-07-08"><a href="#第一天-07-08" class="headerlink" title="第一天 - 07.08"></a>第一天 - 07.08</h1><p>前记: 今天是高考的最后一天…望考生们不负自己的努力</p>
+<h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><blockquote>
+<p>1.两数之和<br>2.整数反转<br>3.罗马数字转整数</p>
+</blockquote>
+<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><blockquote>
+<p>给定一个整数数组 <strong>nums</strong> 和一个目标值 <strong>target</strong>，请你在该数组中找出和为目标值的那 <strong>两个</strong> 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+</blockquote>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路"><a href="#解答思路" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.关键在于target-当前数组的剩余值，等于数组剩余值中的某一个<br>2.利用对象key为值, value为下标</p>
+<h4 id="解答代码"><a href="#解答代码" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> prevNums = &#123;&#125;;  <span class="comment">// 存储的对象                         </span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;      </span><br><span class="line">    <span class="keyword">const</span> curNum = nums[i];   <span class="comment">// 当前数组值</span></span><br><span class="line">    <span class="keyword">const</span> targetNum = target - curNum;    <span class="comment">// 当前剩余值</span></span><br><span class="line">    <span class="keyword">const</span> targetNumIndex = prevNums[targetNum];   <span class="comment">// 在存储对象中key为当前剩余值时候 -&gt; 获取value下标值</span></span><br><span class="line">    <span class="keyword">if</span> (targetNumIndex !== <span class="literal">undefined</span>) &#123;   <span class="comment">// 当存储对象有该下标时</span></span><br><span class="line">      <span class="keyword">return</span> [targetNumIndex, i];   <span class="comment">// 返回目标下标和当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    prevNums[curNum] = i;   <span class="comment">// 否则存储value -&gt; 下标和key -&gt; 数值</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果"><a href="#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入:<br>[2,7,11,15]<br>9  </p>
+<p>输出<br>[0,1]  </p>
+<p>预期结果<br>[0,1]  </p>
+</blockquote>
+<hr>
+<h3 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h3><blockquote>
+<p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。<br><strong>注意反转后整数可能溢出情况 -&gt; 返回0</strong></p>
+</blockquote>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-1"><a href="#解答思路-1" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.反转整数向左移一位同时加上原整数的最后一位 -&gt; 原整数去掉最后一位 -&gt; 至到原整数为0<br>2.注意需要将反转整数转为32位有符号整数<br>3.若溢出 -&gt; 反转整数不等于自身 -&gt; 溢出为Infinity</p>
+<h4 id="解答代码-1"><a href="#解答代码-1" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverse = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> reverseNumber = <span class="number">0</span>   <span class="comment">// 反转整数为0</span></span><br><span class="line">    <span class="keyword">while</span>(x) &#123;</span><br><span class="line">        reverseNumber = reverseNumber * <span class="number">10</span> + x % <span class="number">10</span>   <span class="comment">// 反转整数向左移一位 再加上x最后一位数字</span></span><br><span class="line">        x = (x / <span class="number">10</span>) | <span class="number">0</span>    <span class="comment">// 原整数去掉最后一位数字 x | 0 -&gt; 强制转换为32位有符号整数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (reverseNumber | <span class="number">0</span>) === reverseNumber ? reverseNumber : <span class="number">0</span></span><br><span class="line">    <span class="comment">// 反转整数强制转换为32位有符号整数 -&gt; 若不等于自身 -&gt; 判断溢出 -&gt; 值为0</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-1"><a href="#代码执行结果-1" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>12345  </p>
+<p>输出<br>54321  </p>
+<p>预期结果<br>54321  </p>
+</blockquote>
+<hr>
+<h3 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</span><br><span class="line"></span><br><span class="line">字符          数值</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br><span class="line">例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</span><br><span class="line"></span><br><span class="line">通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。</span><br><span class="line">数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。</span><br><span class="line">同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</span><br><span class="line"></span><br><span class="line">I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</span><br><span class="line">X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </span><br><span class="line">C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</span><br><span class="line">给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</span><br></pre></td></tr></table></figure>
+<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: "IX"</span><br><span class="line">输出: 9</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: "LVIII"</span><br><span class="line">输出: 58</span><br><span class="line">解释: L = 50, V= 5, III = 3.</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: "MCMXCIV"</span><br><span class="line">输出: 1994</span><br><span class="line">解释: M = 1000, CM = 900, XC = 90, IV = 4.</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-2"><a href="#解答思路-2" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.创建一个罗马字符的对象 -&gt; 对应字符对应数值<br>2.贪心思想 -&gt; 由最大的字符往最小的字符一一转换<br>3.当前罗马字符 &lt; 右边罗马字符时 -&gt; 整数减去当前罗马字符代表的数值 反之则加<br>4.遍历整个罗马字符完成</p>
+<h4 id="解答代码-2"><a href="#解答代码-2" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> romanToInt = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> roman = &#123;     <span class="comment">// 创建罗马字符对象</span></span><br><span class="line">        <span class="string">'I'</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">'V'</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">'X'</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="string">'L'</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="string">'C'</span>: <span class="number">100</span>,</span><br><span class="line">        <span class="string">'D'</span>: <span class="number">500</span>,</span><br><span class="line">        <span class="string">'M'</span>: <span class="number">1000</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> length = s.length   <span class="comment">// 罗马字符串长度</span></span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>    <span class="comment">// 转换整数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.length; i++ ) &#123;</span><br><span class="line">        <span class="keyword">const</span> currentNum = roman[s[i]]    <span class="comment">// 当罗马字符对应数值</span></span><br><span class="line">        <span class="keyword">if</span>(i &lt; length - <span class="number">1</span> &amp;&amp; currentNum &lt; roman[s[i+<span class="number">1</span>]]) &#123;    <span class="comment">// 判断为倒数第二个字符串 并且当前罗马对应数值小于右边对应数值</span></span><br><span class="line">            result -= currentNum    <span class="comment">// 减去当前值</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result += currentNum    <span class="comment">// 反之加上当前值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result   <span class="comment">// 返回转换后的整数</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-2"><a href="#代码执行结果-2" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>“MCMXCIV”  </p>
+<p>输出<br>1994  </p>
+<p>预期结果<br>1994</p>
+</blockquote>
+<hr>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89">博客原文章✨</a></p>
+<hr>
+<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        
+                                            <!--MOB SHARE BEGIN-->
+<a><div class="-mob-share-open article-share-link">分享</div></a>
+<div class="-mob-share-ui" style="display: none; display: flex; align-items: center; align-content: center;">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+    </ul>
+    <div style="height: 100%; width: 100%">
+        <div class="-mob-share-close" style="position:relative; margin: -26em auto; width: 80px; height: 40px; font-size: 14px; color: #fff; background-color: #4593e9; border-radius: 15px;">取消</div>
+    </div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="/lindada-blog/js/mob-share.js"></script>
+<!--MOB SHARE END-->
+
+                                        
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+    
+      <a href="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">带你入职的精美简历制作（免费获取高大上模版教程）</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+    <div class="vcomments" id="vcomments"></div>
+    
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'vtOOBRQNx6g17peggpfzBROa-9Nh9j0Va',
+                appKey: 'Q1DgaTCfUeYjMOqoTAH8TX9M',
+                notify: 'false',
+                verify: 'true',
+                avatar: 'mp',
+                pageSize: '15',
+                placeholder: '✨悄悄地对小屋说...'
+            })
+        </script>
+        
+                        
+                            
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li>访客数 <i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li>阅读量 <i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 林大大的小屋</li> |
+      <li> Gitee主页 by <a href="https://gitee.com/lin_daren" target="_blank">林大大的Gitee</a></li> |
+      <li> Wechat by <span class="footer-title">dadaLin_0809</span></li>
+      <li> Email by <span class="footer-title">809751956@qq.com</span></li> |
+    </ul>
+  </div>
+</footer>
+
+<style>
+    .footer-title {
+        color: darkcyan;
+        font-weight: bold;
+    }
+</style>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/lindada-blog/images/star.svg" alt="林大大的小屋"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/lindada-blog/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/lindada-blog/js/ocean.js"></script>
+
+
+<script src="/lindada-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/lindada-blog/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360,"top":"-40px","right":"25px"},"mobile":{"show":true}});</script></body>
+</html>
