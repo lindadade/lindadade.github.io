@@ -89,6 +89,26 @@
 <p>预期结果<br>3</p>
 </blockquote>
 <hr>
+<hr>
+<h1 id="第二天-07-10"><a href="#第二天-07-10" class="headerlink" title="第二天 - 07.10"></a>第二天 - 07.10</h1><p>前记: 打了会游戏，困难题肝了快3小时，还是不太清除官方做法…</p>
+<h2 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h2><blockquote>
+<p>1.正则表达式匹配</p>
+</blockquote>
+<h3 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h3><blockquote>
+<p>给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 ‘.’ 和 ‘*’ 的正则表达式匹配。  </p>
+<p>‘.’ 匹配任意单个字符<br>‘<em>‘ 匹配零个或多个前面的那一个元素<br>所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。<br>说明:<br>s 可能为空，且只包含从 a-z 的小写字母。<br>p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。<br>*</em>注意可不要使用JS的正则表达式呀~那这道题将毫无意义**</p>
+</blockquote>
+<h4 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入:</span><br><span class="line">s = "aa"</span><br><span class="line">p = "a"</span><br><span class="line">输出: false</span><br><span class="line">解释: "a" 无法匹配 "aa" 整个字符串。</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入:</span><br><span class="line">s = "ab"</span><br><span class="line">p = ".*"</span><br><span class="line">输出: true</span><br><span class="line">解释: ".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入:</span><br><span class="line">s = "aab"</span><br><span class="line">p = "c*a*b"</span><br><span class="line">输出: true</span><br><span class="line">解释: 因为 '*' 表示零个或多个，这里 'c' 为 0 个, 'a' 被重复一次。因此可以匹配字符串 "aab"。</span><br><span class="line"></span><br><span class="line">示例 4:</span><br><span class="line">输入:</span><br><span class="line">s = "mississippi"</span><br><span class="line">p = "mis*is*p*."</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-5"><a href="#解答思路-5" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.定义基础返回条件，p的长度为0时，s的长度为0则表示匹配，s的长度不为0则表示不匹配<br>2.定义匹配状态match，即为第一个字符的互相比较，如果相等或p[0]为’.’则为true<br>3.当p没有模式的时候，我们根据match的状态进行返回，如果match为false，直接返回false，如果为true，那么进行下一步的判断getIsMactch(s.slice(1), p.slice(1)<br>4.当p有模式的时候，有两种情况：一是s<em>匹配0个字符，则进行getIsMactch(s, p.slice(2))，二是s<em>匹配1个字符，递归下去，用来表示s</em>匹配多个s</em>,这样如果match为false，直接返回false，如果为true，那么进行getIsMactch(s.slice(1), p)。这两种只要一个能成立就够了<br>5.返回匹配结果</p>
+<h4 id="解答代码-5"><a href="#解答代码-5" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isMatch = <span class="function"><span class="keyword">function</span> (<span class="params">s, p</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> getIsMactch = <span class="function">(<span class="params">s, p</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 判断，如果传入p的长度为0，那么，必须s的长度也为0才会返回true</span></span><br><span class="line">    <span class="keyword">if</span> (p.length === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> !s.length</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 判断第一个字符是否相等</span></span><br><span class="line">    <span class="keyword">let</span> match = <span class="literal">false</span></span><br><span class="line">    <span class="keyword">if</span> (s.length &gt; <span class="number">0</span> &amp;&amp; (s[<span class="number">0</span>] === p[<span class="number">0</span>] || p[<span class="number">0</span>] === <span class="string">'.'</span>)) &#123;</span><br><span class="line">      match = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//p有模式的</span></span><br><span class="line">    <span class="keyword">if</span> (p.length &gt; <span class="number">1</span> &amp;&amp; p[<span class="number">1</span>] === <span class="string">"*"</span>) &#123;</span><br><span class="line">      <span class="comment">// 如果有"*"字符，回溯字符</span></span><br><span class="line">      <span class="comment">// 第一种情况：s*匹配0个字符</span></span><br><span class="line">      <span class="comment">// 第二种情况：s*匹配1个字符，递归下去，用来表示s*匹配多个s*</span></span><br><span class="line">      <span class="keyword">return</span> getIsMactch(s, p.slice(<span class="number">2</span>)) || (match &amp;&amp; getIsMactch(s.slice(<span class="number">1</span>), p))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> (match &amp;&amp; getIsMactch(s.slice(<span class="number">1</span>), p.slice(<span class="number">1</span>)))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> getIsMactch(s, p)  <span class="comment">// 返回最终调用方法匹配结果</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 官方解答代码</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isMatch = <span class="function"><span class="keyword">function</span>(<span class="params">s, p</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">matches</span>(<span class="params">s, p, i, j</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (p.charAt(j - <span class="number">1</span>) === <span class="string">'.'</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s[i - <span class="number">1</span>] === p[j - <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> m = s.length</span><br><span class="line">  <span class="keyword">let</span> n = p.length</span><br><span class="line">  <span class="keyword">let</span> f = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= m; i++) &#123;</span><br><span class="line">    f.push(<span class="keyword">new</span> <span class="built_in">Array</span>(n + <span class="number">1</span>).fill(<span class="literal">false</span>))</span><br><span class="line">  &#125;</span><br><span class="line">  f[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</span><br><span class="line">      <span class="keyword">if</span> (p[j - <span class="number">1</span>] == <span class="string">'*'</span>) &#123;</span><br><span class="line">        f[i][j] = f[i][j - <span class="number">2</span>];</span><br><span class="line">        <span class="keyword">if</span> (matches(s, p, i, j - <span class="number">1</span>)) &#123;</span><br><span class="line">          f[i][j] = f[i][j] || f[i - <span class="number">1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (matches(s, p, i, j)) &#123;</span><br><span class="line">          f[i][j] = f[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> f[m][n]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-5"><a href="#代码执行结果-5" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>“mississippi”<br>“mis<em>is*p</em>.”  </p>
+<p>输出<br>false  </p>
+<p>预期结果<br>false</p>
+</blockquote>
+<hr>
 <h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89">博客原文章✨</a></p>
 <hr>
 <p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
@@ -250,6 +270,257 @@
 ]]></content>
       <tags>
         <tag>Three</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>终于等到你！不蒜子-统计工具和萌萌哒-2D模型~</title>
+    <url>/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>✨这里是林大大的小屋子~<br>小屋子也要统计访问量和访问的人数噢~<br>当然！还必不可缺少一位可爱的姑娘<br>来营造小屋中的浪漫气息噢✨</p>
+<a id="more"></a>
+
+<blockquote>
+<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
+</blockquote>
+<hr>
+<h1 id="不蒜子统计"><a href="#不蒜子统计" class="headerlink" title="不蒜子统计"></a>不蒜子统计</h1><p>首先，咱们要统计小屋子的访问量和访问人数<br>那么就需要采用工具啦…<br>在此期间，本大大搜索了好多统计的工具<br>最后我还是选用了<strong>不蒜子统计</strong><br>这是为啥嘞~ 让我简单的说明一下吧</p>
+<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><blockquote>
+<p>优点 </p>
+<blockquote>
+<p>稳定性、控制台展示多模块化数据、搜索来源、更多功能等等   </p>
+</blockquote>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/1.png" class>
+<p>缺点 </p>
+<blockquote>
+<p>实时更新速度慢<br>最新的百度统计的接口需要token值，获取这个token值有一定的要求</p>
+<blockquote>
+<p>如（1. 是企业账号直接获取 2.需访问量在500以上，访问IP也有一定要求）<br>总之对小型网站不太友好就是啦~   </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="谷歌统计"><a href="#谷歌统计" class="headerlink" title="谷歌统计"></a>谷歌统计</h2><blockquote>
+<p>优点</p>
+<blockquote>
+<p>不用说啦！更稳定、功能点更多、可视化等等</p>
+</blockquote>
+<p>缺点</p>
+<blockquote>
+<p>人家是国外的，咱们得翻墙！<br>有时候因网络，国内会各种延迟</p>
+</blockquote>
+</blockquote>
+<h2 id="CNZZ"><a href="#CNZZ" class="headerlink" title="CNZZ"></a>CNZZ</h2><blockquote>
+<p>优点</p>
+<blockquote>
+<p>统计功能、搜索来源、数据分析等等</p>
+</blockquote>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/2.png" class>
+<blockquote>
+<p>安装容易！并且对小型站点友好噢</p>
+</blockquote>
+<p>缺点</p>
+<blockquote>
+<p>样式不好看 <strong>因引入方式特殊的原因</strong> 很难修改固定样式</p>
+</blockquote>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/3.png" class>
+<blockquote>
+<p>并且数据格式固定，不能自定义改动<br>数据更新很慢（一般需要10~15分钟更新一次）</p>
+</blockquote>
+</blockquote>
+<p>✨接下来就轮到我们今天的主角啦</p>
+<h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><blockquote>
+<p>优点</p>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/4.png" class>
+<blockquote>
+<p>简单方便、可以自定义化各种格式、实时更新数据<br>简单2步就可以安装好这个工具啦！</p>
+</blockquote>
+<p>缺点</p>
+<blockquote>
+<p>只有统计访问量、访问人数、阅读量等数据<br>不能可视化、搜索来源等各种智能功能</p>
+</blockquote>
+</blockquote>
+<p><strong>话不多说让我们来安装不蒜子吧</strong></p>
+<blockquote>
+<p>1.在首页插入脚本</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.在需要的地方引入数据</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line">    本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>这引入就是原生html标签啦~可以自由最大化地自定义样式！</strong></p>
+<p>✨具体官方文章请查看<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子博客</a></p>
+<hr>
+<h1 id="萌萌哒"><a href="#萌萌哒" class="headerlink" title="萌萌哒"></a>萌萌哒</h1><p>小屋子里有个可爱的小姐姐是一种什么样的感受呢~<br>以前我应该晓不得…<br>现在！！我的感受是！！有点小爽…✨</p>
+<p>给你们瞧瞧！</p>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/5.png" class>
+<p><strong>也想在小屋子里偷偷藏一个小姐姐嘛~<br>来跟我简单走4步</strong></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>1.安装插件</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2.插入配置<br><strong>以hexo博客为例</strong></p>
+<blockquote>
+<p>在根目录的_config.yml配置文件中添加</p>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 萌萌哒</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 180</span><br><span class="line">    height: 360</span><br><span class="line">    top: -40px</span><br><span class="line">    right: 25px</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>3.安装模型</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>4.创建配置文件</p>
+<blockquote>
+<p>1.在根目录下创建文件夹：live2d_models<br>2.在node_modules中搜索：hexo-helper-live2d插件<br>3.在里边查找到刚安装的模型：live2d-widget-model-shizuku<br>4.将live2d-widget-model-shizuku模型文件copy到 live2d_models文件夹下</p>
+</blockquote>
+</blockquote>
+<p>不要忘记重启下博客服务噢<br><strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong><br>这样！！你也有一位可爱小姐姐啦~</p>
+<hr>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>俗话说得好…<br>一根萝卜、一颗白菜各有所爱~<br>正巧你爱的是另一个它该怎么办…<br><strong>好办！！！</strong></p>
+<p>以下是本大大辛辛苦苦找的噢</p>
+<blockquote>
+<p>1.选择模型</p>
+</blockquote>
+<ol>
+<li>epsilon2_1<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/6.gif" class width="150" height="150"></li>
+<li>Gantzert_Felixander<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/7.gif" class width="150" height="150"></li>
+<li>haru<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/8.gif" class width="150" height="150"></li>
+<li>miku<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/9.gif" class width="150" height="150"></li>
+<li>ni-j<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/10.gif" class width="150" height="150"></li>
+<li>nico<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/11.gif" class width="150" height="150"></li>
+<li>nietzche<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/12.gif" class width="150" height="150"></li>
+<li>nipsilon<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/13.gif" class width="150" height="150"></li>
+<li>nito<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/14.gif" class width="150" height="150"></li>
+<li>shizuku<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/15.gif" class width="150" height="150"></li>
+<li>tsumiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/16.gif" class width="150" height="150"></li>
+<li>wanko<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/17.gif" class width="150" height="150"></li>
+<li>z16<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/18.gif" class width="150" height="150"></li>
+<li>hibiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/19.gif" class width="150" height="150"></li>
+<li>koharu<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/20.gif" class width="150" height="150"></li>
+<li>haruto<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/21.gif" class width="150" height="150"></li>
+<li>Unitychan<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/22.gif" class width="150" height="150"></li>
+<li>tororo<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/23.gif" class width="150" height="150"></li>
+<li>hijiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/24.gif" class width="150" height="150">
+
+</li>
+</ol>
+<blockquote>
+<p>2.安装新的模型</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-[选择的模型名]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.创建配置文件</p>
+<blockquote>
+<p>1.将新安装的模型文件：live2d-widget-model-[选择的模型名]模型文件<br>  copy到 live2d_models文件夹下<br>2.更改根目录的_config.yml配置文件中<br>  model: use: live2d-widget-model-[选择的模型名]</p>
+</blockquote>
+<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/26.png" class>
+<blockquote>
+<p>3.重启hexo服务</p>
+</blockquote>
+</blockquote>
+<p><strong>这样我们的萌萌哒就大功告成了噢!</strong></p>
+<hr>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/">博客原文章✨</a></p>
+<hr>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>busuanzi  hexo  live2d</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
+    <url>/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>古时候，我们见字如面！<br>到如今，手上的简历可谓见证我们以往的人生。<br>你是否还在对没有一份精美的简历而忧愁<br>是否羡慕那些大牛们高大上的简历<br>看完这一篇文章！<br>你也能打造属于自己的”完美简历”✨</p>
+<a id="more"></a>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
+</blockquote>
+<hr>
+<p>为啥我要写这一篇文章呢<br>因为我也在打造自己的”完美简历”<br>为今后面试中呢<br>我手上这一块”敲门砖”可以更硬更强！<br>写一份简历其实不难，上网找简历需要注重哪些内容<br>跟着填充、优化自己的信息就好了<br>可是！单独且不花钱的情况下<br><strong>制作一份专属自己的完美简历</strong><br>实在是！是太难了！！<br>以下是我在制作属于自己简历时的痛点 </p>
+<blockquote>
+<ul>
+<li>网上免费简历模版千篇一律，突不出重点</li>
+<li>收费模版太太太贵了！并且些许固定化</li>
+<li>找不到满意案例范本来完善自己的简历</li>
+<li>排版没有经验，不知道怎么优化简历排版</li>
+<li>大多的网上模版都花里胡哨，一点都不高大上  </li>
+<li>随时下载PDF文件到本地</li>
+<li>不知道怎么高大上地分享自己的作品集</li>
+</ul>
+</blockquote>
+<p>为了解决这些痛点<br>我下定决心，查阅各种资料和网站<br>终于找到了一个很棒的制作精美简历的网站  </p>
+<h1 id="CakereSume"><a href="#CakereSume" class="headerlink" title="CakereSume"></a>CakereSume</h1><p><em>很正经地声明: 作者不参杂任何广告因素噢（因为也不知道怎么收取广告费用啥的哈哈）</em></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://www.cakeresume.com/?_blank" target="_blank" rel="noopener">CakereSume</a><br>CakeResume是一个由台湾人开发、设计的线上履历表制作工具<br>它的介面单纯，操作上也不会太困难，只要选择布景主题<br>即可自行修改页面上显示的资讯栏位及相关内容<br>设定好你要使用的链结名称，就能轻松建置一个既正式又不会流于制式的个人履历!  </p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>CakeResume上有许多许多的优秀、精美的案例<br>我们简单来游览一下吧  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class title="[left]">
+<br>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class title="[left]">
+<br>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class title="[left]">
+
+<p>这里有很多很多大牛们的优秀案例<br>虽然我们还没有实实在在的技能、项目经验、工作经历等等<br><em>慢慢地以后肯定会有的！</em><br>但我们也可以从第一步做起嘛 —— 模仿大牛的”<strong>老坛酸菜牛肉面</strong>“  </p>
+<h1 id="制作完美简历"><a href="#制作完美简历" class="headerlink" title="制作完美简历"></a>制作完美简历</h1><h2 id="拥有一个CakeResume账号"><a href="#拥有一个CakeResume账号" class="headerlink" title="拥有一个CakeResume账号"></a>拥有一个CakeResume账号</h2><p>在制作前需要先拥有CakeResume网站的账号噢<br><strong>这个就自行解决啦</strong><br>CakeResume支持很多第三方登录账号噢  </p>
+<h2 id="直接开始创建履历"><a href="#直接开始创建履历" class="headerlink" title="直接开始创建履历"></a>直接开始创建履历</h2><h3 id="创建空白履历"><a href="#创建空白履历" class="headerlink" title="创建空白履历"></a>创建空白履历</h3><img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class title="[left]">
+<blockquote>
+<ol>
+<li>首先点击右上角，进入 - 自己的主控台</li>
+<li>选择左边框 - 我的履历 <em>（可以先完成自己的个人档案噢）</em>  </li>
+<li>点击 - 直接制作履历</li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class title="[left]">
+<p><strong>在这里就是属于我们的空白履历了</strong><br>右边栏有许多的模版框架<br>可以直接拖动模版来制作自己的履历啦！<br><em>不过也有一些需升级账户后才能使用的模版</em><br><strong>不用担心~ 看小编如何免费获取到大牛的范本吧</strong></p>
+<hr>
+<h3 id="参考精美履历"><a href="#参考精美履历" class="headerlink" title="参考精美履历"></a>参考精美履历</h3><p>怎么样查看参考大牛们的范本呢  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class title="[left]">
+<blockquote>
+<p>首先我们点击履历范本<br>其次在搜索框中搜索自己的领域或者职位</p>
+</blockquote>
+<br>
+
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class title="[left]">
+<blockquote>
+<p>在这里就可以看到很多相关的优秀简历范本<br>点击就可以查看详情了噢<br><strong>快快挑选自己满意的完美模版吧！</strong></p>
+</blockquote>
+<p><strong>那如何将模版免费套用自己的简历上呢！</strong><br>接着往下看</p>
+<hr>
+<h3 id="套用模版"><a href="#套用模版" class="headerlink" title="套用模版"></a>套用模版</h3><p>跟着我简单3步走噢~  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class title="[left]">
+<blockquote>
+<ol>
+<li>点击上方小图标，进入作者简历主页 </li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class title="[left]">
+<blockquote>
+<ol start="2">
+<li>打开谷歌开发者工具，选取自己满意的模块，copy下代码</li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class title="[left]">
+<blockquote>
+<ol start="3">
+<li>点击左边工具栏 - 小图标，粘贴代码，点击OK</li>
+</ol>
+</blockquote>
+<p><strong>我们这就得到了免费的模版噢！</strong><br><strong>喜欢哪个模块，就套用哪个模块</strong><br>✨ 惊不惊喜！满不满意！</p>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>最后我还想唠嗑几句啰嗦话哈哈<br>其实这离制作一份完美的简历还很远很远<br>尽管我们最终制作出了精美的简历排版<br>可简历其实就是我们过往人生的一张纸、电子纸<br>若是我们过往的人生既不丰富，又不精彩<br>空有一份精美的排版<br>岂不是有点心酸…  </p>
+<blockquote>
+<p>CakeResume官网其实还有很多的功能<br>这些优秀的功能，就靠你们各取所需啦<br>可别忘了！大牛们简历的内容<br>也是很值得我们今后人生目标参考和学习的噢！  </p>
+</blockquote>
+<p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89">博客原文章✨</a></p>
+<hr>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>简历  CakereSume</tag>
       </tags>
   </entry>
   <entry>
@@ -429,257 +700,6 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
-    <url>/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>古时候，我们见字如面！<br>到如今，手上的简历可谓见证我们以往的人生。<br>你是否还在对没有一份精美的简历而忧愁<br>是否羡慕那些大牛们高大上的简历<br>看完这一篇文章！<br>你也能打造属于自己的”完美简历”✨</p>
-<a id="more"></a>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
-</blockquote>
-<hr>
-<p>为啥我要写这一篇文章呢<br>因为我也在打造自己的”完美简历”<br>为今后面试中呢<br>我手上这一块”敲门砖”可以更硬更强！<br>写一份简历其实不难，上网找简历需要注重哪些内容<br>跟着填充、优化自己的信息就好了<br>可是！单独且不花钱的情况下<br><strong>制作一份专属自己的完美简历</strong><br>实在是！是太难了！！<br>以下是我在制作属于自己简历时的痛点 </p>
-<blockquote>
-<ul>
-<li>网上免费简历模版千篇一律，突不出重点</li>
-<li>收费模版太太太贵了！并且些许固定化</li>
-<li>找不到满意案例范本来完善自己的简历</li>
-<li>排版没有经验，不知道怎么优化简历排版</li>
-<li>大多的网上模版都花里胡哨，一点都不高大上  </li>
-<li>随时下载PDF文件到本地</li>
-<li>不知道怎么高大上地分享自己的作品集</li>
-</ul>
-</blockquote>
-<p>为了解决这些痛点<br>我下定决心，查阅各种资料和网站<br>终于找到了一个很棒的制作精美简历的网站  </p>
-<h1 id="CakereSume"><a href="#CakereSume" class="headerlink" title="CakereSume"></a>CakereSume</h1><p><em>很正经地声明: 作者不参杂任何广告因素噢（因为也不知道怎么收取广告费用啥的哈哈）</em></p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://www.cakeresume.com/?_blank" target="_blank" rel="noopener">CakereSume</a><br>CakeResume是一个由台湾人开发、设计的线上履历表制作工具<br>它的介面单纯，操作上也不会太困难，只要选择布景主题<br>即可自行修改页面上显示的资讯栏位及相关内容<br>设定好你要使用的链结名称，就能轻松建置一个既正式又不会流于制式的个人履历!  </p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>CakeResume上有许多许多的优秀、精美的案例<br>我们简单来游览一下吧  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class title="[left]">
-<br>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class title="[left]">
-<br>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class title="[left]">
-
-<p>这里有很多很多大牛们的优秀案例<br>虽然我们还没有实实在在的技能、项目经验、工作经历等等<br><em>慢慢地以后肯定会有的！</em><br>但我们也可以从第一步做起嘛 —— 模仿大牛的”<strong>老坛酸菜牛肉面</strong>“  </p>
-<h1 id="制作完美简历"><a href="#制作完美简历" class="headerlink" title="制作完美简历"></a>制作完美简历</h1><h2 id="拥有一个CakeResume账号"><a href="#拥有一个CakeResume账号" class="headerlink" title="拥有一个CakeResume账号"></a>拥有一个CakeResume账号</h2><p>在制作前需要先拥有CakeResume网站的账号噢<br><strong>这个就自行解决啦</strong><br>CakeResume支持很多第三方登录账号噢  </p>
-<h2 id="直接开始创建履历"><a href="#直接开始创建履历" class="headerlink" title="直接开始创建履历"></a>直接开始创建履历</h2><h3 id="创建空白履历"><a href="#创建空白履历" class="headerlink" title="创建空白履历"></a>创建空白履历</h3><img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class title="[left]">
-<blockquote>
-<ol>
-<li>首先点击右上角，进入 - 自己的主控台</li>
-<li>选择左边框 - 我的履历 <em>（可以先完成自己的个人档案噢）</em>  </li>
-<li>点击 - 直接制作履历</li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class title="[left]">
-<p><strong>在这里就是属于我们的空白履历了</strong><br>右边栏有许多的模版框架<br>可以直接拖动模版来制作自己的履历啦！<br><em>不过也有一些需升级账户后才能使用的模版</em><br><strong>不用担心~ 看小编如何免费获取到大牛的范本吧</strong></p>
-<hr>
-<h3 id="参考精美履历"><a href="#参考精美履历" class="headerlink" title="参考精美履历"></a>参考精美履历</h3><p>怎么样查看参考大牛们的范本呢  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class title="[left]">
-<blockquote>
-<p>首先我们点击履历范本<br>其次在搜索框中搜索自己的领域或者职位</p>
-</blockquote>
-<br>
-
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class title="[left]">
-<blockquote>
-<p>在这里就可以看到很多相关的优秀简历范本<br>点击就可以查看详情了噢<br><strong>快快挑选自己满意的完美模版吧！</strong></p>
-</blockquote>
-<p><strong>那如何将模版免费套用自己的简历上呢！</strong><br>接着往下看</p>
-<hr>
-<h3 id="套用模版"><a href="#套用模版" class="headerlink" title="套用模版"></a>套用模版</h3><p>跟着我简单3步走噢~  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class title="[left]">
-<blockquote>
-<ol>
-<li>点击上方小图标，进入作者简历主页 </li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class title="[left]">
-<blockquote>
-<ol start="2">
-<li>打开谷歌开发者工具，选取自己满意的模块，copy下代码</li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class title="[left]">
-<blockquote>
-<ol start="3">
-<li>点击左边工具栏 - 小图标，粘贴代码，点击OK</li>
-</ol>
-</blockquote>
-<p><strong>我们这就得到了免费的模版噢！</strong><br><strong>喜欢哪个模块，就套用哪个模块</strong><br>✨ 惊不惊喜！满不满意！</p>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>最后我还想唠嗑几句啰嗦话哈哈<br>其实这离制作一份完美的简历还很远很远<br>尽管我们最终制作出了精美的简历排版<br>可简历其实就是我们过往人生的一张纸、电子纸<br>若是我们过往的人生既不丰富，又不精彩<br>空有一份精美的排版<br>岂不是有点心酸…  </p>
-<blockquote>
-<p>CakeResume官网其实还有很多的功能<br>这些优秀的功能，就靠你们各取所需啦<br>可别忘了！大牛们简历的内容<br>也是很值得我们今后人生目标参考和学习的噢！  </p>
-</blockquote>
-<p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89">博客原文章✨</a></p>
-<hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
-<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
-]]></content>
-      <tags>
-        <tag>简历  CakereSume</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>终于等到你！不蒜子-统计工具和萌萌哒-2D模型~</title>
-    <url>/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>✨这里是林大大的小屋子~<br>小屋子也要统计访问量和访问的人数噢~<br>当然！还必不可缺少一位可爱的姑娘<br>来营造小屋中的浪漫气息噢✨</p>
-<a id="more"></a>
-
-<blockquote>
-<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
-</blockquote>
-<hr>
-<h1 id="不蒜子统计"><a href="#不蒜子统计" class="headerlink" title="不蒜子统计"></a>不蒜子统计</h1><p>首先，咱们要统计小屋子的访问量和访问人数<br>那么就需要采用工具啦…<br>在此期间，本大大搜索了好多统计的工具<br>最后我还是选用了<strong>不蒜子统计</strong><br>这是为啥嘞~ 让我简单的说明一下吧</p>
-<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><blockquote>
-<p>优点 </p>
-<blockquote>
-<p>稳定性、控制台展示多模块化数据、搜索来源、更多功能等等   </p>
-</blockquote>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/1.png" class>
-<p>缺点 </p>
-<blockquote>
-<p>实时更新速度慢<br>最新的百度统计的接口需要token值，获取这个token值有一定的要求</p>
-<blockquote>
-<p>如（1. 是企业账号直接获取 2.需访问量在500以上，访问IP也有一定要求）<br>总之对小型网站不太友好就是啦~   </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="谷歌统计"><a href="#谷歌统计" class="headerlink" title="谷歌统计"></a>谷歌统计</h2><blockquote>
-<p>优点</p>
-<blockquote>
-<p>不用说啦！更稳定、功能点更多、可视化等等</p>
-</blockquote>
-<p>缺点</p>
-<blockquote>
-<p>人家是国外的，咱们得翻墙！<br>有时候因网络，国内会各种延迟</p>
-</blockquote>
-</blockquote>
-<h2 id="CNZZ"><a href="#CNZZ" class="headerlink" title="CNZZ"></a>CNZZ</h2><blockquote>
-<p>优点</p>
-<blockquote>
-<p>统计功能、搜索来源、数据分析等等</p>
-</blockquote>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/2.png" class>
-<blockquote>
-<p>安装容易！并且对小型站点友好噢</p>
-</blockquote>
-<p>缺点</p>
-<blockquote>
-<p>样式不好看 <strong>因引入方式特殊的原因</strong> 很难修改固定样式</p>
-</blockquote>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/3.png" class>
-<blockquote>
-<p>并且数据格式固定，不能自定义改动<br>数据更新很慢（一般需要10~15分钟更新一次）</p>
-</blockquote>
-</blockquote>
-<p>✨接下来就轮到我们今天的主角啦</p>
-<h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><blockquote>
-<p>优点</p>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/4.png" class>
-<blockquote>
-<p>简单方便、可以自定义化各种格式、实时更新数据<br>简单2步就可以安装好这个工具啦！</p>
-</blockquote>
-<p>缺点</p>
-<blockquote>
-<p>只有统计访问量、访问人数、阅读量等数据<br>不能可视化、搜索来源等各种智能功能</p>
-</blockquote>
-</blockquote>
-<p><strong>话不多说让我们来安装不蒜子吧</strong></p>
-<blockquote>
-<p>1.在首页插入脚本</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>2.在需要的地方引入数据</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line">    本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>这引入就是原生html标签啦~可以自由最大化地自定义样式！</strong></p>
-<p>✨具体官方文章请查看<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子博客</a></p>
-<hr>
-<h1 id="萌萌哒"><a href="#萌萌哒" class="headerlink" title="萌萌哒"></a>萌萌哒</h1><p>小屋子里有个可爱的小姐姐是一种什么样的感受呢~<br>以前我应该晓不得…<br>现在！！我的感受是！！有点小爽…✨</p>
-<p>给你们瞧瞧！</p>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/5.png" class>
-<p><strong>也想在小屋子里偷偷藏一个小姐姐嘛~<br>来跟我简单走4步</strong></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>1.安装插件</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>2.插入配置<br><strong>以hexo博客为例</strong></p>
-<blockquote>
-<p>在根目录的_config.yml配置文件中添加</p>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 萌萌哒</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 180</span><br><span class="line">    height: 360</span><br><span class="line">    top: -40px</span><br><span class="line">    right: 25px</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>3.安装模型</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>4.创建配置文件</p>
-<blockquote>
-<p>1.在根目录下创建文件夹：live2d_models<br>2.在node_modules中搜索：hexo-helper-live2d插件<br>3.在里边查找到刚安装的模型：live2d-widget-model-shizuku<br>4.将live2d-widget-model-shizuku模型文件copy到 live2d_models文件夹下</p>
-</blockquote>
-</blockquote>
-<p>不要忘记重启下博客服务噢<br><strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong><br>这样！！你也有一位可爱小姐姐啦~</p>
-<hr>
-<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>俗话说得好…<br>一根萝卜、一颗白菜各有所爱~<br>正巧你爱的是另一个它该怎么办…<br><strong>好办！！！</strong></p>
-<p>以下是本大大辛辛苦苦找的噢</p>
-<blockquote>
-<p>1.选择模型</p>
-</blockquote>
-<ol>
-<li>epsilon2_1<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/6.gif" class width="150" height="150"></li>
-<li>Gantzert_Felixander<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/7.gif" class width="150" height="150"></li>
-<li>haru<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/8.gif" class width="150" height="150"></li>
-<li>miku<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/9.gif" class width="150" height="150"></li>
-<li>ni-j<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/10.gif" class width="150" height="150"></li>
-<li>nico<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/11.gif" class width="150" height="150"></li>
-<li>nietzche<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/12.gif" class width="150" height="150"></li>
-<li>nipsilon<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/13.gif" class width="150" height="150"></li>
-<li>nito<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/14.gif" class width="150" height="150"></li>
-<li>shizuku<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/15.gif" class width="150" height="150"></li>
-<li>tsumiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/16.gif" class width="150" height="150"></li>
-<li>wanko<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/17.gif" class width="150" height="150"></li>
-<li>z16<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/18.gif" class width="150" height="150"></li>
-<li>hibiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/19.gif" class width="150" height="150"></li>
-<li>koharu<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/20.gif" class width="150" height="150"></li>
-<li>haruto<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/21.gif" class width="150" height="150"></li>
-<li>Unitychan<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/22.gif" class width="150" height="150"></li>
-<li>tororo<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/23.gif" class width="150" height="150"></li>
-<li>hijiki<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/24.gif" class width="150" height="150">
-
-</li>
-</ol>
-<blockquote>
-<p>2.安装新的模型</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-[选择的模型名]</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>3.创建配置文件</p>
-<blockquote>
-<p>1.将新安装的模型文件：live2d-widget-model-[选择的模型名]模型文件<br>  copy到 live2d_models文件夹下<br>2.更改根目录的_config.yml配置文件中<br>  model: use: live2d-widget-model-[选择的模型名]</p>
-</blockquote>
-<img src="/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/26.png" class>
-<blockquote>
-<p>3.重启hexo服务</p>
-</blockquote>
-</blockquote>
-<p><strong>这样我们的萌萌哒就大功告成了噢!</strong></p>
-<hr>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/">博客原文章✨</a></p>
-<hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
-<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
-]]></content>
-      <tags>
-        <tag>busuanzi  hexo  live2d</tag>
       </tags>
   </entry>
 </search>
