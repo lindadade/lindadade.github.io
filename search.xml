@@ -17,12 +17,11 @@
 <h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><blockquote>
 <p>1.两数之和<br>2.整数反转<br>3.罗马数字转整数</p>
 </blockquote>
-<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><blockquote>
-<p>给定一个整数数组 <strong>nums</strong> 和一个目标值 <strong>target</strong>，请你在该数组中找出和为目标值的那 <strong>两个</strong> 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-</blockquote>
+<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个目标值 target，</span><br><span class="line">请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
 
-<h4 id="解答思路"><a href="#解答思路" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.关键在于target-当前数组的剩余值，等于数组剩余值中的某一个<br>2.利用对象key为值, value为下标</p>
+<h4 id="解答思路"><a href="#解答思路" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.关键在于target-当前数组的剩余值，等于数组剩余值中的某一个<br>2.利用对象key为值, value为下标  </p>
 <h4 id="解答代码"><a href="#解答代码" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> prevNums = &#123;&#125;;  <span class="comment">// 存储的对象                         </span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;      </span><br><span class="line">    <span class="keyword">const</span> curNum = nums[i];   <span class="comment">// 当前数组值</span></span><br><span class="line">    <span class="keyword">const</span> targetNum = target - curNum;    <span class="comment">// 当前剩余值</span></span><br><span class="line">    <span class="keyword">const</span> targetNumIndex = prevNums[targetNum];   <span class="comment">// 在存储对象中key为当前剩余值时候 -&gt; 获取value下标值</span></span><br><span class="line">    <span class="keyword">if</span> (targetNumIndex !== <span class="literal">undefined</span>) &#123;   <span class="comment">// 当存储对象有该下标时</span></span><br><span class="line">      <span class="keyword">return</span> [targetNumIndex, i];   <span class="comment">// 返回目标下标和当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    prevNums[curNum] = i;   <span class="comment">// 否则存储value -&gt; 下标和key -&gt; 数值</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="代码执行结果"><a href="#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
@@ -31,12 +30,11 @@
 <p>预期结果<br>[0,1]  </p>
 </blockquote>
 <hr>
-<h3 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h3><blockquote>
-<p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。<br><strong>注意反转后整数可能溢出情况 -&gt; 返回0</strong></p>
-</blockquote>
+<h3 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</span><br><span class="line">注意反转后整数可能溢出情况 -&gt; 返回0</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br></pre></td></tr></table></figure>
 
-<h4 id="解答思路-1"><a href="#解答思路-1" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.反转整数向左移一位同时加上原整数的最后一位 -&gt; 原整数去掉最后一位 -&gt; 至到原整数为0<br>2.注意需要将反转整数转为32位有符号整数<br>3.若溢出 -&gt; 反转整数不等于自身 -&gt; 溢出为Infinity</p>
+<h4 id="解答思路-1"><a href="#解答思路-1" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.反转整数向左移一位同时加上原整数的最后一位 -&gt; 原整数去掉最后一位 -&gt; 至到原整数为0<br>2.注意需要将反转整数转为32位有符号整数<br>3.若溢出 -&gt; 反转整数不等于自身 -&gt; 溢出为Infinity  </p>
 <h4 id="解答代码-1"><a href="#解答代码-1" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reverse = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> reverseNumber = <span class="number">0</span>   <span class="comment">// 反转整数为0</span></span><br><span class="line">    <span class="keyword">while</span>(x) &#123;</span><br><span class="line">        reverseNumber = reverseNumber * <span class="number">10</span> + x % <span class="number">10</span>   <span class="comment">// 反转整数向左移一位 再加上x最后一位数字</span></span><br><span class="line">        x = (x / <span class="number">10</span>) | <span class="number">0</span>    <span class="comment">// 原整数去掉最后一位数字 x | 0 -&gt; 强制转换为32位有符号整数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (reverseNumber | <span class="number">0</span>) === reverseNumber ? reverseNumber : <span class="number">0</span></span><br><span class="line">    <span class="comment">// 反转整数强制转换为32位有符号整数 -&gt; 若不等于自身 -&gt; 判断溢出 -&gt; 值为0</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h4 id="代码执行结果-1"><a href="#代码执行结果-1" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
@@ -46,6 +44,7 @@
 </blockquote>
 <hr>
 <h3 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</span><br><span class="line"></span><br><span class="line">字符          数值</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br><span class="line">例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</span><br><span class="line"></span><br><span class="line">通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。</span><br><span class="line">数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。</span><br><span class="line">同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</span><br><span class="line"></span><br><span class="line">I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</span><br><span class="line">X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </span><br><span class="line">C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</span><br><span class="line">给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: "IX"</span><br><span class="line">输出: 9</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: "LVIII"</span><br><span class="line">输出: 58</span><br><span class="line">解释: L = 50, V= 5, III = 3.</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: "MCMXCIV"</span><br><span class="line">输出: 1994</span><br><span class="line">解释: M = 1000, CM = 900, XC = 90, IV = 4.</span><br></pre></td></tr></table></figure>
 
 <h4 id="解答思路-2"><a href="#解答思路-2" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.创建一个罗马字符的对象 -&gt; 对应字符对应数值<br>2.贪心思想 -&gt; 由最大的字符往最小的字符一一转换<br>3.当前罗马字符 &lt; 右边罗马字符时 -&gt; 整数减去当前罗马字符代表的数值 反之则加<br>4.遍历整个罗马字符完成</p>
@@ -59,11 +58,10 @@
 <hr>
 <h1 id="第二天-07-09"><a href="#第二天-07-09" class="headerlink" title="第二天 - 07.09"></a>第二天 - 07.09</h1><p>前记: 写了好久小程序，和小妹妹出去散散步</p>
 <h2 id="Mid"><a href="#Mid" class="headerlink" title="Mid"></a>Mid</h2><blockquote>
-<p>1.两数相加<br>2.无重复字符的最长子串</p>
+<p>1.两数相加<br>2.无重复字符的最长子串  </p>
 </blockquote>
-<h3 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h3><blockquote>
-<p>给出两个 <strong>非空</strong> 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 <strong>逆序</strong> 的方式存储的，并且它们的每个节点只能存储 <strong>一位</strong> 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
-</blockquote>
+<h3 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给出两个 非空 的链表用来表示两个非负的整数。</span><br><span class="line">其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。  </span><br><span class="line">如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">输出：7 -&gt; 0 -&gt; 8</span><br><span class="line">原因：342 + 465 = 807</span><br></pre></td></tr></table></figure>
 
 <h4 id="解答思路-3"><a href="#解答思路-3" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.因为倒叙<br>2.链表取出l1和l2的首个数字相加 -&gt; 为sum<br>3.sum取余10 -&gt; 存入新链表中（防止为两位数）<br>4.若sum &gt;= 10 -&gt; 向下一个链表next + 1</p>
@@ -75,9 +73,8 @@
 <p>预期结果<br>[7,0,8]  </p>
 </blockquote>
 <hr>
-<h3 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h3><blockquote>
-<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
-</blockquote>
+<h3 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: "abcabcbb"</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: "bbbbb"</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。</span><br><span class="line">示例 3:</span><br><span class="line"></span><br><span class="line">输入: "pwwkew"</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。。</span><br></pre></td></tr></table></figure>
 
 <h4 id="解答思路-4"><a href="#解答思路-4" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.遍历字符串每个字符<br>2.用一个数组存储每个字符<br>3.若数组中存在当前字符 -&gt; 清除数组当前字符和前的数据<br>4.判断max取整个过程的最长长度</p>
@@ -90,14 +87,12 @@
 </blockquote>
 <hr>
 <hr>
-<h1 id="第二天-07-10"><a href="#第二天-07-10" class="headerlink" title="第二天 - 07.10"></a>第二天 - 07.10</h1><p>前记: 打了会游戏，困难题肝了快3小时，还是不太清除官方做法…</p>
+<h1 id="第三天-07-10"><a href="#第三天-07-10" class="headerlink" title="第三天 - 07.10"></a>第三天 - 07.10</h1><p>前记: 打了会游戏，困难题肝了快3小时，还是不太清除官方做法…</p>
 <h2 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h2><blockquote>
-<p>1.正则表达式匹配</p>
+<p>1.正则表达式匹配  </p>
 </blockquote>
-<h3 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h3><blockquote>
-<p>给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 ‘.’ 和 ‘*’ 的正则表达式匹配。  </p>
-<p>‘.’ 匹配任意单个字符<br>‘<em>‘ 匹配零个或多个前面的那一个元素<br>所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。<br>说明:<br>s 可能为空，且只包含从 a-z 的小写字母。<br>p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。<br>*</em>注意可不要使用JS的正则表达式呀~那这道题将毫无意义**</p>
-</blockquote>
+<h3 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。  </span><br><span class="line">'.' 匹配任意单个字符  </span><br><span class="line">'*' 匹配零个或多个前面的那一个元素  </span><br><span class="line">所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。  </span><br><span class="line">说明:  </span><br><span class="line">s 可能为空，且只包含从 a-z 的小写字母。  </span><br><span class="line">p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。  </span><br><span class="line">注意可不要使用JS的正则表达式呀~那这道题将毫无意义</span><br></pre></td></tr></table></figure>
+
 <h4 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入:</span><br><span class="line">s = "aa"</span><br><span class="line">p = "a"</span><br><span class="line">输出: false</span><br><span class="line">解释: "a" 无法匹配 "aa" 整个字符串。</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入:</span><br><span class="line">s = "ab"</span><br><span class="line">p = ".*"</span><br><span class="line">输出: true</span><br><span class="line">解释: ".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入:</span><br><span class="line">s = "aab"</span><br><span class="line">p = "c*a*b"</span><br><span class="line">输出: true</span><br><span class="line">解释: 因为 '*' 表示零个或多个，这里 'c' 为 0 个, 'a' 被重复一次。因此可以匹配字符串 "aab"。</span><br><span class="line"></span><br><span class="line">示例 4:</span><br><span class="line">输入:</span><br><span class="line">s = "mississippi"</span><br><span class="line">p = "mis*is*p*."</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
 
 <h4 id="解答思路-5"><a href="#解答思路-5" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.定义基础返回条件，p的长度为0时，s的长度为0则表示匹配，s的长度不为0则表示不匹配<br>2.定义匹配状态match，即为第一个字符的互相比较，如果相等或p[0]为’.’则为true<br>3.当p没有模式的时候，我们根据match的状态进行返回，如果match为false，直接返回false，如果为true，那么进行下一步的判断getIsMactch(s.slice(1), p.slice(1)<br>4.当p有模式的时候，有两种情况：一是s<em>匹配0个字符，则进行getIsMactch(s, p.slice(2))，二是s<em>匹配1个字符，递归下去，用来表示s</em>匹配多个s</em>,这样如果match为false，直接返回false，如果为true，那么进行getIsMactch(s.slice(1), p)。这两种只要一个能成立就够了<br>5.返回匹配结果</p>
@@ -105,6 +100,47 @@
 
 <h4 id="代码执行结果-5"><a href="#代码执行结果-5" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
 <p>输入<br>“mississippi”<br>“mis<em>is*p</em>.”  </p>
+<p>输出<br>false  </p>
+<p>预期结果<br>false</p>
+</blockquote>
+<hr>
+<h1 id="第四天-07-11"><a href="#第四天-07-11" class="headerlink" title="第四天 - 07.11"></a>第四天 - 07.11</h1><p>前记: 噢吼吼吼吼吼，写了一天小程序。等会看小白船</p>
+<h2 id="Easy-1"><a href="#Easy-1" class="headerlink" title="Easy"></a>Easy</h2><blockquote>
+<p>1.回文数<br>2.最长公共前缀<br>3.有效的括号</p>
+</blockquote>
+<h3 id="两数之和-1"><a href="#两数之和-1" class="headerlink" title="两数之和"></a>两数之和</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">判断一个整数是否是回文数。  </span><br><span class="line">回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例-6"><a href="#实例-6" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: 121</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: -121</span><br><span class="line">输出: false</span><br><span class="line">解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</span><br><span class="line">示例 3:</span><br><span class="line"></span><br><span class="line">输入: 10</span><br><span class="line">输出: false</span><br><span class="line">解释: 从右向左读, 为 01 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-6"><a href="#解答思路-6" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.将整数转为字符串<br>2.字符串倒置<br>3.判断字符串倒置和原整数字符串是否一致  </p>
+<h4 id="解答代码-6"><a href="#解答代码-6" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isPalindrome = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> reserveStr = x.toString().split(<span class="string">""</span>).reverse().join(<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">return</span> reserveStr === x.toString()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-6"><a href="#代码执行结果-6" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入:<br>121<br>9  </p>
+<p>输出<br>true  </p>
+<p>预期结果<br>true  </p>
+</blockquote>
+<hr>
+<h3 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a>最长公共前缀</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">编写一个函数来查找字符串数组中的最长公共前缀。  </span><br><span class="line">如果不存在公共前缀，返回空字符串 ""。</span><br></pre></td></tr></table></figure>
+<h4 id="实例-7"><a href="#实例-7" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: ["flower","flow","flight"]</span><br><span class="line">输出: "fl"</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: ["dog","racecar","car"]</span><br><span class="line">输出: ""</span><br><span class="line">解释: 输入不存在公共前缀。</span><br><span class="line"></span><br><span class="line">说明:</span><br><span class="line">所有输入只包含小写字母 a-z 。</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-7"><a href="#解答思路-7" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.初始化任意一个数组字符串（原理: 公共前缀小于任意一个字符串）<br>2.开始遍历和对比字符串数组 -&gt; 若公共前缀与当前不相等 -&gt; 截取之前的公共前缀<br>3.遍历完成返回公共前缀 -&gt; 若公共前缀为空字符 -&gt; 提前返回  </p>
+<h4 id="解答代码-7"><a href="#解答代码-7" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> longestCommonPrefix = <span class="function"><span class="keyword">function</span>(<span class="params">strs</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(strs.length == <span class="number">0</span>)     <span class="comment">// 如果字符数组为空数组 -&gt; 返回为空</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">let</span> ans = strs[<span class="number">0</span>];      <span class="comment">// 初始化公共前缀第一个数组字符串</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; strs.length; i++) &#123;      <span class="comment">// 遍历字符数组</span></span><br><span class="line">        <span class="keyword">let</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 公共前缀小于初始化字符串长度 并且 小于当前字符串长度</span></span><br><span class="line">        <span class="keyword">for</span>(;j &lt; ans.length &amp;&amp; j &lt; strs[i].length; j++) &#123;</span><br><span class="line">            <span class="comment">// 公共前缀字符 和 当前数组字符串字符不相等时 -&gt; break</span></span><br><span class="line">            <span class="keyword">if</span>(ans[j] != strs[i][j])</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 截取目前相等的公共前缀</span></span><br><span class="line">        ans = ans.substr(<span class="number">0</span>, j);</span><br><span class="line">        <span class="keyword">if</span>(ans === <span class="string">""</span>)      <span class="comment">// 若公共前缀为空 -&gt; 直接返回无需遍历</span></span><br><span class="line">            <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;     <span class="comment">// 遍历完成，返回公共前缀</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-7"><a href="#代码执行结果-7" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>[“flower”,”flow”,”flight”]  </p>
+<p>输出<br>“fl”  </p>
+<p>预期结果<br>“fl”  </p>
+</blockquote>
+<hr>
+<h3 id="有效的括号"><a href="#有效的括号" class="headerlink" title="有效的括号"></a>有效的括号</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给定一个只包括 '('，')'，'&#123;'，'&#125;'，'['，']' 的字符串，判断字符串是否有效。</span><br><span class="line"></span><br><span class="line">有效字符串需满足：</span><br><span class="line"></span><br><span class="line">左括号必须用相同类型的右括号闭合。</span><br><span class="line">左括号必须以正确的顺序闭合。</span><br><span class="line">注意空字符串可被认为是有效字符串。</span><br></pre></td></tr></table></figure>
+<h4 id="实例-8"><a href="#实例-8" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">输入: "()[]&#123;&#125;"</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">输入: "(]"</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">示例 3:</span><br><span class="line">输入: "([)]"</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">示例 4:</span><br><span class="line">输入: "&#123;[]&#125;"</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-8"><a href="#解答思路-8" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.因为空字符串可被认为是有效字符串 -&gt; 利用对象的key和value只提取出括号字符<br>2.利用栈思想 -&gt; 先近后出原理 -&gt; 这里将括号字符定义为开、关两种<br>3.若 开 字符 -&gt; 存入栈中对应 闭 字符<br>4.若 闭 字符 -&gt; 取出栈顶字符 -&gt; 判断是否相等<br>5.若不相等 -&gt; 返回false / 若遍历结束后栈为空 -&gt; 返回true</p>
+<h4 id="解答代码-8"><a href="#解答代码-8" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isValid = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 括号字符分为 开、关 两种</span></span><br><span class="line">    <span class="keyword">const</span> brackets = &#123;       <span class="comment">// 定义括号对象 -&gt; key为开、value为闭</span></span><br><span class="line">        <span class="string">'('</span>: <span class="string">')'</span>,</span><br><span class="line">        <span class="string">'&#123;'</span>: <span class="string">'&#125;'</span>,</span><br><span class="line">        <span class="string">'['</span>: <span class="string">']'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> stack = []      <span class="comment">//定义空栈</span></span><br><span class="line">    <span class="keyword">let</span> top = <span class="literal">undefined</span>     <span class="comment">// 栈顶</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> char <span class="keyword">of</span> s) &#123;        <span class="comment">// 遍历字符</span></span><br><span class="line">        <span class="keyword">let</span> value</span><br><span class="line">        <span class="keyword">if</span>((value = brackets[char])) &#123;      <span class="comment">// 若是对象key的 开 字符 -&gt; 赋值给value</span></span><br><span class="line">            stack.push(value)       <span class="comment">// 存入栈中对应 闭 字符</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;        <span class="comment">// 若是 闭 字符</span></span><br><span class="line">            top = stack.pop()       <span class="comment">// 取出栈顶</span></span><br><span class="line">            <span class="keyword">if</span>(top !== char) &#123;      <span class="comment">// 判断是否栈顶值等于对应当前 闭 字符</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>        <span class="comment">// 若不相等 -&gt; 返回false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> stack.length === <span class="number">0</span>       <span class="comment">// 遍历结束，栈为空 -&gt; 返回true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-8"><a href="#代码执行结果-8" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>“([)]”  </p>
 <p>输出<br>false  </p>
 <p>预期结果<br>false</p>
 </blockquote>
