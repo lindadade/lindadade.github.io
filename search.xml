@@ -1,279 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>从零开始初尝Three.js</title>
-    <url>/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/</url>
-    <content><![CDATA[<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/1.gif" class>  
-<p>不经意间看到了某个官网的动态效果~<br>实在是太帅啦！十分地友好<br>查了查实现该效果地技术 —— 原来是<strong>Three.js</strong><br>那就让我来从零初尝Three.js动态3D效果吧✨<br><strong>✨有大量案例和找寻源码的方法噢✨</strong></p>
-<a id="more"></a>
-
-<hr>
-<blockquote>
-<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
-</blockquote>
-<hr>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>随着当今时期前端地愈来愈普及，页面实现的效果真的是越来越棒！<br>随着数字图像处理、人工智能技术的发展<br>展示给用户的视觉效果便不局限于平面的2D视觉效果<br><strong>开始注重于全方位的3D立体展示效果</strong><br><strong>力求对于商品的361度地无死角供用户认识了解</strong><br>今天~就跟着大大初尝一下优秀的三维引擎 <strong>Three.js</strong></p>
-<hr>
-<h1 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h1><p>Three.js是基于原生WebGL封装运行的三维引擎，在所有WebGL引擎中，Three.js是国内文资料最多、使用最广泛的三维引擎。</p>
-<p>Threejs是一款WebGL三维引擎，它可以用来做什么许多许多地场景应用</p>
-<p>下面我来介绍一下官方运行的经典案例吧</p>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="物联网3D可视化"><a href="#物联网3D可视化" class="headerlink" title="物联网3D可视化"></a>物联网3D可视化</h3><p>随着物联网的发展,工业、建筑等各个领域与物联网相关Web项目网页交互界面都会呈现出<br><strong>3D化的趋势</strong>。<br>3D的方式更为直观，当然开发成本也比较大<br>而Three.js可以将开发成本大大降低<br><a href="http://www.yanhuangxueyuan.com/3D/liangcang/index.html?_blank" target="_blank" rel="noopener">物联网粮仓3D可视化案例</a></p>
-<h3 id="产品720在线预览"><a href="#产品720在线预览" class="headerlink" title="产品720在线预览"></a>产品720在线预览</h3><p>随着WebGL技术的持续推广，5G技术的持续推广，各种产品在线3D展示将会变得越来越普及<br>比如一家汽车公司的新款轿车可以在官网上在线预览<br>也许有一天一些电商平台会通过3D模型取代2D图片<br>现在你朋友推荐推荐给你一款新衣服，你会说发一张图片看看<br><strong>也许将来你会说发来一个3D模型链接看看</strong><br><a href="http://app.xuanke3d.com/apps/trayton/#/show?_blank" target="_blank" rel="noopener">沙发在线预览</a><br><a href="http://suit.xuantech.cn/?_blank" target="_blank" rel="noopener">服装在线预览</a><br><a href="https://cdn.weshape3d.com/hir001/1021/web/index.html?_blank" target="_blank" rel="noopener">洗衣机在线交互预览</a></p>
-<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><p>与webgl相关的数据可视化主要是两方面<br>一方面是海量超大数据的可视化，另一方面是与3D相关的数据可视化。<br>对于超大的海量数据而言<br>基于canvas、svg等方式进行web可视化，没有基于WebGL技术实现性能更好<br>对于3D相关的数据可视化基于WebGL技术<br><strong>借助3D引擎Threejs可以很好的实现</strong><br><a href="http://www.yanhuangxueyuan.com/3D/geojsonChina/index.html?_blank" target="_blank" rel="noopener">解析GeoJOSN数据中国GDP数据可视化</a><br><a href="https://www.echartsjs.com/examples/zh/editor.html?c=transparent-bar3d&gl=1?_blank" target="_blank" rel="noopener">3D直方图</a>  </p>
-<h3 id="H5-微信小游戏"><a href="#H5-微信小游戏" class="headerlink" title="H5/微信小游戏"></a>H5/微信小游戏</h3><p>非常火的<strong>微信小游戏跳一跳</strong>就是使用Three.js引擎开发的<br>开发3D类的H5小游戏或者微信小游戏，Three.js引擎是非常好的选择噢<br>无需下载，方便传播，目前的生态非常和小游戏开发。</p>
-<h3 id="科教领域"><a href="#科教领域" class="headerlink" title="科教领域"></a>科教领域</h3><p>在科教领域通过3D方式展示特定的知识相比较图像更为直观。<br><a href="http://www.rcsb.org/3d-view/2JEN/1?_blank" target="_blank" rel="noopener">科研平台-蛋白质结构可视化案例</a><br><a href="http://www.yanhuangxueyuan.com/3D/fenzi/index.html?_blank" target="_blank" rel="noopener">化学相关——分子结构可视化</a><br><a href="http://www.yanhuangxueyuan.com/3D/solarSystem/index.html?_blank" target="_blank" rel="noopener">地理天文相关——太阳系3D预览</a>   </p>
-<h3 id="机械领域"><a href="#机械领域" class="headerlink" title="机械领域"></a>机械领域</h3><p>Onshape是一款机械领域的三维建模软件<br>如果熟悉Solidworks、UG等CAD软件，那么你可以把Onshape理解为云Solidworks。<br><a href="http://www.yanhuangxueyuan.com/3D/jixiezhuangpei/index.html?_blank" target="_blank" rel="noopener">机械模型在线预览demo</a>  </p>
-<h3 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h3><p>Three.js还有很多的精巧的应用场景噢<br>在这里就不一一列举了<br>感幸福的小伙伴可以到Three.js的官网案例看一看噢<br><a href="http://www.webgl3d.cn/Three.js/?_blank" target="_blank" rel="noopener">戳戳这里看更多噢</a></p>
-<hr>
-<h2 id="认识"><a href="#认识" class="headerlink" title="认识"></a>认识</h2><h3 id="Three-js资源"><a href="#Three-js资源" class="headerlink" title="Three.js资源"></a>Three.js资源</h3><p>首先看看Three.js的资源噢</p>
-<p><a href="https://github.com/mrdoob/three.js/?_blank" target="_blank" rel="noopener">github链接</a><br><a href="https://threejs.org/?_blank" target="_blank" rel="noopener">Three.js官网</a><br><a href="http://www.yanhuangxueyuan.com/threejs/docs/index.html?_blank" target="_blank" rel="noopener">Three.js中文文档</a></p>
-<h3 id="下载Three-js包"><a href="#下载Three-js包" class="headerlink" title="下载Three.js包"></a>下载Three.js包</h3><blockquote>
-<p>可以直接从github中拉取master分支到本地噢</p>
-</blockquote>
-<p><strong>因为有几十M的大小，github下载threejs比较慢</strong><br><strong>所以作者在网盘放了一份，方便大家下载噢</strong><br><a href="http://www.yanhuangxueyuan.com/links.html?_blank" target="_blank" rel="noopener">网盘资源</a>  </p>
-<hr>
-<h1 id="初尝"><a href="#初尝" class="headerlink" title="初尝"></a>初尝</h1><p>首先跟着官网来熟悉一下Three.js的本地案例吧  </p>
-<h2 id="本地初始化项目"><a href="#本地初始化项目" class="headerlink" title="本地初始化项目"></a>本地初始化项目</h2><h3 id="初始化目录结构"><a href="#初始化目录结构" class="headerlink" title="初始化目录结构"></a>初始化目录结构</h3><blockquote>
-<p>创建ThreeJs文件夹<br>创建index.html文件<br>创建js文件夹<br>将下载的three.js包放入js文件夹中  </p>
-</blockquote>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/2.png" class title="[left]"> 
-
-
-<h2 id="案例一-第一个3D场景"><a href="#案例一-第一个3D场景" class="headerlink" title="案例一: 第一个3D场景"></a>案例一: 第一个3D场景</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>第一个three.js文件_WebGL三维场景<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    body &#123;</span><br><span class="line">      margin: 0;</span><br><span class="line">      overflow: hidden;</span><br><span class="line"><span class="css">      <span class="comment">/* 隐藏body窗口区域滚动条 */</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--引入three.js三维引擎--&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"&gt;&lt;/script&gt;--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/three/build/three.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;script src="http://www.yanhuangxueyuan.com/threejs/build/three.js"&gt;&lt;/script&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">    /**</span><br><span class="line">     * 创建场景对象Scene</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</span></span><br><span class="line">    /**</span><br><span class="line">     * 创建网格模型</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="comment">// var geometry = new THREE.SphereGeometry(60, 40, 40); //创建一个球体几何对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> geometry = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>); <span class="comment">//创建一个立方体几何对象Geometry</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> material = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</span></span><br><span class="line">      color: 0x0000ff</span><br><span class="line"><span class="actionscript">    &#125;); <span class="comment">//材质对象Material</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> mesh = <span class="keyword">new</span> THREE.Mesh(geometry, material); <span class="comment">//网格模型对象Mesh</span></span></span><br><span class="line"><span class="actionscript">    scene.add(mesh); <span class="comment">//网格模型添加到场景中</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 光源设置</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="comment">//点光源</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> point = <span class="keyword">new</span> THREE.PointLight(<span class="number">0xffffff</span>);</span></span><br><span class="line"><span class="actionscript">    point.position.set(<span class="number">400</span>, <span class="number">200</span>, <span class="number">300</span>); <span class="comment">//点光源位置</span></span></span><br><span class="line"><span class="actionscript">    scene.add(point); <span class="comment">//点光源添加到场景中</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//环境光</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> ambient = <span class="keyword">new</span> THREE.AmbientLight(<span class="number">0x444444</span>);</span></span><br><span class="line">    scene.add(ambient);</span><br><span class="line"><span class="actionscript">    <span class="comment">// console.log(scene)</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// console.log(scene.children)</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 相机设置</span><br><span class="line">     */</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> width = <span class="built_in">window</span>.innerWidth; <span class="comment">//窗口宽度</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> height = <span class="built_in">window</span>.innerHeight; <span class="comment">//窗口高度</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> k = width / height; <span class="comment">//窗口宽高比</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> s = <span class="number">200</span>; <span class="comment">//三维场景显示范围控制系数，系数越大，显示的范围越大</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//创建相机对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(-s * k, s * k, s, -s, <span class="number">1</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="actionscript">    camera.position.set(<span class="number">200</span>, <span class="number">300</span>, <span class="number">200</span>); <span class="comment">//设置相机位置</span></span></span><br><span class="line"><span class="actionscript">    camera.lookAt(scene.position); <span class="comment">//设置相机方向(指向的场景对象)</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 创建渲染器对象</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer();</span></span><br><span class="line"><span class="actionscript">    renderer.setSize(width, height);<span class="comment">//设置渲染区域尺寸</span></span></span><br><span class="line"><span class="actionscript">    renderer.setClearColor(<span class="number">0xb9d3ff</span>, <span class="number">1</span>); <span class="comment">//设置背景颜色</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.appendChild(renderer.domElement); <span class="comment">//body元素中插入canvas对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//执行渲染操作   指定场景、相机作为参数</span></span></span><br><span class="line">    renderer.render(scene, camera);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>效果:  </p>
-</blockquote>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/4.png" class title="[left]"> 
-<hr>
-<blockquote>
-<p>整个程序的结构:  </p>
-</blockquote>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/5.png" class title="[left]"> 
-
-<h2 id="案例二-旋转动画、周期渲染"><a href="#案例二-旋转动画、周期渲染" class="headerlink" title="案例二: 旋转动画、周期渲染"></a>案例二: 旋转动画、周期渲染</h2><p>在案例一，已经做出了一个3D立方体的模型<br>在此基础上，我们尝试地把它旋转起来  </p>
-<h3 id="周期渲染"><a href="#周期渲染" class="headerlink" title="周期渲染"></a>周期渲染</h3><blockquote>
-<p>每执行一次渲染器对象WebGLRenderer的渲染方法.render()<br>浏览器就会渲染出一帧图像并显示在Web页面上，这就是说你按照一定的周期不停地调用渲染方法.render()就可以不停地生成新的图像覆盖原来的图像。<br>这也就是说只要一边旋转立方体，一边执行渲染方法.render()重新渲染，就可以实现立方体的旋转效果。</p>
-</blockquote>
-<p><strong>所以我们可以利用js中的定时器+render()来将3D立方体动起来</strong></p>
-<blockquote>
-<p>将代码:</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">renderer.render(scene,camera);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>替换为:si</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 渲染函数</span><br><span class="line">function render() &#123;</span><br><span class="line">    renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">    mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">&#125;</span><br><span class="line">//间隔20ms周期性调用函数fun,20ms也就是刷新频率是50FPS(1s/20ms)，每秒渲染50次</span><br><span class="line">setInterval(render,20);</span><br></pre></td></tr></table></figure>
-
-<p>这里官方说<strong>调用渲染方法.render()进行渲染的渲染频率不能太低</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//设置调用render函数的周期为200ms，刷新频率相当于5你能明显的感受到卡顿</span><br><span class="line">setInterval("render()",200);</span><br></pre></td></tr></table></figure>
-
-<h3 id="函数requestAnimationFrame"><a href="#函数requestAnimationFrame" class="headerlink" title="函数requestAnimationFrame()"></a>函数requestAnimationFrame()</h3><p>实际开发中，为了更好的利用浏览器渲染<br>可以使用函数requestAnimationFrame()代替setInterval()函数</p>
-<blockquote>
-<p>requestAnimationFrame()参数是将要被调用函数的函数名，requestAnimationFrame()调用一个函数不是立即调用而是向浏览器发起一个执行某函数的请求， 什么时候会执行由浏览器决定，一般默认保持60FPS的频率，大约每16.7ms调用一次requestAnimationFrame()方法指定的函数，60FPS是理想的情况下，如果渲染的场景比较复杂或者说硬件性能有限可能会低于这个频率。可以查看文章<a href="http://www.yanhuangxueyuan.com/HTML5/time.html?_blank" target="_blank" rel="noopener">《requestAnimationFrame()》</a>了解更多requestAnimationFrame()函数的知识。</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">        renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">        mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">        requestAnimationFrame(render);//请求再次执行渲染函数render</span><br><span class="line">    &#125;</span><br><span class="line">render();</span><br></pre></td></tr></table></figure>
-
-<h2 id="案例三-鼠标操作三维场景"><a href="#案例三-鼠标操作三维场景" class="headerlink" title="案例三: 鼠标操作三维场景"></a>案例三: 鼠标操作三维场景</h2><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">  renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">&#125;</span><br><span class="line">render();</span><br><span class="line">var controls = new THREE.OrbitControls(camera,renderer.domElement);//创建控件对象</span><br><span class="line">controls.addEventListener('change', render);//监听鼠标、键盘事件</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>OrbitControls.js控件提供了一个构造函数THREE.OrbitControls()，把一个相机对象作为参数的时候，执行代码new THREE.OrbitControls(camera,renderer.domElement)，浏览器会自动检测鼠标键盘的变化， 并根据鼠标和键盘的变化更新相机对象的参数，比如你拖动鼠标左键，浏览器会检测到鼠标事件，把鼠标平移的距离按照一定算法转化为相机的的旋转角度，你可以联系生活中相机拍照,即使景物没有变化，你的相机拍摄角度发生了变化，自然渲染器渲染出的结果就变化了，通过定义监听事件controls.addEventListener(‘change’, render)，如果你连续操作鼠标，相机的参数不停的变化，同时会不停的调用渲染函数render()进行渲染，这样threejs就会使用相机新的位置或角度数据进行渲染。<br>执行构造函数THREE.OrbitControls()浏览器会同时干两件事，一是给浏览器定义了一个鼠标、键盘事件，自动检测鼠标键盘的变化，如果变化了就会自动更新相机的数据， 执行该构造函数同时会返回一个对象，可以给该对象添加一个监听事件，只要鼠标或键盘发生了变化，就会触发渲染函数。</p>
-</blockquote>
-<h3 id="场景操作"><a href="#场景操作" class="headerlink" title="场景操作"></a>场景操作</h3><ul>
-<li>缩放：滚动—鼠标中键</li>
-<li>旋转：拖动—鼠标左键</li>
-<li>平移：拖动—鼠标右键</li>
-</ul>
-<h3 id="requestAnimationFrame-使用情况"><a href="#requestAnimationFrame-使用情况" class="headerlink" title="requestAnimationFrame()使用情况"></a>requestAnimationFrame()使用情况</h3><blockquote>
-<p>如果threejs代码中通过requestAnimationFrame()实现渲染器渲染方法render()的周期性调用<br>当通过OrbitControls操作改变相机状态的时候<br>没必要在通过controls.addEventListener(‘change’, render)监听鼠标事件调用渲染函数<br>因为requestAnimationFrame()就会不停的调用渲染函数。</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">  renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">  // mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">  requestAnimationFrame(render);//请求再次执行渲染函数render</span><br><span class="line">&#125;</span><br><span class="line">render();</span><br><span class="line">var controls = new THREE.OrbitControls(camera);//创建控件对象</span><br><span class="line">// 已经通过requestAnimationFrame(render);周期性执行render函数，没必要再通过监听鼠标事件执行render函数</span><br><span class="line">// controls.addEventListener('change', render)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>效果:</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/3.gif" class title="[left]"> 
-</blockquote>
-<p><strong>注意官方的冲突事项</strong></p>
-<blockquote>
-<p>注意开发中不要同时使用requestAnimationFrame()或controls.addEventListener(‘change’, render)调用同一个函数，这样会冲突。</p>
-</blockquote>
-<p><strong>本次初尝Three.js案例就到这里噢~相信感兴趣的小伙伴们对此也有一点认识啦</strong><br><strong>接下来的学习，就靠各位小伙伴们自行摸索啦！</strong></p>
-<blockquote>
-<p><a href="http://www.webgl3d.cn/Three.js/?_blank" target="_blank" rel="noopener">Three.js官网教程</a></p>
-</blockquote>
-<hr>
-<h1 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h1><p>是不是初次尝试Three.js只”品味”了这几个案例不过瘾呀！<br>没关系！让我们一起看看官网优秀的案例<br>并且找到他们的源码吧！</p>
-<blockquote>
-<p><a href="http://www.webgl3d.cn/threejs/examples/?_blank" target="_blank" rel="noopener">Three.js官网优秀案例</a></p>
-</blockquote>
-<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><strong>我来安利当中几个特别不错的安利吧</strong></p>
-<ul>
-<li><p>gpgpu_birds</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/6.gif" class title="[left]">
-</li>
-<li><p>geometry_minecraft</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/7.gif" class title="[left]">
-</li>
-<li><p>effects_anaglyph</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/8.gif" class title="[left]">
-</li>
-<li><p>animation_skinning_morph</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/9.gif" class title="[left]">
-</li>
-<li><p>buffergeometry_drawrange</p>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/10.gif" class title="[left]">
-
-</li>
-</ul>
-<blockquote>
-<p>以上安利只是我自己觉得有趣的安利噢~<br>官网中有将近上百个案例<br><strong>还在等待什么！赶紧去体验下Three.js的绝妙效果吧~</strong></p>
-</blockquote>
-<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p>到官网中发现了很多优秀的案例~<br>那该怎么获取到它的源码呢</p>
-<p><strong>我整理了两种方法查询到它的源码噢</strong></p>
-<ol>
-<li>在官网的右下角有一个<strong>按钮</strong><blockquote>
-<p>点击按钮即可进入github中的案例源码  </p>
-</blockquote>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/11.png" class title="[left]">
-
-</li>
-</ol>
-<hr>
-<ol start="2">
-<li>所有官网案例都可以在tree文件夹下找到<blockquote>
-<p>tree &gt; examples &gt; [案例名].html</p>
-</blockquote>
-<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/12.png" class title="[left]">
-
-</li>
-</ol>
-<p><strong>这样咱们就初次尝到了Tree.js的滋味啦</strong><br><strong>不得不说！这可真”鲜美”</strong></p>
-<hr>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/">博客原文章✨</a></p>
-<hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)</p>
-<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
-]]></content>
-      <tags>
-        <tag>Three</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>完美一步步解决hexo博客部署到gitee后样式bug</title>
-    <url>/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</url>
-    <content><![CDATA[<p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客<br>可是问题一个接着一个来了…</p>
-<a id="more"></a>
-
-<blockquote>
-<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
-</blockquote>
-<hr>
-<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class>
-
-<blockquote>
-<p><strong>可是！！本地的样式css和js文件在线上并没有加载出来!</strong></p>
-</blockquote>
-<ul>
-<li><p>本地跑的hexo博客样式</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class>
-</li>
-<li><p>gitee跑的hexo博客样式</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class>
-</li>
-</ul>
-<hr>
-<h2 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h2><p>🌛这个问题是怎么导致的呢？？</p>
-<ul>
-<li><p>第一步：直觉打开开发者工具</p>
-<blockquote>
-<p>(Google) F12 或 检查</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class>
-<blockquote>
-<p><strong>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</strong></p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>第二步：为啥没有加载出来</p>
-<blockquote>
-<p>粘贴网站进行查看</p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class>
-<blockquote>
-<p><strong>完美地404了！！</strong></p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>第三步：猜测</p>
-<blockquote>
-<p>这些文件应该在哪？</p>
-<blockquote>
-<p>查看网址的前缀仅仅只是自己gitee的主网</p>
-<blockquote>
-<p><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>可是文件应该都在这个博客项目中才对…</p>
-<blockquote>
-<p>将前缀添加自己项目地址变为</p>
-<blockquote>
-<p><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
-</blockquote>
-</blockquote>
-<p>这样就成功访问到目标文件了！！</p>
-</blockquote>
-<p><strong>这样我们就成功找到样式仅在本地显示而不在gitee线上显示的原因了</strong></p>
-<hr>
-<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>上度娘去看如何hexo修改线上访问地址的前缀</p>
-<p><em>简单来说只用两步</em></p>
-<ul>
-<li><p>1.修改_config.yml文件</p>
-<blockquote>
-<p>将 url: / </p>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class>
-<blockquote>
-<p>修改为 rul: 图片上框的地址</p>
-</blockquote>
-<p>将 root: /</p>
-<blockquote>
-<p>修改为 root: /博客项目名称/</p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>2.重新打包上传hexo</p>
-<blockquote>
-<p>hexo clean<br>hexo g<br>hexo d</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h2 id="再遇问题"><a href="#再遇问题" class="headerlink" title="再遇问题"></a>再遇问题</h2><p><strong>可是即便这样gitee上Pages也仍没有变化这是为什么呢</strong></p>
-<blockquote>
-<p>找啊找…找啊找…没找到一堆好朋友…掉几根头发…</p>
-</blockquote>
-<p><strong>原来是因为gitee的Pages服务是不会自动更新的需要手动更新</strong></p>
-<blockquote>
-<p>github 就没有这个烦恼 会自动进行更新</p>
-</blockquote>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
-<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class>
-<blockquote>
-<p><strong>点击更新！完美解决🌟🌟</strong></p>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/">博客原文章✨</a></p>
-<hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
-<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
-]]></content>
-      <tags>
-        <tag>block  hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端JS算法，您看我还有机会嘛？（持续不间断更新）</title>
     <url>/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</url>
     <content><![CDATA[<img src="/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/1.png" class>  
@@ -539,191 +266,28 @@
 <p>预期结果<br>49</p>
 </blockquote>
 <hr>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89">博客原文章✨</a></p>
+<h1 id="第九天-07-18"><a href="#第九天-07-18" class="headerlink" title="第九天 - 07.18"></a>第九天 - 07.18</h1><p>前记: 今天参加codeJump的夏令营笔试，一直没有看邮箱！！等短信通知…结果最后40分钟才看到了考试的短信<br>唉总体都是算法的题目，自己还是弱了…而且150分钟，自己迟到作死，只有40分钟笔试。<br><strong>给自己一个警钟，不单要看官网应聘流程和短信，还要看邮箱</strong></p>
+<h2 id="Hard-2"><a href="#Hard-2" class="headerlink" title="Hard"></a>Hard</h2><blockquote>
+<p>1.寻找两个正序数组的中位数 </p>
+</blockquote>
+<h3 id="寻找两个正序数组的中位数"><a href="#寻找两个正序数组的中位数" class="headerlink" title="寻找两个正序数组的中位数"></a>寻找两个正序数组的中位数</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。</span><br><span class="line"></span><br><span class="line">请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。</span><br><span class="line"></span><br><span class="line">你可以假设 nums1 和 nums2 不会同时为空。</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例-17"><a href="#实例-17" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">示例 1:</span><br><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">则中位数是 2.0</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">则中位数是 (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
+
+<h4 id="解答思路-17"><a href="#解答思路-17" class="headerlink" title="解答思路"></a>解答思路</h4><p>1.暴力算法 -&gt; 合并 -&gt; 排序 -&gt; 判断奇偶 -&gt; 返回（时间复杂度O(m+n) -&gt; 不符合题意）<br>2.二分法（时间复杂度O(log(min(m, n)))）-&gt; 个人琢磨了个把小时还是没太理解，只能参照代码放上<br>3.将自己理解注释在代码中  </p>
+<h4 id="解答代码-17"><a href="#解答代码-17" class="headerlink" title="解答代码"></a>解答代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 暴力解法</span></span><br><span class="line"><span class="comment"> * 时间复杂度O(m+n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度O(0)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> findMedianSortedArrays = <span class="function"><span class="keyword">function</span>(<span class="params">nums1, nums2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 合并 -&gt; 排序 -&gt; 避免负数</span></span><br><span class="line">    <span class="keyword">let</span> nums3 = nums1.concat(nums2).sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a-b);</span><br><span class="line">    <span class="keyword">let</span> length = nums3.length;</span><br><span class="line">    <span class="keyword">if</span>(length%<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> (nums3[length/<span class="number">2</span><span class="number">-1</span>] + nums3[length/<span class="number">2</span>])/<span class="number">2</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> nums3[<span class="built_in">Math</span>.floor(length/<span class="number">2</span>)]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分法</span></span><br><span class="line"><span class="comment"> * 时间复杂度O(log(min(m, n)))</span></span><br><span class="line"><span class="comment"> * 空间复杂度O(0)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> findMedianSortedArrays = <span class="function"><span class="keyword">function</span>(<span class="params">nums1, nums2</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 保证m是最短的数组长度</span></span><br><span class="line">  <span class="keyword">if</span> (nums1.length &gt; nums2.length) &#123;</span><br><span class="line">    [nums1, nums2] = [nums2, nums1]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> m = nums1.length</span><br><span class="line">  <span class="keyword">const</span> n = nums2.length</span><br><span class="line">  <span class="keyword">let</span> low = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> high = m</span><br><span class="line">  <span class="keyword">while</span>(low &lt;= high) &#123;</span><br><span class="line">    <span class="keyword">const</span> i = low + <span class="built_in">Math</span>.floor((high - low) / <span class="number">2</span>)    <span class="comment">// nums1的指针</span></span><br><span class="line">    <span class="keyword">const</span> j = <span class="built_in">Math</span>.floor((m + n + <span class="number">1</span>) / <span class="number">2</span>) - i       <span class="comment">// nums2的指针</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断数组越界</span></span><br><span class="line">    <span class="keyword">const</span> maxLeftA = i === <span class="number">0</span> ? -<span class="literal">Infinity</span> : nums1[i<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">const</span> minRightA = i === m ? <span class="literal">Infinity</span> : nums1[i]</span><br><span class="line">    <span class="keyword">const</span> maxLeftB = j === <span class="number">0</span> ? -<span class="literal">Infinity</span> : nums2[j<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">const</span> minRightB = j === n ? <span class="literal">Infinity</span> : nums2[j]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (maxLeftA &lt;= minRightB &amp;&amp; minRightA &gt;= maxLeftB) &#123;</span><br><span class="line">      <span class="keyword">return</span> (m + n) % <span class="number">2</span> === <span class="number">1</span>    <span class="comment">// 判断奇偶性</span></span><br><span class="line">        ? <span class="built_in">Math</span>.max(maxLeftA, maxLeftB)</span><br><span class="line">        : (<span class="built_in">Math</span>.max(maxLeftA, maxLeftB) + <span class="built_in">Math</span>.min(minRightA, minRightB)) / <span class="number">2</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (maxLeftA &gt; minRightB) &#123;    <span class="comment">// 当nums1左数字大于nums2右数字时</span></span><br><span class="line">      high = i - <span class="number">1</span>    <span class="comment">// 往high指针左移一位</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      low = low + <span class="number">1</span>   <span class="comment">// 往low指针右移一位</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码执行结果-17"><a href="#代码执行结果-17" class="headerlink" title="代码执行结果"></a>代码执行结果</h4><blockquote>
+<p>输入<br>[3]<br>[-2,-1]  </p>
+<p>输出<br>-1.0  </p>
+<p>预期结果<br>-1.0  </p>
+</blockquote>
 <hr>
-<p><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89?_blank">博客原文章✨</a></p>
+<hr>
+<p><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
 <p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>小屋的第一份惊喜</title>
-    <url>/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/</url>
-    <content><![CDATA[<p>写了好多hexo中的标签🌰<br>滴滴滴滴~</p>
-<a id="more"></a>
-<h1 id="将hexo博客常用的格式🌰放入呀"><a href="#将hexo博客常用的格式🌰放入呀" class="headerlink" title="将hexo博客常用的格式🌰放入呀~"></a>将hexo博客常用的格式🌰放入呀~</h1><hr>
-<h2 id="报块～～"><a href="#报块～～" class="headerlink" title="报块～～"></a>报块～～</h2><h3 id="1-在帖子中添加引号，并带有可选的作者，来源和标题信息"><a href="#1-在帖子中添加引号，并带有可选的作者，来源和标题信息" class="headerlink" title="1.在帖子中添加引号，并带有可选的作者，来源和标题信息"></a>1.在帖子中添加引号，并带有可选的作者，来源和标题信息</h3><blockquote><p>content</p>
-<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
-
-<h3 id="2-没有参数。普通的blockquote"><a href="#2-没有参数。普通的blockquote" class="headerlink" title="2.没有参数。普通的blockquote"></a>2.没有参数。普通的blockquote</h3><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
-
-<h3 id="3-从书中引用"><a href="#3-从书中引用" class="headerlink" title="3.从书中引用"></a>3.从书中引用</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-
-<h3 id="4-语法突出显示功能"><a href="#4-语法突出显示功能" class="headerlink" title="4.语法突出显示功能"></a>4.语法突出显示功能</h3><p>{％blockquote @DevDocs <a href="https://twitter.com/devdocs/status/356095192085962752％}" target="_blank" rel="noopener">https://twitter.com/devdocs/status/356095192085962752％}</a><br>新功能：DevDocs现在带有语法高亮功能。<a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a><br>{％endblockquote％}</p>
-<h3 id="5-引用网络上的文章"><a href="#5-引用网络上的文章" class="headerlink" title="5.引用网络上的文章"></a>5.引用网络上的文章</h3><p>{％blockquote塞斯·戈丁（Seth Godin）<a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}" target="_blank" rel="noopener">http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}</a><br>每次互动都是宝贵的，也是一次欢愉的机会。<br>{％endblockquote％}</p>
-<hr>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="1-普通代码块"><a href="#1-普通代码块" class="headerlink" title="1.普通代码块"></a>1.普通代码块</h3><p>{％codeblock％}<br>alert（’Hello World！’）;<br>{％endcodeblock％}</p>
-<h3 id="2-指定语言如objc"><a href="#2-指定语言如objc" class="headerlink" title="2.指定语言如objc"></a>2.指定语言如objc</h3><p>{％codeblock lang：objc％}<br>[矩形setX：10 y：10宽度：20高度：20]；<br>{％endcodeblock％}</p>
-<h3 id="3-在代码块中添加标题"><a href="#3-在代码块中添加标题" class="headerlink" title="3.在代码块中添加标题"></a>3.在代码块中添加标题</h3><p>{％codeblock Array.map％}<br>array.map（callback [，thisArg]）<br>{％endcodeblock％}</p>
-<h3 id="4-添加标题和URL"><a href="#4-添加标题和URL" class="headerlink" title="4.添加标题和URL"></a>4.添加标题和URL</h3><p>{％codeblock _.compact <a href="http://underscorejs.org/#compact" target="_blank" rel="noopener">http://underscorejs.org/#compact</a> Underscore.js％}<br>_.compact（[0，1，false，2，``，3]）;<br>=&gt; [1、2、3]<br>{％endcodeblock％}</p>
-<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>这与使用代码块相同，但是使用三个反引号来分隔该块。<br><code>[语言] [标题] [URL] [链接文本]代码段</code></p>
-<hr>
-<h2 id="拉报价"><a href="#拉报价" class="headerlink" title="拉报价"></a>拉报价</h2><p>{％pullquote [class]％}<br>内容<br>{％endpullquote％}</p>
-<hr>
-<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><iframe scrolling="no" width="[width]" height="[height]" src="https://jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" loading="lazy" allowfullscreen></iframe>
-<hr>
-<h2 id="要旨"><a href="#要旨" class="headerlink" title="要旨"></a>要旨</h2><p>嵌入要点代码段：</p>
-<script src="//gist.github.com/gist_id.js?file=[filename]"></script>
-<hr>
-<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>嵌入iframe：</p>
-<iframe src="url" width="[width]" height="[height]" frameborder="0" loading="lazy" allowfullscreen></iframe>
-<hr>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>插入具有指定尺寸的图像。</p>
-<img src="/lindada-blog/path/to/image" class="[class names]" title="[width] [height] " alt="title text">
-<hr>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>插入具有target=”_blank”属性的链接。</p>
-<a href title target>text url [external] [title]</a>
-<hr>
-<h2 id="包含代码"><a href="#包含代码" class="headerlink" title="包含代码~"></a>包含代码<del>~</del></h2><p>在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。</p>
-
-
-<h3 id="嵌入test-js的全部内容"><a href="#嵌入test-js的全部内容" class="headerlink" title="嵌入test.js的全部内容"></a>嵌入test.js的全部内容</h3><p>{％include_code lang：javascript test.js％}</p>
-<h3 id="仅嵌入第3行"><a href="#仅嵌入第3行" class="headerlink" title="仅嵌入第3行"></a>仅嵌入第3行</h3><p>{％include_code lang：javascript from：3 to：3 test.js％}</p>
-<h3 id="嵌入第5至8行"><a href="#嵌入第5至8行" class="headerlink" title="嵌入第5至8行"></a>嵌入第5至8行</h3><p>{％include_code lang：javascript from：5 to：8 test.js％}</p>
-<h3 id="将第5行嵌入到文件末尾"><a href="#将第5行嵌入到文件末尾" class="headerlink" title="将第5行嵌入到文件末尾"></a>将第5行嵌入到文件末尾</h3><p>{％include_code lang：javascript from：5 test.js％}</p>
-<h3 id="嵌入第1至8行"><a href="#嵌入第1至8行" class="headerlink" title="嵌入第1至8行"></a>嵌入第1至8行</h3><h2 id="％include-code-lang：javascript-to：8-test-js％"><a href="#％include-code-lang：javascript-to：8-test-js％" class="headerlink" title="{％include_code lang：javascript to：8 test.js％}"></a>{％include_code lang：javascript to：8 test.js％}</h2><h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>插入YouTube视频。<br>{％youtube video_id％}</p>
-<hr>
-<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>插入自适应或指定大小的Vimeo视频。<br>{％vimeo video_id [宽度] [高度]％}</p>
-<hr>
-<h2 id="包括帖子"><a href="#包括帖子" class="headerlink" title="包括帖子"></a>包括帖子</h2><p>包括指向其他​​帖子的链接。<br>{％post_path文件名％}<br>{％post_link文件名[标题] [转义]％}</p>
-<h3 id="转义标题"><a href="#转义标题" class="headerlink" title="转义标题"></a>转义标题</h3><p>{％post_link hexo-4-released’如何在标题中使用<b>标记’％}</b></p>
-<h3 id="不要逃脱标题"><a href="#不要逃脱标题" class="headerlink" title="不要逃脱标题"></a>不要逃脱标题</h3><h2 id="％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％"><a href="#％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％" class="headerlink" title="{％post_link hexo-4-released’粗体&lt;/ b&gt;自定义标题’false％}"></a>{％post_link hexo-4-released’<b>粗体&lt;/ b&gt;自定义标题’false％}</b></h2><h2 id="包括资产"><a href="#包括资产" class="headerlink" title="包括资产"></a>包括资产</h2><p>{％asset_path文件名％}<br>{％asset_img文件名[标题]％}<br>{％asset_link文件名[标题] [转义]％}</p>
-<hr>
-<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果某些内容导致帖子中的处理问题，请使用raw标记将其包裹起来，以避免呈现错误。<br>{％原始％}的<br>含量<br>{％endraw％}</p>
-<hr>
-<h2 id="摘录后"><a href="#摘录后" class="headerlink" title="摘录后"></a>摘录后</h2><p>使用<!-- more -->标签前面的文字作为帖子的摘录。如果已指定，则最重要的excerpt:值将优先。<br>Lorem ipsum dolor坐镇，奉献自若，sius do eiusmod tempor incididunt ut Labore et dolore magna aliqua。<br>&lt;！-更多-&gt;<br>尽量减少使用veniam，不要进行任何锻炼，而要获得commodo的结果。Duis aute irure dolor in reprehenderit in volttable velit esse cillum dolore eu fugiat nulla pariatur。不擅长于圣人的情节，应在负责任的犯罪活动中动手</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序简历</title>
-    <url>/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/</url>
-    <content><![CDATA[<h1 id="微信小程序简历"><a href="#微信小程序简历" class="headerlink" title="微信小程序简历"></a>微信小程序简历</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>哈喽！你好！<br>这里是微信小程序 - <strong>林锦浩的简历</strong><br><a href="https://gitee.com/lin_daren/Resume-MiniProgram" target="_blank" rel="noopener">项目传送门</a><br><em>欢迎小星星</em> 🌟</p>
-<hr>
-<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p><strong>欢迎扫描下面二维码查看</strong>  </p>
-<img src="/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/weChat.png" class> 
-
-<a id="more"></a> 
-
-<hr>
-<p>小程序简历基于微信小程序和Vant框架搭建<br>具有<strong>主页</strong>、<strong>个人简介</strong>、<strong>关于我的</strong>、<strong>我的技能</strong>、<strong>我的项目</strong>等页面展示。<br>应聘时，更容易让面试官了解你，从千篇一律的PDF简历中脱颖而出。 </p>
-<hr>
-<p>希望这个小程序能让你的简历在面试中给面试官留下好印象<br>更多功能和内容，我还在不断改善和提升当中  </p>
-<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>有想法的小伙伴们欢迎与我交流<br>有所不足也欢迎小伙伴们指教  </p>
-<p>若这个小项目对你有所帮助或启发<br><strong>麻烦点个小赞噢！</strong><br><del>白嫖就带你上山噢！</del></p>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p><a href="https://lin_daren.gitee.io/lindada-blog/" title="我的掘金">博客</a> </p>
-<p><a href="https://juejin.im/user/5eb823eb5188256d4345f77a" target="_blank" rel="noopener" title="我的掘金">掘金</a> </p>
-<p><a href="https://www.yuque.com/lindaren-bj8vp" target="_blank" rel="noopener" title="我的语雀">语雀</a></p>
-<p>邮箱: <a href="mailto:809751956@qq.com">809751956@qq.com</a></p>
-<p>WeChat: dadaLin_0809  </p>
-]]></content>
-      <tags>
-        <tag>微信小程序  简历</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
-    <url>/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>古时候，我们见字如面！<br>到如今，手上的简历可谓见证我们以往的人生。<br>你是否还在对没有一份精美的简历而忧愁<br>是否羡慕那些大牛们高大上的简历<br>看完这一篇文章！<br>你也能打造属于自己的”完美简历”✨</p>
-<a id="more"></a>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
-</blockquote>
-<hr>
-<p>为啥我要写这一篇文章呢<br>因为我也在打造自己的”完美简历”<br>为今后面试中呢<br>我手上这一块”敲门砖”可以更硬更强！<br>写一份简历其实不难，上网找简历需要注重哪些内容<br>跟着填充、优化自己的信息就好了<br>可是！单独且不花钱的情况下<br><strong>制作一份专属自己的完美简历</strong><br>实在是！是太难了！！<br>以下是我在制作属于自己简历时的痛点 </p>
-<blockquote>
-<ul>
-<li>网上免费简历模版千篇一律，突不出重点</li>
-<li>收费模版太太太贵了！并且些许固定化</li>
-<li>找不到满意案例范本来完善自己的简历</li>
-<li>排版没有经验，不知道怎么优化简历排版</li>
-<li>大多的网上模版都花里胡哨，一点都不高大上  </li>
-<li>随时下载PDF文件到本地</li>
-<li>不知道怎么高大上地分享自己的作品集</li>
-</ul>
-</blockquote>
-<p>为了解决这些痛点<br>我下定决心，查阅各种资料和网站<br>终于找到了一个很棒的制作精美简历的网站  </p>
-<h1 id="CakereSume"><a href="#CakereSume" class="headerlink" title="CakereSume"></a>CakereSume</h1><p><em>很正经地声明: 作者不参杂任何广告因素噢（因为也不知道怎么收取广告费用啥的哈哈）</em></p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://www.cakeresume.com/?_blank" target="_blank" rel="noopener">CakereSume</a><br>CakeResume是一个由台湾人开发、设计的线上履历表制作工具<br>它的介面单纯，操作上也不会太困难，只要选择布景主题<br>即可自行修改页面上显示的资讯栏位及相关内容<br>设定好你要使用的链结名称，就能轻松建置一个既正式又不会流于制式的个人履历!  </p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>CakeResume上有许多许多的优秀、精美的案例<br>我们简单来游览一下吧  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class title="[left]">
-<br>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class title="[left]">
-<br>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class title="[left]">
-
-<p>这里有很多很多大牛们的优秀案例<br>虽然我们还没有实实在在的技能、项目经验、工作经历等等<br><em>慢慢地以后肯定会有的！</em><br>但我们也可以从第一步做起嘛 —— 模仿大牛的”<strong>老坛酸菜牛肉面</strong>“  </p>
-<h1 id="制作完美简历"><a href="#制作完美简历" class="headerlink" title="制作完美简历"></a>制作完美简历</h1><h2 id="拥有一个CakeResume账号"><a href="#拥有一个CakeResume账号" class="headerlink" title="拥有一个CakeResume账号"></a>拥有一个CakeResume账号</h2><p>在制作前需要先拥有CakeResume网站的账号噢<br><strong>这个就自行解决啦</strong><br>CakeResume支持很多第三方登录账号噢  </p>
-<h2 id="直接开始创建履历"><a href="#直接开始创建履历" class="headerlink" title="直接开始创建履历"></a>直接开始创建履历</h2><h3 id="创建空白履历"><a href="#创建空白履历" class="headerlink" title="创建空白履历"></a>创建空白履历</h3><img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class title="[left]">
-<blockquote>
-<ol>
-<li>首先点击右上角，进入 - 自己的主控台</li>
-<li>选择左边框 - 我的履历 <em>（可以先完成自己的个人档案噢）</em>  </li>
-<li>点击 - 直接制作履历</li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class title="[left]">
-<p><strong>在这里就是属于我们的空白履历了</strong><br>右边栏有许多的模版框架<br>可以直接拖动模版来制作自己的履历啦！<br><em>不过也有一些需升级账户后才能使用的模版</em><br><strong>不用担心~ 看小编如何免费获取到大牛的范本吧</strong></p>
-<hr>
-<h3 id="参考精美履历"><a href="#参考精美履历" class="headerlink" title="参考精美履历"></a>参考精美履历</h3><p>怎么样查看参考大牛们的范本呢  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class title="[left]">
-<blockquote>
-<p>首先我们点击履历范本<br>其次在搜索框中搜索自己的领域或者职位</p>
-</blockquote>
-<br>
-
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class title="[left]">
-<blockquote>
-<p>在这里就可以看到很多相关的优秀简历范本<br>点击就可以查看详情了噢<br><strong>快快挑选自己满意的完美模版吧！</strong></p>
-</blockquote>
-<p><strong>那如何将模版免费套用自己的简历上呢！</strong><br>接着往下看</p>
-<hr>
-<h3 id="套用模版"><a href="#套用模版" class="headerlink" title="套用模版"></a>套用模版</h3><p>跟着我简单3步走噢~  </p>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class title="[left]">
-<blockquote>
-<ol>
-<li>点击上方小图标，进入作者简历主页 </li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class title="[left]">
-<blockquote>
-<ol start="2">
-<li>打开谷歌开发者工具，选取自己满意的模块，copy下代码</li>
-</ol>
-</blockquote>
-<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class title="[left]">
-<blockquote>
-<ol start="3">
-<li>点击左边工具栏 - 小图标，粘贴代码，点击OK</li>
-</ol>
-</blockquote>
-<p><strong>我们这就得到了免费的模版噢！</strong><br><strong>喜欢哪个模块，就套用哪个模块</strong><br>✨ 惊不惊喜！满不满意！</p>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>最后我还想唠嗑几句啰嗦话哈哈<br>其实这离制作一份完美的简历还很远很远<br>尽管我们最终制作出了精美的简历排版<br>可简历其实就是我们过往人生的一张纸、电子纸<br>若是我们过往的人生既不丰富，又不精彩<br>空有一份精美的排版<br>岂不是有点心酸…  </p>
-<blockquote>
-<p>CakeResume官网其实还有很多的功能<br>这些优秀的功能，就靠你们各取所需啦<br>可别忘了！大牛们简历的内容<br>也是很值得我们今后人生目标参考和学习的噢！  </p>
-</blockquote>
-<p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89">博客原文章✨</a></p>
-<hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
-<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
-]]></content>
-      <tags>
-        <tag>简历  CakereSume</tag>
-      </tags>
   </entry>
   <entry>
     <title>终于等到你！不蒜子-统计工具和萌萌哒-2D模型~</title>
@@ -876,13 +440,557 @@
 </blockquote>
 <p><strong>这样我们的萌萌哒就大功告成了噢!</strong></p>
 <hr>
-<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/">博客原文章✨</a></p>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/?_blank">博客原文章✨</a></p>
 <hr>
-<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
 <p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
 ]]></content>
       <tags>
         <tag>busuanzi  hexo  live2d</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序简历</title>
+    <url>/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/</url>
+    <content><![CDATA[<h1 id="微信小程序简历"><a href="#微信小程序简历" class="headerlink" title="微信小程序简历"></a>微信小程序简历</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>哈喽！你好！<br>这里是微信小程序 - <strong>林锦浩的简历</strong><br><a href="https://gitee.com/lin_daren/Resume-MiniProgram" target="_blank" rel="noopener">项目传送门</a><br><em>欢迎小星星</em> 🌟</p>
+<hr>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p><strong>欢迎扫描下面二维码查看</strong>  </p>
+<img src="/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/weChat.png" class> 
+
+<a id="more"></a> 
+
+<hr>
+<p>小程序简历基于微信小程序和Vant框架搭建<br>具有<strong>主页</strong>、<strong>个人简介</strong>、<strong>关于我的</strong>、<strong>我的技能</strong>、<strong>我的项目</strong>等页面展示。<br>应聘时，更容易让面试官了解你，从千篇一律的PDF简历中脱颖而出。 </p>
+<hr>
+<p>希望这个小程序能让你的简历在面试中给面试官留下好印象<br>更多功能和内容，我还在不断改善和提升当中  </p>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>有想法的小伙伴们欢迎与我交流<br>有所不足也欢迎小伙伴们指教  </p>
+<p>若这个小项目对你有所帮助或启发<br><strong>麻烦点个小赞噢！</strong><br><del>白嫖就带你上山噢！</del></p>
+<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p><a href="https://lin_daren.gitee.io/lindada-blog/?_blank" title="我的掘金">博客</a> </p>
+<p><a href="https://juejin.im/user/5eb823eb5188256d4345f77a?_blank" target="_blank" rel="noopener" title="我的掘金">掘金</a> </p>
+<p><a href="https://www.yuque.com/lindaren-bj8vp?_blank" target="_blank" rel="noopener" title="我的语雀">语雀</a></p>
+<p>邮箱: <a href="mailto:809751956@qq.com">809751956@qq.com</a></p>
+<p>WeChat: dadaLin_0809  </p>
+]]></content>
+      <tags>
+        <tag>微信小程序  简历</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6全面复习（一）赋值解构</title>
+    <url>/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/</url>
+    <content><![CDATA[<img src="/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/1.png" class>  
+<p>开启ES6全面复习之旅<br>记录自己觉得有用且易遗忘的知识点  </p>
+<p><strong>赋值解构</strong>  </p>
+<blockquote>
+<p>新的变量赋值方式<br>优美且简洁的代码<br>保护内容，只可读</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="赋值解构"><a href="#赋值解构" class="headerlink" title="赋值解构"></a>赋值解构</h1><h2 id="字符串解构"><a href="#字符串解构" class="headerlink" title="字符串解构"></a>字符串解构</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c, d, e, f, g] = <span class="string">"lindada"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a, b, c, d, e, f, g);  <span class="comment">// =&gt; l i n d a d a</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数值解构"><a href="#数值解构" class="headerlink" title="数值解构"></a>数值解构</h2><blockquote>
+<p>可以解构数值原型Number中的内容</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">toString</span>: s &#125; = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s);    <span class="comment">// [Function: toString]</span></span><br><span class="line"><span class="built_in">console</span>.log(s === <span class="built_in">Number</span>.prototype.toString);    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="布尔解构"><a href="#布尔解构" class="headerlink" title="布尔解构"></a>布尔解构</h2><blockquote>
+<p>可以解构布尔值原型Boolean中的内容</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">toString</span>: b &#125; = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b);    <span class="comment">// [Function: toString]</span></span><br><span class="line"><span class="built_in">console</span>.log(b === <span class="built_in">Boolean</span>.prototype.toString);    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="函数参数解构"><a href="#函数参数解构" class="headerlink" title="函数参数解构"></a>函数参数解构</h2><h3 id="数组参数"><a href="#数组参数" class="headerlink" title="数组参数"></a>数组参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Func([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Func</span>(<span class="params">[x1, x2, x3]</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(x1, x2, x3)   <span class="comment">// 1 2 3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象参数"><a href="#对象参数" class="headerlink" title="对象参数"></a>对象参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Func(&#123;</span><br><span class="line">	name: <span class="string">'大大'</span>,</span><br><span class="line">	age: <span class="number">20</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Func</span>(<span class="params">&#123;name, age&#125;</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(name, age)   <span class="comment">// 大大 20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h2><h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c] = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a, b, c);    <span class="comment">// 0 1 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [x, y = <span class="number">2</span>] = [<span class="number">1</span>]    <span class="comment">// 默认赋值均为1</span></span><br><span class="line"><span class="built_in">console</span>.log(x, y)   <span class="comment">// 1 2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><h3 id="形式-1"><a href="#形式-1" class="headerlink" title="形式"></a>形式</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;name, age&#125; = &#123; <span class="attr">name</span>: <span class="string">'大大'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name, age);    <span class="comment">// 大大 20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="默认-1"><a href="#默认-1" class="headerlink" title="默认"></a>默认</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;name, age, dream = <span class="string">'happy'</span>&#125; = &#123; <span class="attr">name</span>: <span class="string">'大大'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name, age, dream);    <span class="comment">// 大大 20 happy</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="改名"><a href="#改名" class="headerlink" title="改名"></a>改名</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, <span class="attr">age</span>: years &#125; = &#123; <span class="attr">name</span>: <span class="string">'大大'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(name, years);    <span class="comment">// 大大 20</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="无解构变量"><a href="#无解构变量" class="headerlink" title="无解构变量"></a>无解构变量</h3><blockquote>
+<p>例如对象解构</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;name, age, dream&#125; = &#123; <span class="attr">name</span>: <span class="string">'大大'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name, age, dream)   <span class="comment">// 大大 20 undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="undefined-和-null"><a href="#undefined-和-null" class="headerlink" title="undefined 和 null"></a>undefined 和 null</h3><blockquote>
+<p>无法转为对象 -&gt; 无法进行解构<br> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [ u1 ] = <span class="literal">undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(u1)    <span class="comment">// TypeError: undefined is not iterable</span></span><br><span class="line"><span class="keyword">const</span> &#123; u2 &#125; = <span class="literal">undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(u2)    <span class="comment">// TypeError: Cannot destructure property 'u2' of 'undefined' as it is undefined.</span></span><br><span class="line"><span class="keyword">const</span> [ n1 ] = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(n1)    <span class="comment">// TypeError: null is not iterable</span></span><br><span class="line"><span class="keyword">const</span> &#123; n2 &#125; = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(n2)    <span class="comment">// TypeError: Cannot destructure property 'n2' of 'null' as it is null.</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="解构与扩展运算符"><a href="#解构与扩展运算符" class="headerlink" title="解构与扩展运算符"></a>解构与扩展运算符</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, ...b] = <span class="string">"lindada"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a, b);  <span class="comment">// =&gt; l [ 'i', 'n', 'd', 'a', 'd', 'a' ]</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><h3 id="交换变量的值"><a href="#交换变量的值" class="headerlink" title="交换变量的值"></a>交换变量的值</h3><blockquote>
+<p>代码交换变量x和y的值，简洁，易读，语义非常清晰</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">2</span>;</span><br><span class="line">[x, y] = [y, x];</span><br><span class="line"><span class="built_in">console</span>.log(x, y);   <span class="comment">// 2 1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="从函数返回多个值"><a href="#从函数返回多个值" class="headerlink" title="从函数返回多个值"></a>从函数返回多个值</h3><blockquote>
+<p>函数只能返回一个值，如果要返回多个值，解构取出</p>
+</blockquote>
+<h4 id="返回一个数组"><a href="#返回一个数组" class="headerlink" title="返回一个数组"></a>返回一个数组</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> [a, b, c] = example();</span><br><span class="line"><span class="built_in">console</span>.log(a, b, c)    <span class="comment">// 1 2 3</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="返回一个对象"><a href="#返回一个对象" class="headerlink" title="返回一个对象"></a>返回一个对象</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		name: <span class="string">'大大'</span>,</span><br><span class="line">		age: <span class="number">20</span></span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123; name, age &#125; = example();</span><br><span class="line"><span class="built_in">console</span>.log(name, age)    <span class="comment">// 大大 20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="提取-JSON-数据"><a href="#提取-JSON-数据" class="headerlink" title="提取 JSON 数据"></a>提取 JSON 数据</h3><blockquote>
+<p>简洁，明了地提取 JSON 对象中的数据</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> json = &#123;</span><br><span class="line">	id: <span class="number">42</span>,</span><br><span class="line">	code: <span class="number">200</span>,</span><br><span class="line">	data: &#123;</span><br><span class="line">		name: <span class="string">"大大"</span>,</span><br><span class="line">		age: <span class="number">20</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; id, code, <span class="attr">data</span>: info &#125; = json;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(id, code, info);    <span class="comment">// 42 200 &#123; name: '大大', age: 20 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历-Map-结构"><a href="#遍历-Map-结构" class="headerlink" title="遍历 Map 结构"></a>遍历 Map 结构</h3><blockquote>
+<p>配合变量的解构赋值，获取键名和键值非常方便。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">map.set(<span class="string">'name'</span>, <span class="string">'大大'</span>);</span><br><span class="line">map.set(<span class="string">'age'</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> map) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(key + <span class="string">" is "</span> + value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// name is 大大</span></span><br><span class="line"><span class="comment">// age is 20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="输入模块的指定方法"><a href="#输入模块的指定方法" class="headerlink" title="输入模块的指定方法"></a>输入模块的指定方法</h3><blockquote>
+<p>加载模块时，指定输入哪些方法。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; method1, method2, method3 &#125; = <span class="keyword">import</span>(xxx.js)</span><br></pre></td></tr></table></figure>
+
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><blockquote>
+<p>ES6全面复习 - 赋值解构<br>参考 JowayYoung 大佬的文章 - <a href="https://juejin.im/post/5d9bf530518825427b27639d#heading-4?_blank" target="_blank" rel="noopener">1.5万字概括ES6全部特性(已更新ES2020)</a></p>
+</blockquote>
+<p>最后想说  </p>
+<ul>
+<li>记录下自己复习的点点滴滴  </li>
+<li>让以后的自己感到骄傲  </li>
+<li>要是本文章(笔记)有任何需要修改或注意的地方，麻烦联系我噢！小编卑微整改 </li>
+</ul>
+<p><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/?_blank">博客原文✨</a></p>
+]]></content>
+      <tags>
+        <tag>javaScript ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
+    <url>/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>古时候，我们见字如面！<br>到如今，手上的简历可谓见证我们以往的人生。<br>你是否还在对没有一份精美的简历而忧愁<br>是否羡慕那些大牛们高大上的简历<br>看完这一篇文章！<br>你也能打造属于自己的”完美简历”✨</p>
+<a id="more"></a>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
+</blockquote>
+<hr>
+<p>为啥我要写这一篇文章呢<br>因为我也在打造自己的”完美简历”<br>为今后面试中呢<br>我手上这一块”敲门砖”可以更硬更强！<br>写一份简历其实不难，上网找简历需要注重哪些内容<br>跟着填充、优化自己的信息就好了<br>可是！单独且不花钱的情况下<br><strong>制作一份专属自己的完美简历</strong><br>实在是！是太难了！！<br>以下是我在制作属于自己简历时的痛点 </p>
+<blockquote>
+<ul>
+<li>网上免费简历模版千篇一律，突不出重点</li>
+<li>收费模版太太太贵了！并且些许固定化</li>
+<li>找不到满意案例范本来完善自己的简历</li>
+<li>排版没有经验，不知道怎么优化简历排版</li>
+<li>大多的网上模版都花里胡哨，一点都不高大上  </li>
+<li>随时下载PDF文件到本地</li>
+<li>不知道怎么高大上地分享自己的作品集</li>
+</ul>
+</blockquote>
+<p>为了解决这些痛点<br>我下定决心，查阅各种资料和网站<br>终于找到了一个很棒的制作精美简历的网站  </p>
+<h1 id="CakereSume"><a href="#CakereSume" class="headerlink" title="CakereSume"></a>CakereSume</h1><p><em>很正经地声明: 作者不参杂任何广告因素噢（因为也不知道怎么收取广告费用啥的哈哈）</em></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://www.cakeresume.com/?_blank" target="_blank" rel="noopener">CakereSume</a><br>CakeResume是一个由台湾人开发、设计的线上履历表制作工具<br>它的介面单纯，操作上也不会太困难，只要选择布景主题<br>即可自行修改页面上显示的资讯栏位及相关内容<br>设定好你要使用的链结名称，就能轻松建置一个既正式又不会流于制式的个人履历!  </p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>CakeResume上有许多许多的优秀、精美的案例<br>我们简单来游览一下吧  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class title="[left]">
+<br>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class title="[left]">
+<br>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class title="[left]">
+
+<p>这里有很多很多大牛们的优秀案例<br>虽然我们还没有实实在在的技能、项目经验、工作经历等等<br><em>慢慢地以后肯定会有的！</em><br>但我们也可以从第一步做起嘛 —— 模仿大牛的”<strong>老坛酸菜牛肉面</strong>“  </p>
+<h1 id="制作完美简历"><a href="#制作完美简历" class="headerlink" title="制作完美简历"></a>制作完美简历</h1><h2 id="拥有一个CakeResume账号"><a href="#拥有一个CakeResume账号" class="headerlink" title="拥有一个CakeResume账号"></a>拥有一个CakeResume账号</h2><p>在制作前需要先拥有CakeResume网站的账号噢<br><strong>这个就自行解决啦</strong><br>CakeResume支持很多第三方登录账号噢  </p>
+<h2 id="直接开始创建履历"><a href="#直接开始创建履历" class="headerlink" title="直接开始创建履历"></a>直接开始创建履历</h2><h3 id="创建空白履历"><a href="#创建空白履历" class="headerlink" title="创建空白履历"></a>创建空白履历</h3><img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class title="[left]">
+<blockquote>
+<ol>
+<li>首先点击右上角，进入 - 自己的主控台</li>
+<li>选择左边框 - 我的履历 <em>（可以先完成自己的个人档案噢）</em>  </li>
+<li>点击 - 直接制作履历</li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class title="[left]">
+<p><strong>在这里就是属于我们的空白履历了</strong><br>右边栏有许多的模版框架<br>可以直接拖动模版来制作自己的履历啦！<br><em>不过也有一些需升级账户后才能使用的模版</em><br><strong>不用担心~ 看小编如何免费获取到大牛的范本吧</strong></p>
+<hr>
+<h3 id="参考精美履历"><a href="#参考精美履历" class="headerlink" title="参考精美履历"></a>参考精美履历</h3><p>怎么样查看参考大牛们的范本呢  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class title="[left]">
+<blockquote>
+<p>首先我们点击履历范本<br>其次在搜索框中搜索自己的领域或者职位</p>
+</blockquote>
+<br>
+
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class title="[left]">
+<blockquote>
+<p>在这里就可以看到很多相关的优秀简历范本<br>点击就可以查看详情了噢<br><strong>快快挑选自己满意的完美模版吧！</strong></p>
+</blockquote>
+<p><strong>那如何将模版免费套用自己的简历上呢！</strong><br>接着往下看</p>
+<hr>
+<h3 id="套用模版"><a href="#套用模版" class="headerlink" title="套用模版"></a>套用模版</h3><p>跟着我简单3步走噢~  </p>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class title="[left]">
+<blockquote>
+<ol>
+<li>点击上方小图标，进入作者简历主页 </li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class title="[left]">
+<blockquote>
+<ol start="2">
+<li>打开谷歌开发者工具，选取自己满意的模块，copy下代码</li>
+</ol>
+</blockquote>
+<img src="/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class title="[left]">
+<blockquote>
+<ol start="3">
+<li>点击左边工具栏 - 小图标，粘贴代码，点击OK</li>
+</ol>
+</blockquote>
+<p><strong>我们这就得到了免费的模版噢！</strong><br><strong>喜欢哪个模块，就套用哪个模块</strong><br>✨ 惊不惊喜！满不满意！</p>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>最后我还想唠嗑几句啰嗦话哈哈<br>其实这离制作一份完美的简历还很远很远<br>尽管我们最终制作出了精美的简历排版<br>可简历其实就是我们过往人生的一张纸、电子纸<br>若是我们过往的人生既不丰富，又不精彩<br>空有一份精美的排版<br>岂不是有点心酸…  </p>
+<blockquote>
+<p>CakeResume官网其实还有很多的功能<br>这些优秀的功能，就靠你们各取所需啦<br>可别忘了！大牛们简历的内容<br>也是很值得我们今后人生目标参考和学习的噢！  </p>
+</blockquote>
+<p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89?_blank">博客原文章✨</a></p>
+<hr>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>简历  CakereSume</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始初尝Three.js</title>
+    <url>/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/</url>
+    <content><![CDATA[<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/1.gif" class>  
+<p>不经意间看到了某个官网的动态效果~<br>实在是太帅啦！十分地友好<br>查了查实现该效果地技术 —— 原来是<strong>Three.js</strong><br>那就让我来从零初尝Three.js动态3D效果吧✨<br><strong>✨有大量案例和找寻源码的方法噢✨</strong></p>
+<a id="more"></a>
+
+<hr>
+<blockquote>
+<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
+</blockquote>
+<hr>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>随着当今时期前端地愈来愈普及，页面实现的效果真的是越来越棒！<br>随着数字图像处理、人工智能技术的发展<br>展示给用户的视觉效果便不局限于平面的2D视觉效果<br><strong>开始注重于全方位的3D立体展示效果</strong><br><strong>力求对于商品的361度地无死角供用户认识了解</strong><br>今天~就跟着大大初尝一下优秀的三维引擎 <strong>Three.js</strong></p>
+<hr>
+<h1 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h1><p>Three.js是基于原生WebGL封装运行的三维引擎，在所有WebGL引擎中，Three.js是国内文资料最多、使用最广泛的三维引擎。</p>
+<p>Threejs是一款WebGL三维引擎，它可以用来做什么许多许多地场景应用</p>
+<p>下面我来介绍一下官方运行的经典案例吧</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="物联网3D可视化"><a href="#物联网3D可视化" class="headerlink" title="物联网3D可视化"></a>物联网3D可视化</h3><p>随着物联网的发展,工业、建筑等各个领域与物联网相关Web项目网页交互界面都会呈现出<br><strong>3D化的趋势</strong>。<br>3D的方式更为直观，当然开发成本也比较大<br>而Three.js可以将开发成本大大降低<br><a href="http://www.yanhuangxueyuan.com/3D/liangcang/index.html?_blank" target="_blank" rel="noopener">物联网粮仓3D可视化案例</a></p>
+<h3 id="产品720在线预览"><a href="#产品720在线预览" class="headerlink" title="产品720在线预览"></a>产品720在线预览</h3><p>随着WebGL技术的持续推广，5G技术的持续推广，各种产品在线3D展示将会变得越来越普及<br>比如一家汽车公司的新款轿车可以在官网上在线预览<br>也许有一天一些电商平台会通过3D模型取代2D图片<br>现在你朋友推荐推荐给你一款新衣服，你会说发一张图片看看<br><strong>也许将来你会说发来一个3D模型链接看看</strong><br><a href="http://app.xuanke3d.com/apps/trayton/#/show?_blank" target="_blank" rel="noopener">沙发在线预览</a><br><a href="http://suit.xuantech.cn/?_blank" target="_blank" rel="noopener">服装在线预览</a><br><a href="https://cdn.weshape3d.com/hir001/1021/web/index.html?_blank" target="_blank" rel="noopener">洗衣机在线交互预览</a></p>
+<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><p>与webgl相关的数据可视化主要是两方面<br>一方面是海量超大数据的可视化，另一方面是与3D相关的数据可视化。<br>对于超大的海量数据而言<br>基于canvas、svg等方式进行web可视化，没有基于WebGL技术实现性能更好<br>对于3D相关的数据可视化基于WebGL技术<br><strong>借助3D引擎Threejs可以很好的实现</strong><br><a href="http://www.yanhuangxueyuan.com/3D/geojsonChina/index.html?_blank" target="_blank" rel="noopener">解析GeoJOSN数据中国GDP数据可视化</a><br><a href="https://www.echartsjs.com/examples/zh/editor.html?c=transparent-bar3d&gl=1?_blank" target="_blank" rel="noopener">3D直方图</a>  </p>
+<h3 id="H5-微信小游戏"><a href="#H5-微信小游戏" class="headerlink" title="H5/微信小游戏"></a>H5/微信小游戏</h3><p>非常火的<strong>微信小游戏跳一跳</strong>就是使用Three.js引擎开发的<br>开发3D类的H5小游戏或者微信小游戏，Three.js引擎是非常好的选择噢<br>无需下载，方便传播，目前的生态非常和小游戏开发。</p>
+<h3 id="科教领域"><a href="#科教领域" class="headerlink" title="科教领域"></a>科教领域</h3><p>在科教领域通过3D方式展示特定的知识相比较图像更为直观。<br><a href="http://www.rcsb.org/3d-view/2JEN/1?_blank" target="_blank" rel="noopener">科研平台-蛋白质结构可视化案例</a><br><a href="http://www.yanhuangxueyuan.com/3D/fenzi/index.html?_blank" target="_blank" rel="noopener">化学相关——分子结构可视化</a><br><a href="http://www.yanhuangxueyuan.com/3D/solarSystem/index.html?_blank" target="_blank" rel="noopener">地理天文相关——太阳系3D预览</a>   </p>
+<h3 id="机械领域"><a href="#机械领域" class="headerlink" title="机械领域"></a>机械领域</h3><p>Onshape是一款机械领域的三维建模软件<br>如果熟悉Solidworks、UG等CAD软件，那么你可以把Onshape理解为云Solidworks。<br><a href="http://www.yanhuangxueyuan.com/3D/jixiezhuangpei/index.html?_blank" target="_blank" rel="noopener">机械模型在线预览demo</a>  </p>
+<h3 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h3><p>Three.js还有很多的精巧的应用场景噢<br>在这里就不一一列举了<br>感幸福的小伙伴可以到Three.js的官网案例看一看噢<br><a href="http://www.webgl3d.cn/Three.js/?_blank" target="_blank" rel="noopener">戳戳这里看更多噢</a></p>
+<hr>
+<h2 id="认识"><a href="#认识" class="headerlink" title="认识"></a>认识</h2><h3 id="Three-js资源"><a href="#Three-js资源" class="headerlink" title="Three.js资源"></a>Three.js资源</h3><p>首先看看Three.js的资源噢</p>
+<p><a href="https://github.com/mrdoob/three.js/?_blank" target="_blank" rel="noopener">github链接</a><br><a href="https://threejs.org/?_blank" target="_blank" rel="noopener">Three.js官网</a><br><a href="http://www.yanhuangxueyuan.com/threejs/docs/index.html?_blank" target="_blank" rel="noopener">Three.js中文文档</a></p>
+<h3 id="下载Three-js包"><a href="#下载Three-js包" class="headerlink" title="下载Three.js包"></a>下载Three.js包</h3><blockquote>
+<p>可以直接从github中拉取master分支到本地噢</p>
+</blockquote>
+<p><strong>因为有几十M的大小，github下载threejs比较慢</strong><br><strong>所以作者在网盘放了一份，方便大家下载噢</strong><br><a href="http://www.yanhuangxueyuan.com/links.html?_blank" target="_blank" rel="noopener">网盘资源</a>  </p>
+<hr>
+<h1 id="初尝"><a href="#初尝" class="headerlink" title="初尝"></a>初尝</h1><p>首先跟着官网来熟悉一下Three.js的本地案例吧  </p>
+<h2 id="本地初始化项目"><a href="#本地初始化项目" class="headerlink" title="本地初始化项目"></a>本地初始化项目</h2><h3 id="初始化目录结构"><a href="#初始化目录结构" class="headerlink" title="初始化目录结构"></a>初始化目录结构</h3><blockquote>
+<p>创建ThreeJs文件夹<br>创建index.html文件<br>创建js文件夹<br>将下载的three.js包放入js文件夹中  </p>
+</blockquote>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/2.png" class title="[left]"> 
+
+
+<h2 id="案例一-第一个3D场景"><a href="#案例一-第一个3D场景" class="headerlink" title="案例一: 第一个3D场景"></a>案例一: 第一个3D场景</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>第一个three.js文件_WebGL三维场景<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    body &#123;</span><br><span class="line">      margin: 0;</span><br><span class="line">      overflow: hidden;</span><br><span class="line"><span class="css">      <span class="comment">/* 隐藏body窗口区域滚动条 */</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--引入three.js三维引擎--&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"&gt;&lt;/script&gt;--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/three/build/three.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;script src="http://www.yanhuangxueyuan.com/threejs/build/three.js"&gt;&lt;/script&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">    /**</span><br><span class="line">     * 创建场景对象Scene</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();</span></span><br><span class="line">    /**</span><br><span class="line">     * 创建网格模型</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="comment">// var geometry = new THREE.SphereGeometry(60, 40, 40); //创建一个球体几何对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> geometry = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>); <span class="comment">//创建一个立方体几何对象Geometry</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> material = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;</span></span><br><span class="line">      color: 0x0000ff</span><br><span class="line"><span class="actionscript">    &#125;); <span class="comment">//材质对象Material</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> mesh = <span class="keyword">new</span> THREE.Mesh(geometry, material); <span class="comment">//网格模型对象Mesh</span></span></span><br><span class="line"><span class="actionscript">    scene.add(mesh); <span class="comment">//网格模型添加到场景中</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 光源设置</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="comment">//点光源</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> point = <span class="keyword">new</span> THREE.PointLight(<span class="number">0xffffff</span>);</span></span><br><span class="line"><span class="actionscript">    point.position.set(<span class="number">400</span>, <span class="number">200</span>, <span class="number">300</span>); <span class="comment">//点光源位置</span></span></span><br><span class="line"><span class="actionscript">    scene.add(point); <span class="comment">//点光源添加到场景中</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//环境光</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> ambient = <span class="keyword">new</span> THREE.AmbientLight(<span class="number">0x444444</span>);</span></span><br><span class="line">    scene.add(ambient);</span><br><span class="line"><span class="actionscript">    <span class="comment">// console.log(scene)</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// console.log(scene.children)</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 相机设置</span><br><span class="line">     */</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> width = <span class="built_in">window</span>.innerWidth; <span class="comment">//窗口宽度</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> height = <span class="built_in">window</span>.innerHeight; <span class="comment">//窗口高度</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> k = width / height; <span class="comment">//窗口宽高比</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> s = <span class="number">200</span>; <span class="comment">//三维场景显示范围控制系数，系数越大，显示的范围越大</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//创建相机对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(-s * k, s * k, s, -s, <span class="number">1</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="actionscript">    camera.position.set(<span class="number">200</span>, <span class="number">300</span>, <span class="number">200</span>); <span class="comment">//设置相机位置</span></span></span><br><span class="line"><span class="actionscript">    camera.lookAt(scene.position); <span class="comment">//设置相机方向(指向的场景对象)</span></span></span><br><span class="line">    /**</span><br><span class="line">     * 创建渲染器对象</span><br><span class="line">     */</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer();</span></span><br><span class="line"><span class="actionscript">    renderer.setSize(width, height);<span class="comment">//设置渲染区域尺寸</span></span></span><br><span class="line"><span class="actionscript">    renderer.setClearColor(<span class="number">0xb9d3ff</span>, <span class="number">1</span>); <span class="comment">//设置背景颜色</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.appendChild(renderer.domElement); <span class="comment">//body元素中插入canvas对象</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//执行渲染操作   指定场景、相机作为参数</span></span></span><br><span class="line">    renderer.render(scene, camera);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果:  </p>
+</blockquote>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/4.png" class title="[left]"> 
+<hr>
+<blockquote>
+<p>整个程序的结构:  </p>
+</blockquote>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/5.png" class title="[left]"> 
+
+<h2 id="案例二-旋转动画、周期渲染"><a href="#案例二-旋转动画、周期渲染" class="headerlink" title="案例二: 旋转动画、周期渲染"></a>案例二: 旋转动画、周期渲染</h2><p>在案例一，已经做出了一个3D立方体的模型<br>在此基础上，我们尝试地把它旋转起来  </p>
+<h3 id="周期渲染"><a href="#周期渲染" class="headerlink" title="周期渲染"></a>周期渲染</h3><blockquote>
+<p>每执行一次渲染器对象WebGLRenderer的渲染方法.render()<br>浏览器就会渲染出一帧图像并显示在Web页面上，这就是说你按照一定的周期不停地调用渲染方法.render()就可以不停地生成新的图像覆盖原来的图像。<br>这也就是说只要一边旋转立方体，一边执行渲染方法.render()重新渲染，就可以实现立方体的旋转效果。</p>
+</blockquote>
+<p><strong>所以我们可以利用js中的定时器+render()来将3D立方体动起来</strong></p>
+<blockquote>
+<p>将代码:</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">renderer.render(scene,camera);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>替换为:si</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 渲染函数</span><br><span class="line">function render() &#123;</span><br><span class="line">    renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">    mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">&#125;</span><br><span class="line">//间隔20ms周期性调用函数fun,20ms也就是刷新频率是50FPS(1s/20ms)，每秒渲染50次</span><br><span class="line">setInterval(render,20);</span><br></pre></td></tr></table></figure>
+
+<p>这里官方说<strong>调用渲染方法.render()进行渲染的渲染频率不能太低</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//设置调用render函数的周期为200ms，刷新频率相当于5你能明显的感受到卡顿</span><br><span class="line">setInterval("render()",200);</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数requestAnimationFrame"><a href="#函数requestAnimationFrame" class="headerlink" title="函数requestAnimationFrame()"></a>函数requestAnimationFrame()</h3><p>实际开发中，为了更好的利用浏览器渲染<br>可以使用函数requestAnimationFrame()代替setInterval()函数</p>
+<blockquote>
+<p>requestAnimationFrame()参数是将要被调用函数的函数名，requestAnimationFrame()调用一个函数不是立即调用而是向浏览器发起一个执行某函数的请求， 什么时候会执行由浏览器决定，一般默认保持60FPS的频率，大约每16.7ms调用一次requestAnimationFrame()方法指定的函数，60FPS是理想的情况下，如果渲染的场景比较复杂或者说硬件性能有限可能会低于这个频率。可以查看文章<a href="http://www.yanhuangxueyuan.com/HTML5/time.html?_blank" target="_blank" rel="noopener">《requestAnimationFrame()》</a>了解更多requestAnimationFrame()函数的知识。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">        renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">        mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">        requestAnimationFrame(render);//请求再次执行渲染函数render</span><br><span class="line">    &#125;</span><br><span class="line">render();</span><br></pre></td></tr></table></figure>
+
+<h2 id="案例三-鼠标操作三维场景"><a href="#案例三-鼠标操作三维场景" class="headerlink" title="案例三: 鼠标操作三维场景"></a>案例三: 鼠标操作三维场景</h2><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">  renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">&#125;</span><br><span class="line">render();</span><br><span class="line">var controls = new THREE.OrbitControls(camera,renderer.domElement);//创建控件对象</span><br><span class="line">controls.addEventListener('change', render);//监听鼠标、键盘事件</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>OrbitControls.js控件提供了一个构造函数THREE.OrbitControls()，把一个相机对象作为参数的时候，执行代码new THREE.OrbitControls(camera,renderer.domElement)，浏览器会自动检测鼠标键盘的变化， 并根据鼠标和键盘的变化更新相机对象的参数，比如你拖动鼠标左键，浏览器会检测到鼠标事件，把鼠标平移的距离按照一定算法转化为相机的的旋转角度，你可以联系生活中相机拍照,即使景物没有变化，你的相机拍摄角度发生了变化，自然渲染器渲染出的结果就变化了，通过定义监听事件controls.addEventListener(‘change’, render)，如果你连续操作鼠标，相机的参数不停的变化，同时会不停的调用渲染函数render()进行渲染，这样threejs就会使用相机新的位置或角度数据进行渲染。<br>执行构造函数THREE.OrbitControls()浏览器会同时干两件事，一是给浏览器定义了一个鼠标、键盘事件，自动检测鼠标键盘的变化，如果变化了就会自动更新相机的数据， 执行该构造函数同时会返回一个对象，可以给该对象添加一个监听事件，只要鼠标或键盘发生了变化，就会触发渲染函数。</p>
+</blockquote>
+<h3 id="场景操作"><a href="#场景操作" class="headerlink" title="场景操作"></a>场景操作</h3><ul>
+<li>缩放：滚动—鼠标中键</li>
+<li>旋转：拖动—鼠标左键</li>
+<li>平移：拖动—鼠标右键</li>
+</ul>
+<h3 id="requestAnimationFrame-使用情况"><a href="#requestAnimationFrame-使用情况" class="headerlink" title="requestAnimationFrame()使用情况"></a>requestAnimationFrame()使用情况</h3><blockquote>
+<p>如果threejs代码中通过requestAnimationFrame()实现渲染器渲染方法render()的周期性调用<br>当通过OrbitControls操作改变相机状态的时候<br>没必要在通过controls.addEventListener(‘change’, render)监听鼠标事件调用渲染函数<br>因为requestAnimationFrame()就会不停的调用渲染函数。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">function render() &#123;</span><br><span class="line">  renderer.render(scene,camera);//执行渲染操作</span><br><span class="line">  // mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度</span><br><span class="line">  requestAnimationFrame(render);//请求再次执行渲染函数render</span><br><span class="line">&#125;</span><br><span class="line">render();</span><br><span class="line">var controls = new THREE.OrbitControls(camera);//创建控件对象</span><br><span class="line">// 已经通过requestAnimationFrame(render);周期性执行render函数，没必要再通过监听鼠标事件执行render函数</span><br><span class="line">// controls.addEventListener('change', render)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果:</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/3.gif" class title="[left]"> 
+</blockquote>
+<p><strong>注意官方的冲突事项</strong></p>
+<blockquote>
+<p>注意开发中不要同时使用requestAnimationFrame()或controls.addEventListener(‘change’, render)调用同一个函数，这样会冲突。</p>
+</blockquote>
+<p><strong>本次初尝Three.js案例就到这里噢~相信感兴趣的小伙伴们对此也有一点认识啦</strong><br><strong>接下来的学习，就靠各位小伙伴们自行摸索啦！</strong></p>
+<blockquote>
+<p><a href="http://www.webgl3d.cn/Three.js/?_blank" target="_blank" rel="noopener">Three.js官网教程</a></p>
+</blockquote>
+<hr>
+<h1 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h1><p>是不是初次尝试Three.js只”品味”了这几个案例不过瘾呀！<br>没关系！让我们一起看看官网优秀的案例<br>并且找到他们的源码吧！</p>
+<blockquote>
+<p><a href="http://www.webgl3d.cn/threejs/examples/?_blank" target="_blank" rel="noopener">Three.js官网优秀案例</a></p>
+</blockquote>
+<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><strong>我来安利当中几个特别不错的安利吧</strong></p>
+<ul>
+<li><p>gpgpu_birds</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/6.gif" class title="[left]">
+</li>
+<li><p>geometry_minecraft</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/7.gif" class title="[left]">
+</li>
+<li><p>effects_anaglyph</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/8.gif" class title="[left]">
+</li>
+<li><p>animation_skinning_morph</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/9.gif" class title="[left]">
+</li>
+<li><p>buffergeometry_drawrange</p>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/10.gif" class title="[left]">
+
+</li>
+</ul>
+<blockquote>
+<p>以上安利只是我自己觉得有趣的安利噢~<br>官网中有将近上百个案例<br><strong>还在等待什么！赶紧去体验下Three.js的绝妙效果吧~</strong></p>
+</blockquote>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p>到官网中发现了很多优秀的案例~<br>那该怎么获取到它的源码呢</p>
+<p><strong>我整理了两种方法查询到它的源码噢</strong></p>
+<ol>
+<li>在官网的右下角有一个<strong>按钮</strong><blockquote>
+<p>点击按钮即可进入github中的案例源码  </p>
+</blockquote>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/11.png" class title="[left]">
+
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>所有官网案例都可以在tree文件夹下找到<blockquote>
+<p>tree &gt; examples &gt; [案例名].html</p>
+</blockquote>
+<img src="/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/12.png" class title="[left]">
+
+</li>
+</ol>
+<p><strong>这样咱们就初次尝到了Tree.js的滋味啦</strong><br><strong>不得不说！这可真”鲜美”</strong></p>
+<hr>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>很开心能与你们分享博客文章~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/?_blank">博客原文章✨</a></p>
+<hr>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)</p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>Three</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>完美一步步解决hexo博客部署到gitee后样式bug</title>
+    <url>/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/</url>
+    <content><![CDATA[<p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客<br>可是问题一个接着一个来了…</p>
+<a id="more"></a>
+
+<blockquote>
+<p>先赞后看噢~<br>你们的每一个小小的赞都会给我添加无限的动力✨</p>
+</blockquote>
+<hr>
+<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>✨将hexo博客部署成功到gitee上后<br>也可以根据gitee Pages服务成功线上访问博客</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/1.png" class>
+
+<blockquote>
+<p><strong>可是！！本地的样式css和js文件在线上并没有加载出来!</strong></p>
+</blockquote>
+<ul>
+<li><p>本地跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/3.png" class>
+</li>
+<li><p>gitee跑的hexo博客样式</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/2.png" class>
+</li>
+</ul>
+<hr>
+<h2 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h2><p>🌛这个问题是怎么导致的呢？？</p>
+<ul>
+<li><p>第一步：直觉打开开发者工具</p>
+<blockquote>
+<p>(Google) F12 或 检查</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/4.png" class>
+<blockquote>
+<p><strong>可以清楚得看到console中报了很多得错误——大致都为css和js文件没有加载出来</strong></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>第二步：为啥没有加载出来</p>
+<blockquote>
+<p>粘贴网站进行查看</p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/5.png" class>
+<blockquote>
+<p><strong>完美地404了！！</strong></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>第三步：猜测</p>
+<blockquote>
+<p>这些文件应该在哪？</p>
+<blockquote>
+<p>查看网址的前缀仅仅只是自己gitee的主网</p>
+<blockquote>
+<p><a href="https://lin_daren.gitee.io/">https://lin_daren.gitee.io/</a> </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>可是文件应该都在这个博客项目中才对…</p>
+<blockquote>
+<p>将前缀添加自己项目地址变为</p>
+<blockquote>
+<p><a href="https://lin_daren.gitee.io/lindada-blog/{css或js文件}">https://lin_daren.gitee.io/lindada-blog/{css或js文件}</a></p>
+</blockquote>
+</blockquote>
+<p>这样就成功访问到目标文件了！！</p>
+</blockquote>
+<p><strong>这样我们就成功找到样式仅在本地显示而不在gitee线上显示的原因了</strong></p>
+<hr>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>上度娘去看如何hexo修改线上访问地址的前缀</p>
+<p><em>简单来说只用两步</em></p>
+<ul>
+<li><p>1.修改_config.yml文件</p>
+<blockquote>
+<p>将 url: / </p>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/6.png" class>
+<blockquote>
+<p>修改为 rul: 图片上框的地址</p>
+</blockquote>
+<p>将 root: /</p>
+<blockquote>
+<p>修改为 root: /博客项目名称/</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>2.重新打包上传hexo</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo d</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="再遇问题"><a href="#再遇问题" class="headerlink" title="再遇问题"></a>再遇问题</h2><p><strong>可是即便这样gitee上Pages也仍没有变化这是为什么呢</strong></p>
+<blockquote>
+<p>找啊找…找啊找…没找到一堆好朋友…掉几根头发…</p>
+</blockquote>
+<p><strong>原来是因为gitee的Pages服务是不会自动更新的需要手动更新</strong></p>
+<blockquote>
+<p>github 就没有这个烦恼 会自动进行更新</p>
+</blockquote>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
+<img src="/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/7.png" class>
+<blockquote>
+<p><strong>点击更新！完美解决🌟🌟</strong></p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p><strong>很开心自己能搭建好一个博客并且写好一篇博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/06/13/%E5%AE%8C%E7%BE%8E%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0gitee%E5%90%8E%E6%A0%B7%E5%BC%8Fbug/?_blank">博客原文✨</a></p>
+<hr>
+<p><em>若有什么无意之举冒犯了您，麻烦联系我噢~</em><br>要是这篇文章对您有那么一丢丢的帮助<br><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>block  hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小屋的第一份惊喜</title>
+    <url>/lindada-blog/2020/06/12/%E5%B0%8F%E5%B1%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C/</url>
+    <content><![CDATA[<p>写了好多hexo中的标签🌰<br>滴滴滴滴~</p>
+<a id="more"></a>
+<h1 id="将hexo博客常用的格式🌰放入呀"><a href="#将hexo博客常用的格式🌰放入呀" class="headerlink" title="将hexo博客常用的格式🌰放入呀~"></a>将hexo博客常用的格式🌰放入呀~</h1><hr>
+<h2 id="报块～～"><a href="#报块～～" class="headerlink" title="报块～～"></a>报块～～</h2><h3 id="1-在帖子中添加引号，并带有可选的作者，来源和标题信息"><a href="#1-在帖子中添加引号，并带有可选的作者，来源和标题信息" class="headerlink" title="1.在帖子中添加引号，并带有可选的作者，来源和标题信息"></a>1.在帖子中添加引号，并带有可选的作者，来源和标题信息</h3><blockquote><p>content</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
+
+<h3 id="2-没有参数。普通的blockquote"><a href="#2-没有参数。普通的blockquote" class="headerlink" title="2.没有参数。普通的blockquote"></a>2.没有参数。普通的blockquote</h3><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+
+<h3 id="3-从书中引用"><a href="#3-从书中引用" class="headerlink" title="3.从书中引用"></a>3.从书中引用</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<h3 id="4-语法突出显示功能"><a href="#4-语法突出显示功能" class="headerlink" title="4.语法突出显示功能"></a>4.语法突出显示功能</h3><p>{％blockquote @DevDocs <a href="https://twitter.com/devdocs/status/356095192085962752％}" target="_blank" rel="noopener">https://twitter.com/devdocs/status/356095192085962752％}</a><br>新功能：DevDocs现在带有语法高亮功能。<a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a><br>{％endblockquote％}</p>
+<h3 id="5-引用网络上的文章"><a href="#5-引用网络上的文章" class="headerlink" title="5.引用网络上的文章"></a>5.引用网络上的文章</h3><p>{％blockquote塞斯·戈丁（Seth Godin）<a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}" target="_blank" rel="noopener">http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html欢迎来到岛内营销％}</a><br>每次互动都是宝贵的，也是一次欢愉的机会。<br>{％endblockquote％}</p>
+<hr>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="1-普通代码块"><a href="#1-普通代码块" class="headerlink" title="1.普通代码块"></a>1.普通代码块</h3><p>{％codeblock％}<br>alert（’Hello World！’）;<br>{％endcodeblock％}</p>
+<h3 id="2-指定语言如objc"><a href="#2-指定语言如objc" class="headerlink" title="2.指定语言如objc"></a>2.指定语言如objc</h3><p>{％codeblock lang：objc％}<br>[矩形setX：10 y：10宽度：20高度：20]；<br>{％endcodeblock％}</p>
+<h3 id="3-在代码块中添加标题"><a href="#3-在代码块中添加标题" class="headerlink" title="3.在代码块中添加标题"></a>3.在代码块中添加标题</h3><p>{％codeblock Array.map％}<br>array.map（callback [，thisArg]）<br>{％endcodeblock％}</p>
+<h3 id="4-添加标题和URL"><a href="#4-添加标题和URL" class="headerlink" title="4.添加标题和URL"></a>4.添加标题和URL</h3><p>{％codeblock _.compact <a href="http://underscorejs.org/#compact" target="_blank" rel="noopener">http://underscorejs.org/#compact</a> Underscore.js％}<br>_.compact（[0，1，false，2，``，3]）;<br>=&gt; [1、2、3]<br>{％endcodeblock％}</p>
+<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>这与使用代码块相同，但是使用三个反引号来分隔该块。<br><code>[语言] [标题] [URL] [链接文本]代码段</code></p>
+<hr>
+<h2 id="拉报价"><a href="#拉报价" class="headerlink" title="拉报价"></a>拉报价</h2><p>{％pullquote [class]％}<br>内容<br>{％endpullquote％}</p>
+<hr>
+<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><iframe scrolling="no" width="[width]" height="[height]" src="https://jsfiddle.net/shorttag/embedded/[tabs]/[skin]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<hr>
+<h2 id="要旨"><a href="#要旨" class="headerlink" title="要旨"></a>要旨</h2><p>嵌入要点代码段：</p>
+<script src="//gist.github.com/gist_id.js?file=[filename]"></script>
+<hr>
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>嵌入iframe：</p>
+<iframe src="url" width="[width]" height="[height]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<hr>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>插入具有指定尺寸的图像。</p>
+<img src="/lindada-blog/path/to/image" class="[class names]" title="[width] [height] " alt="title text">
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>插入具有target=”_blank”属性的链接。</p>
+<a href title target>text url [external] [title]</a>
+<hr>
+<h2 id="包含代码"><a href="#包含代码" class="headerlink" title="包含代码~"></a>包含代码<del>~</del></h2><p>在source/downloads/code文件夹中插入代码段。可以通过code_dir配置中的选项指定文件夹位置。</p>
+
+
+<h3 id="嵌入test-js的全部内容"><a href="#嵌入test-js的全部内容" class="headerlink" title="嵌入test.js的全部内容"></a>嵌入test.js的全部内容</h3><p>{％include_code lang：javascript test.js％}</p>
+<h3 id="仅嵌入第3行"><a href="#仅嵌入第3行" class="headerlink" title="仅嵌入第3行"></a>仅嵌入第3行</h3><p>{％include_code lang：javascript from：3 to：3 test.js％}</p>
+<h3 id="嵌入第5至8行"><a href="#嵌入第5至8行" class="headerlink" title="嵌入第5至8行"></a>嵌入第5至8行</h3><p>{％include_code lang：javascript from：5 to：8 test.js％}</p>
+<h3 id="将第5行嵌入到文件末尾"><a href="#将第5行嵌入到文件末尾" class="headerlink" title="将第5行嵌入到文件末尾"></a>将第5行嵌入到文件末尾</h3><p>{％include_code lang：javascript from：5 test.js％}</p>
+<h3 id="嵌入第1至8行"><a href="#嵌入第1至8行" class="headerlink" title="嵌入第1至8行"></a>嵌入第1至8行</h3><h2 id="％include-code-lang：javascript-to：8-test-js％"><a href="#％include-code-lang：javascript-to：8-test-js％" class="headerlink" title="{％include_code lang：javascript to：8 test.js％}"></a>{％include_code lang：javascript to：8 test.js％}</h2><h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>插入YouTube视频。<br>{％youtube video_id％}</p>
+<hr>
+<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>插入自适应或指定大小的Vimeo视频。<br>{％vimeo video_id [宽度] [高度]％}</p>
+<hr>
+<h2 id="包括帖子"><a href="#包括帖子" class="headerlink" title="包括帖子"></a>包括帖子</h2><p>包括指向其他​​帖子的链接。<br>{％post_path文件名％}<br>{％post_link文件名[标题] [转义]％}</p>
+<h3 id="转义标题"><a href="#转义标题" class="headerlink" title="转义标题"></a>转义标题</h3><p>{％post_link hexo-4-released’如何在标题中使用<b>标记’％}</b></p>
+<h3 id="不要逃脱标题"><a href="#不要逃脱标题" class="headerlink" title="不要逃脱标题"></a>不要逃脱标题</h3><h2 id="％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％"><a href="#％post-link-hexo-4-released’粗体-lt-b-gt-自定义标题’false％" class="headerlink" title="{％post_link hexo-4-released’粗体&lt;/ b&gt;自定义标题’false％}"></a>{％post_link hexo-4-released’<b>粗体&lt;/ b&gt;自定义标题’false％}</b></h2><h2 id="包括资产"><a href="#包括资产" class="headerlink" title="包括资产"></a>包括资产</h2><p>{％asset_path文件名％}<br>{％asset_img文件名[标题]％}<br>{％asset_link文件名[标题] [转义]％}</p>
+<hr>
+<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果某些内容导致帖子中的处理问题，请使用raw标记将其包裹起来，以避免呈现错误。<br>{％原始％}的<br>含量<br>{％endraw％}</p>
+<hr>
+<h2 id="摘录后"><a href="#摘录后" class="headerlink" title="摘录后"></a>摘录后</h2><p>使用<!-- more -->标签前面的文字作为帖子的摘录。如果已指定，则最重要的excerpt:值将优先。<br>Lorem ipsum dolor坐镇，奉献自若，sius do eiusmod tempor incididunt ut Labore et dolore magna aliqua。<br>&lt;！-更多-&gt;<br>尽量减少使用veniam，不要进行任何锻炼，而要获得commodo的结果。Duis aute irure dolor in reprehenderit in volttable velit esse cillum dolore eu fugiat nulla pariatur。不擅长于圣人的情节，应在负责任的犯罪活动中动手</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
