@@ -290,6 +290,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>微信小程序简历</title>
+    <url>/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/</url>
+    <content><![CDATA[<h1 id="微信小程序简历"><a href="#微信小程序简历" class="headerlink" title="微信小程序简历"></a>微信小程序简历</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>哈喽！你好！<br>这里是微信小程序 - <strong>林锦浩的简历</strong><br><a href="https://gitee.com/lin_daren/Resume-MiniProgram" target="_blank" rel="noopener">项目传送门</a><br><em>欢迎小星星</em> 🌟</p>
+<hr>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p><strong>欢迎扫描下面二维码查看</strong>  </p>
+<img src="/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/weChat.png" class> 
+
+<a id="more"></a> 
+
+<hr>
+<p>小程序简历基于微信小程序和Vant框架搭建<br>具有<strong>主页</strong>、<strong>个人简介</strong>、<strong>关于我的</strong>、<strong>我的技能</strong>、<strong>我的项目</strong>等页面展示。<br>应聘时，更容易让面试官了解你，从千篇一律的PDF简历中脱颖而出。 </p>
+<hr>
+<p>希望这个小程序能让你的简历在面试中给面试官留下好印象<br>更多功能和内容，我还在不断改善和提升当中  </p>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>有想法的小伙伴们欢迎与我交流<br>有所不足也欢迎小伙伴们指教  </p>
+<p>若这个小项目对你有所帮助或启发<br><strong>麻烦点个小赞噢！</strong><br><del>白嫖就带你上山噢！</del></p>
+<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p><a href="https://lin_daren.gitee.io/lindada-blog/?_blank" title="我的掘金">博客</a> </p>
+<p><a href="https://juejin.im/user/5eb823eb5188256d4345f77a?_blank" target="_blank" rel="noopener" title="我的掘金">掘金</a> </p>
+<p><a href="https://www.yuque.com/lindaren-bj8vp?_blank" target="_blank" rel="noopener" title="我的语雀">语雀</a></p>
+<p>邮箱: <a href="mailto:809751956@qq.com">809751956@qq.com</a></p>
+<p>WeChat: dadaLin_0809  </p>
+]]></content>
+      <tags>
+        <tag>微信小程序  简历</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>终于等到你！不蒜子-统计工具和萌萌哒-2D模型~</title>
     <url>/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<p>✨这里是林大大的小屋子~<br>小屋子也要统计访问量和访问的人数噢~<br>当然！还必不可缺少一位可爱的姑娘<br>来营造小屋中的浪漫气息噢✨</p>
@@ -450,29 +476,145 @@
       </tags>
   </entry>
   <entry>
-    <title>微信小程序简历</title>
-    <url>/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/</url>
-    <content><![CDATA[<h1 id="微信小程序简历"><a href="#微信小程序简历" class="headerlink" title="微信小程序简历"></a>微信小程序简历</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>哈喽！你好！<br>这里是微信小程序 - <strong>林锦浩的简历</strong><br><a href="https://gitee.com/lin_daren/Resume-MiniProgram" target="_blank" rel="noopener">项目传送门</a><br><em>欢迎小星星</em> 🌟</p>
-<hr>
-<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p><strong>欢迎扫描下面二维码查看</strong>  </p>
-<img src="/lindada-blog/2020/07/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8E%86/weChat.png" class> 
+    <title>ES6全面复习（二）隐形的技能</title>
+    <url>/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/</url>
+    <content><![CDATA[<img src="/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/1.png" class>  
+<p><strong>往期复习</strong></p>
+<blockquote>
+<p><a href="https://juejin.im/post/5f12dd04f265da23033335e4?_blank" target="_blank" rel="noopener">ES6全面复习（一）赋值解构</a><br>记录小编认为ES6中不常见，但以后很有用的<br>宝藏新特效</p>
+</blockquote>
+<a id="more"></a>
 
-<a id="more"></a> 
+<h1 id="指数操作符"><a href="#指数操作符" class="headerlink" title="指数操作符 - **"></a>指数操作符 - **</h1><blockquote>
+<p>** 指数运算符与 + - * % 属于同一性质的运算操作符<br>与函数Math.pow(..)等效  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 指数操作符</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>**<span class="number">8</span>);    <span class="comment">// 256</span></span><br></pre></td></tr></table></figure>
 
+
+<h1 id="Object-getOwnPropertyDescriptors"><a href="#Object-getOwnPropertyDescriptors" class="headerlink" title="Object.getOwnPropertyDescriptors( )"></a>Object.getOwnPropertyDescriptors( )</h1><blockquote>
+<p>获取对象的所有自身属性的描述符方法<br>所指定对象的所有自身属性的描述符，如果没有任何自身属性，则返回空对象。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	name: <span class="string">'大大'</span>,</span><br><span class="line">	age: <span class="function"><span class="params">()</span>=&gt;</span> &#123; <span class="keyword">return</span> <span class="string">'18'</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> result = <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj)</span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   name: &#123; value: '大大', writable: true, enumerable: true, configurable: true &#125;,</span></span><br><span class="line"><span class="comment">//   age: &#123;</span></span><br><span class="line"><span class="comment">//     value: [Function: age],</span></span><br><span class="line"><span class="comment">//     writable: true,</span></span><br><span class="line"><span class="comment">//     enumerable: true,</span></span><br><span class="line"><span class="comment">//     configurable: true</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="浅拷贝一个对象"><a href="#浅拷贝一个对象" class="headerlink" title="浅拷贝一个对象"></a>浅拷贝一个对象</h3><blockquote>
+<p>Object.assign() 方法只能拷贝源对象的可枚举的自身属性，而且访问器属性会被转换成数据属性<br>利用getOwnPropertyDescriptors()函数，同时拷贝时，拷贝属性的特性们，也拷贝源对象的原型  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	name: <span class="string">'大大'</span>,</span><br><span class="line">	age: <span class="function"><span class="params">()</span>=&gt;</span> &#123; <span class="keyword">return</span> <span class="string">'18'</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj2 = <span class="built_in">Object</span>.create(</span><br><span class="line">	<span class="built_in">Object</span>.getPrototypeOf(obj),</span><br><span class="line">	<span class="built_in">Object</span>.getOwnPropertyDescriptors(obj)</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.log(obj2)</span><br><span class="line"><span class="comment">// &#123; name: '大大', age: [Function: age] &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建子类"><a href="#创建子类" class="headerlink" title="创建子类"></a>创建子类</h3><blockquote>
+<p>创建子类的典型方法是定义子类，将其原型设置为超类的实例，然后在该实例上定义属性<br>这么写很不优雅，特别是对于 getters 和 setter 而言。<br>可以使用Object.create()结合Object.getOwnPropertyDescriptors()来创建子类  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">superclass</span>(<span class="params"></span>) </span>&#123;&#125;    <span class="comment">// 父类</span></span><br><span class="line">superclass.prototype = &#123;</span><br><span class="line">	<span class="comment">// 在这里定义方法和属性</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">subclass</span>(<span class="params"></span>) </span>&#123;&#125;    <span class="comment">// 子类</span></span><br><span class="line">subclass.prototype = <span class="built_in">Object</span>.create(superclass.prototype, <span class="built_in">Object</span>.getOwnPropertyDescriptors(&#123;</span><br><span class="line">	<span class="comment">// 在这里定义方法和属性</span></span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="flat"><a href="#flat" class="headerlink" title="flat( )"></a>flat( )</h1><blockquote>
+<p>flat()方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。</p>
+</blockquote>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> newArray = arr.flat([depth])    <span class="comment">// 等效于 reduce + concat</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h2><h3 id="扁平化嵌套数组"><a href="#扁平化嵌套数组" class="headerlink" title="扁平化嵌套数组"></a>扁平化嵌套数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]];</span><br><span class="line">arr1.flat();    <span class="comment">// [1, 2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>, [<span class="number">5</span>, <span class="number">6</span>]]];</span><br><span class="line">arr2.flat();    <span class="comment">// [1, 2, 3, 4, [5, 6]]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr3 = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>, [<span class="number">5</span>, <span class="number">6</span>]]];</span><br><span class="line">arr3.flat(<span class="number">2</span>);   <span class="comment">// [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 Infinity（无限大），可展开任意深度的嵌套数组</span></span><br><span class="line"><span class="comment">// 等效于 reduce + concat + isArray + recursivity</span></span><br><span class="line"><span class="keyword">var</span> arr4 = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>, [<span class="number">5</span>, <span class="number">6</span>, [<span class="number">7</span>, <span class="number">8</span>, [<span class="number">9</span>, <span class="number">10</span>]]]]];</span><br><span class="line">arr4.flat(<span class="literal">Infinity</span>);   <span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扁平化与数组空项"><a href="#扁平化与数组空项" class="headerlink" title="扁平化与数组空项"></a>扁平化与数组空项</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 等效于 forEach + isArray + push + recursivity</span></span><br><span class="line"><span class="keyword">var</span> arr4 = [<span class="number">1</span>, <span class="number">2</span>, , <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr4.flat();    <span class="comment">// [1, 2, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="flatMap"><a href="#flatMap" class="headerlink" title="flatMap( )"></a>flatMap( )</h1><blockquote>
+<p>flatMap() 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。</p>
+</blockquote>
+<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr1.flatMap(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// return element for new_array</span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="callback"><a href="#callback" class="headerlink" title="callback"></a>callback</h3><blockquote>
+<p>可以生成一个新数组中的元素的函数，可以传入三个参数：</p>
+</blockquote>
+<ul>
+<li><p>currentValue</p>
+<blockquote>
+<p>当前正在数组中处理的元素</p>
+</blockquote>
+</li>
+<li><p>index可选</p>
+<blockquote>
+<p>可选的。数组中正在处理的当前元素的索引。</p>
+</blockquote>
+</li>
+<li><p>array可选</p>
+<blockquote>
+<p>可选的。被调用的 map 数组</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="thisArg"><a href="#thisArg" class="headerlink" title="thisArg"></a>thisArg</h2><blockquote>
+<p>可选的。执行 callback 函数时 使用的this 值。</p>
+</blockquote>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><blockquote>
+<p>一个新的数组，其中每个元素都是回调函数的结果，并且结构深度 depth 值为1。</p>
+</blockquote>
+<h2 id="map-和-flatMap-的比较"><a href="#map-和-flatMap-的比较" class="headerlink" title="map 和 flatMap 的比较"></a>map 和 flatMap 的比较</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="string">"it's Sunny in"</span>, <span class="string">""</span>, <span class="string">"California"</span>];</span><br><span class="line"></span><br><span class="line">arr1.map(<span class="function"><span class="params">x</span> =&gt;</span> x.split(<span class="string">" "</span>));</span><br><span class="line"><span class="comment">// [["it's","Sunny","in"],[""],["California"]]</span></span><br><span class="line"></span><br><span class="line">arr1.flatMap(<span class="function"><span class="params">x</span> =&gt;</span> x.split(<span class="string">" "</span>));</span><br><span class="line"><span class="comment">// ["it's","Sunny","in", "", "California"]</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="trimStart"><a href="#trimStart" class="headerlink" title="trimStart( )"></a>trimStart( )</h1><blockquote>
+<p>trimStart() 方法从字符串的开头删除空格。<br>trimLeft() 是此方法的别名。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> greeting = <span class="string">'   Hello world!   '</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting);    <span class="comment">// "   Hello world!   "</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting.trimStart());    <span class="comment">// "Hello world!   ";</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="trimEnd"><a href="#trimEnd" class="headerlink" title="trimEnd( )"></a>trimEnd( )</h1><blockquote>
+<p>trimEnd() 方法从一个字符串的末端移除空白字符。<br>trimRight() 是这个方法的别名。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> greeting = <span class="string">'   Hello world!   '</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting);    <span class="comment">// "   Hello world!   ";</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting.trimEnd());    <span class="comment">// "   Hello world!";</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="trim"><a href="#trim" class="headerlink" title="trim( )"></a>trim( )</h1><blockquote>
+<p>trim() 方法会从一个字符串的两端删除空白字符。<br>在这个上下文中的空白字符是所有的空白字符<br>(space, tab, no-break space 等)<br>以及所有行终止符字符（如 LF，CR等）。  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> greeting = <span class="string">'   Hello world!   '</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting);    <span class="comment">// "   Hello world!   ";</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greeting.trim());   <span class="comment">// "Hello world!";</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Object-fromEntries"><a href="#Object-fromEntries" class="headerlink" title="Object.fromEntries( )"></a>Object.fromEntries( )</h1><blockquote>
+<p>Object.fromEntries() 方法把键值对列表转换为一个对象。</p>
+</blockquote>
+<h2 id="Map-转化为-Object"><a href="#Map-转化为-Object" class="headerlink" title="Map 转化为 Object"></a>Map 转化为 Object</h2><blockquote>
+<p>通过 Object.fromEntries， 可以将 Map 转换为 Object:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([ [<span class="string">'name'</span>, <span class="string">'大大'</span>], [<span class="string">'age'</span>, <span class="number">20</span>] ]);</span><br><span class="line"><span class="keyword">const</span> obj = <span class="built_in">Object</span>.fromEntries(map);</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123; name: '大大', age: 20 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Array-转化为-Object"><a href="#Array-转化为-Object" class="headerlink" title="Array 转化为 Object"></a>Array 转化为 Object</h2><blockquote>
+<p>通过 Object.fromEntries， 可以将 Array 转换为 Object:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [ [<span class="string">'0'</span>, <span class="string">'大大'</span>], [<span class="string">'1'</span>, <span class="string">'20'</span>], [<span class="string">'2'</span>, <span class="string">'前端'</span>] ];</span><br><span class="line"><span class="keyword">const</span> obj2= <span class="built_in">Object</span>.fromEntries(arr);</span><br><span class="line"><span class="built_in">console</span>.log(obj2); <span class="comment">// &#123; '0': '大大', '1': '20', '2': '前端' &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="对象转换"><a href="#对象转换" class="headerlink" title="对象转换"></a>对象转换</h2><blockquote>
+<p>Object.fromEntries 是与 Object.entries() 相反的方法<br>用数组处理函数 -&gt; 可以像下面这样转换对象：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> object1 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> object2 = <span class="built_in">Object</span>.fromEntries(</span><br><span class="line">  <span class="built_in">Object</span>.entries(object1)</span><br><span class="line">  .map(<span class="function">(<span class="params">[ key, val ]</span>) =&gt;</span> [ key, val * <span class="number">2</span> ])</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(object2);</span><br><span class="line"><span class="comment">// &#123; a: 2, b: 4, c: 6 &#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="catch"><a href="#catch" class="headerlink" title="catch"></a>catch</h1><h2 id="原先"><a href="#原先" class="headerlink" title="原先"></a>原先</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;&#125; <span class="keyword">catch</span>(e) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="如今"><a href="#如今" class="headerlink" title="如今"></a>如今</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;&#125; <span class="keyword">catch</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="基本数据类型发展"><a href="#基本数据类型发展" class="headerlink" title="基本数据类型发展"></a>基本数据类型发展</h1><h2 id="ES6及之前-5种"><a href="#ES6及之前-5种" class="headerlink" title="ES6及之前(5种)"></a>ES6及之前(5种)</h2><blockquote>
+<p>String、Number、Boolean、Null、Undefined</p>
+</blockquote>
+<h2 id="ES6之后ES10之前-6种"><a href="#ES6之后ES10之前-6种" class="headerlink" title="ES6之后ES10之前(6种)"></a>ES6之后ES10之前(6种)</h2><blockquote>
+<p>String、Number、Boolean、Null、Undefined、Symbol</p>
+</blockquote>
+<h2 id="ES10之后-7种"><a href="#ES10之后-7种" class="headerlink" title="ES10之后(7种)"></a>ES10之后(7种)</h2><blockquote>
+<p>String、Number、Boolean、Null、Undefined、Symbol、BigInt</p>
+</blockquote>
 <hr>
-<p>小程序简历基于微信小程序和Vant框架搭建<br>具有<strong>主页</strong>、<strong>个人简介</strong>、<strong>关于我的</strong>、<strong>我的技能</strong>、<strong>我的项目</strong>等页面展示。<br>应聘时，更容易让面试官了解你，从千篇一律的PDF简历中脱颖而出。 </p>
-<hr>
-<p>希望这个小程序能让你的简历在面试中给面试官留下好印象<br>更多功能和内容，我还在不断改善和提升当中  </p>
-<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>有想法的小伙伴们欢迎与我交流<br>有所不足也欢迎小伙伴们指教  </p>
-<p>若这个小项目对你有所帮助或启发<br><strong>麻烦点个小赞噢！</strong><br><del>白嫖就带你上山噢！</del></p>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p><a href="https://lin_daren.gitee.io/lindada-blog/?_blank" title="我的掘金">博客</a> </p>
-<p><a href="https://juejin.im/user/5eb823eb5188256d4345f77a?_blank" target="_blank" rel="noopener" title="我的掘金">掘金</a> </p>
-<p><a href="https://www.yuque.com/lindaren-bj8vp?_blank" target="_blank" rel="noopener" title="我的语雀">语雀</a></p>
-<p>邮箱: <a href="mailto:809751956@qq.com">809751956@qq.com</a></p>
-<p>WeChat: dadaLin_0809  </p>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><blockquote>
+<p><a href="https://juejin.im/post/5f12dd04f265da23033335e4?_blank" target="_blank" rel="noopener">ES6全面复习（一）赋值解构</a><br><a href="https://juejin.im/post/5f13e25b5188252e415f6a21?_blank" target="_blank" rel="noopener">ES6全面复习（二）隐形的技能</a><br>参考 上沅兮 大佬的文章 - <a href="https://juejin.im/post/5ca2e1935188254416288eb2?_blank" target="_blank" rel="noopener">ES6、ES7、ES8、ES9、ES10新特性一览</a><br>查询 <a href="https://developer.mozilla.org/zh-CN/?_blank" target="_blank" rel="noopener">MDN</a> 官网资料</p>
+</blockquote>
+<p>最后想说  </p>
+<ul>
+<li>记录下自己复习的点点滴滴  </li>
+<li>要是本文章(笔记)有任何需要修改或注意的地方，麻烦联系我噢！小编卑微整改 </li>
+</ul>
+<p><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/?_blank">博客原文✨</a></p>
 ]]></content>
       <tags>
-        <tag>微信小程序  简历</tag>
+        <tag>javaScript ES6 复习</tag>
       </tags>
   </entry>
   <entry>
@@ -552,18 +694,17 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; method1, method2, method3 &#125; = <span class="keyword">import</span>(xxx.js)</span><br></pre></td></tr></table></figure>
 
 <h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><blockquote>
-<p>ES6全面复习 - 赋值解构<br>参考 JowayYoung 大佬的文章 - <a href="https://juejin.im/post/5d9bf530518825427b27639d#heading-4?_blank" target="_blank" rel="noopener">1.5万字概括ES6全部特性(已更新ES2020)</a></p>
+<p>ES6全面复习（一）赋值解构<br>参考 JowayYoung 大佬的文章 - <a href="https://juejin.im/post/5d9bf530518825427b27639d#heading-4?_blank" target="_blank" rel="noopener">1.5万字概括ES6全部特性(已更新ES2020)</a></p>
 </blockquote>
 <p>最后想说  </p>
 <ul>
 <li>记录下自己复习的点点滴滴  </li>
-<li>让以后的自己感到骄傲  </li>
 <li>要是本文章(笔记)有任何需要修改或注意的地方，麻烦联系我噢！小编卑微整改 </li>
 </ul>
 <p><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/?_blank">博客原文✨</a></p>
 ]]></content>
       <tags>
-        <tag>javaScript ES6</tag>
+        <tag>javaScript ES6 复习</tag>
       </tags>
   </entry>
   <entry>
