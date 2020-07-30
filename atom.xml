@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2020-07-23T12:57:36.436Z</updated>
+  <updated>2020-07-30T07:20:56.439Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记录常见的Http状态码</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/</id>
+    <published>2020-07-30T07:01:19.000Z</published>
+    <updated>2020-07-30T07:20:56.439Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录常见的http状态码的小知识点&lt;/p&gt;
+&lt;img src=&quot;/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/1.png&quot; class&gt;  
+
+&lt;blockquote&gt;
+&lt;p&gt;状态码由&lt;strong&gt;3位数字&lt;/strong&gt;和&lt;strong&gt;原因短语&lt;/strong&gt;组成&lt;br&gt;如：200 OK&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="http  状态码" scheme="https://lin_daren.gitee.io/lindada-blog/tags/http-%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从0开始的TypeScript基础大全</title>
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/22/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84TypeScript%E5%9F%BA%E7%A1%80%E5%A4%A7%E5%85%A8/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/07/22/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84TypeScript%E5%9F%BA%E7%A1%80%E5%A4%A7%E5%85%A8/</id>
     <published>2020-07-22T10:40:37.000Z</published>
-    <updated>2020-07-23T12:57:36.436Z</updated>
+    <updated>2020-07-23T12:59:20.803Z</updated>
     
     <summary type="html">
     
@@ -115,7 +139,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
     <published>2020-07-08T14:39:25.000Z</published>
-    <updated>2020-07-23T06:01:58.414Z</updated>
+    <updated>2020-07-30T03:31:12.796Z</updated>
     
     <summary type="html">
     

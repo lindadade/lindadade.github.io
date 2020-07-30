@@ -308,6 +308,16 @@
 <p>1.删除链表的倒数第N个节点<br>2.括号生成<br>3.两数相除  </p>
 </blockquote>
 <hr>
+<h1 id="第十五天-07-24"><a href="#第十五天-07-24" class="headerlink" title="第十五天 - 07.24"></a>第十五天 - 07.24</h1><p>前记: 明天要和一个小伙伴去惠州潇洒几天咯  </p>
+<h2 id="Hard-4"><a href="#Hard-4" class="headerlink" title="Hard"></a>Hard</h2><blockquote>
+<p>1.接雨水<br>2.通配符匹配  </p>
+</blockquote>
+<hr>
+<h1 id="第十六天-07-30"><a href="#第十六天-07-30" class="headerlink" title="第十六天 - 07.30"></a>第十六天 - 07.30</h1><p>前记: 我回来了！去惠州潇洒了几天，深感要赚钱</p>
+<h2 id="Easy-5"><a href="#Easy-5" class="headerlink" title="Easy"></a>Easy</h2><blockquote>
+<p>1.合并两个有序数组<br>2.对称二叉树<br>3.二叉树的最大深度  </p>
+</blockquote>
+<hr>
 <h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89?_blank">博客原文章✨</a></p>
 <hr>
 <p><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
@@ -498,6 +508,86 @@
 ]]></content>
       <tags>
         <tag>busuanzi  hexo  live2d</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录常见的Http状态码</title>
+    <url>/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    <content><![CDATA[<p>记录常见的http状态码的小知识点</p>
+<img src="/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/1.png" class>  
+
+<blockquote>
+<p>状态码由<strong>3位数字</strong>和<strong>原因短语</strong>组成<br>如：200 OK</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="状态码分类表"><a href="#状态码分类表" class="headerlink" title="状态码分类表"></a>状态码分类表</h1><blockquote>
+<p>1xx</p>
+<blockquote>
+<pre><code>Informational（信息性状态码）  </code></pre></blockquote>
+<p>2xx</p>
+<blockquote>
+<pre><code>Success（成功状态码）</code></pre></blockquote>
+<p>3xx</p>
+<blockquote>
+<pre><code>Redirection（重定向）</code></pre></blockquote>
+<p>4xx</p>
+<blockquote>
+<pre><code>Client error（客户端错误）</code></pre></blockquote>
+<p>5xx</p>
+<blockquote>
+<pre><code>Server Error（服务器错误）</code></pre></blockquote>
+</blockquote>
+<h1 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h1><h2 id="2xx"><a href="#2xx" class="headerlink" title="2xx"></a>2xx</h2><blockquote>
+<p>200 OK：表示从客户端发送给服务器的请求被正常处理并返回；</p>
+</blockquote>
+<blockquote>
+<p>204 No Content：表示客户端发送给客户端的请求得到了成功处理，但在返回的响应报文中不含实体的主体部分（没有资源可以返回）；</p>
+</blockquote>
+<blockquote>
+<p>206 Patial Content：表示客户端进行了范围请求，并且服务器成功执行了这部分的GET请求，响应报文中包含由Content-Range指定范围的实体内容。</p>
+</blockquote>
+<h2 id="3xx"><a href="#3xx" class="headerlink" title="3xx"></a>3xx</h2><blockquote>
+<p>301 Moved Permanently：永久性重定向，表示请求的资源被分配了新的URL，之后应使用更改的URL；</p>
+</blockquote>
+<blockquote>
+<p>302 Found：临时性重定向，表示请求的资源被分配了新的URL，希望本次访问使用新的URL；</p>
+</blockquote>
+<pre><code>301与302的区别：前者是永久移动，后者是临时移动（之后可能还会更改URL）</code></pre><blockquote>
+<p>303 See Other：表示请求的资源被分配了新的URL，应使用GET方法定向获取请求的资源；</p>
+</blockquote>
+<pre><code>302与303的区别：后者明确表示客户端应当采用GET方式获取资源</code></pre><blockquote>
+<p>304 Not Modified：表示客户端发送附带条件（是指采用GET方法的请求报文中包含if-Match、If-Modified-Since、If-None-Match、If-Range、If-Unmodified-Since中任一首部）的请求时，服务器端允许访问资源，但是请求为满足条件的情况下返回改状态码；</p>
+</blockquote>
+<blockquote>
+<p>307 Temporary Redirect：临时重定向，与303有着相同的含义，307会遵照浏览器标准不会从POST变成GET；（不同浏览器可能会出现不同的情况）；</p>
+</blockquote>
+<h2 id="4xx"><a href="#4xx" class="headerlink" title="4xx"></a>4xx</h2><blockquote>
+<p>400 Bad Request：表示请求报文中存在语法错误；</p>
+</blockquote>
+<blockquote>
+<p>401 Unauthorized：未经许可，需要通过HTTP认证；</p>
+</blockquote>
+<blockquote>
+<p>403 Forbidden：服务器拒绝该次访问（访问权限出现问题）</p>
+</blockquote>
+<blockquote>
+<p>404 Not Found：表示服务器上无法找到请求的资源，除此之外，也可以在服务器拒绝请求但不想给拒绝原因时使用；</p>
+</blockquote>
+<h2 id="5xx"><a href="#5xx" class="headerlink" title="5xx"></a>5xx</h2><blockquote>
+<p>500 Inter Server Error：表示服务器在执行请求时发生了错误，也有可能是web应用存在的bug或某些临时的错误时；</p>
+</blockquote>
+<blockquote>
+<p>503 Server Unavailable：表示服务器暂时处于超负载或正在进行停机维护，无法处理请求；</p>
+</blockquote>
+<hr>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p><strong>文章来自于<br><a href="https://blog.csdn.net/banana960531/article/details/85621865?_blank" target="_blank" rel="noopener">转载原文</a><br>本人作为记录收录</strong></p>
+<hr>
+<p><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
+<p><strong>小屋随时欢迎你们到来噢~</strong><br><strong>也欢迎各位小确幸们的批评和指正~</strong></p>
+]]></content>
+      <tags>
+        <tag>http  状态码</tag>
       </tags>
   </entry>
   <entry>
