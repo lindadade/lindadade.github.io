@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2020-07-30T07:20:56.439Z</updated>
+  <updated>2020-08-06T14:13:09.570Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>20200806记字节跳动首次实习面试</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</id>
+    <published>2020-08-06T10:29:49.000Z</published>
+    <updated>2020-08-06T14:13:09.570Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/3.png&quot; class&gt;  
+
+&lt;h1 id=&quot;前记&quot;&gt;&lt;a href=&quot;#前记&quot; class=&quot;headerlink&quot; title=&quot;前记&quot;&gt;&lt;/a&gt;前记&lt;/h1&gt;&lt;p&gt;自暑假以来，不明而来的焦虑感，总想做点什么，便在做完实验室项目后开始规划自己实习之路&lt;br&gt;在期间一直很喜欢字节跳动这个氛围，便一直朝着方向努力&lt;br&gt;每天刷刷算法题，系统规划知识点，再看看学习视频扩展一下  &lt;/p&gt;
+&lt;p&gt;在一个星期前忍不住投了一个实习的简历，昨天就加上hr的微信&lt;br&gt;然后今天下午5点半就开始面试（天呐阿巴阿巴阿巴第一次面试超级紧张的好吧！）&lt;br&gt;这两个刷了很多面经和整理自己做过项目的经历（还设计了个人介绍反复反复练呀）  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后面试就开始了&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="面试  字节跳动  实习" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8-%E5%AE%9E%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记录常见的Http状态码</title>
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/07/30/%E8%AE%B0%E5%BD%95%E5%B8%B8%E8%A7%81%E7%9A%84Http%E7%8A%B6%E6%80%81%E7%A0%81/</id>
     <published>2020-07-30T07:01:19.000Z</published>
-    <updated>2020-07-30T07:20:56.439Z</updated>
+    <updated>2020-07-30T09:23:02.019Z</updated>
     
     <summary type="html">
     
@@ -139,7 +162,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
     <published>2020-07-08T14:39:25.000Z</published>
-    <updated>2020-07-30T03:31:12.796Z</updated>
+    <updated>2020-08-04T05:59:45.427Z</updated>
     
     <summary type="html">
     
@@ -202,7 +225,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/06/19/%E7%BB%88%E4%BA%8E%E7%AD%89%E5%88%B0%E4%BD%A0%EF%BC%81%E4%B8%8D%E8%92%9C%E5%AD%90-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%92%8C%E8%90%8C%E8%90%8C%E5%93%92-2D%E6%A8%A1%E5%9E%8B/</id>
     <published>2020-06-19T10:58:19.000Z</published>
-    <updated>2020-07-18T11:27:52.122Z</updated>
+    <updated>2020-08-06T14:08:23.657Z</updated>
     
     <summary type="html">
     
