@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2020-08-06T14:13:09.570Z</updated>
+  <updated>2020-08-20T06:47:05.699Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次vue项目sass-loader的/deep/穿透失败</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/</id>
+    <published>2020-08-20T06:22:29.000Z</published>
+    <updated>2020-08-20T06:47:05.699Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;刚刚解决了一个困扰了我一个晚上的bug❌！！&lt;br&gt;起因的这样子的&lt;br&gt;重新要开始一个vue项目，从gitee上拉取&lt;br&gt;之前运行时，一直正正常常~&lt;br&gt;重新 npm install后便一直报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Module build failed (from .&amp;#x2F;node_modules&amp;#x2F;_sass-loader@7.3.1@sass-loader&amp;#x2F;dist&amp;#x2F;cjs.js)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#x2F;deep&amp;#x2F; .el-select, .el-input, .el-cascader &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; ^&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Expected selector.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ╷&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;486 │   &amp;#x2F;deep&amp;#x2F; .el-select, .el-input, .el-cascader&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    │   ^&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ╵&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;所有的/deep/穿透全部报错了！&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="bug sass" scheme="https://lin_daren.gitee.io/lindada-blog/tags/bug-sass/"/>
+    
+  </entry>
   
   <entry>
     <title>20200806记字节跳动首次实习面试</title>
@@ -162,7 +183,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
     <published>2020-07-08T14:39:25.000Z</published>
-    <updated>2020-08-04T05:59:45.427Z</updated>
+    <updated>2020-08-13T06:51:43.788Z</updated>
     
     <summary type="html">
     

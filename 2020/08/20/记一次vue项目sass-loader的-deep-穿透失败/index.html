@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    记一次vue项目sass-loader的/deep/穿透失败 |
+    
+    林大大的小屋</title>
+  
+    <link rel="shortcut icon" href="/lindada-blog/fav.svg">
+  
+  
+<link rel="stylesheet" href="/lindada-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-记一次vue项目sass-loader的-deep-穿透失败" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      记一次vue项目sass-loader的/deep/穿透失败
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/" class="article-date">
+  <time datetime="2020-08-20T06:22:29.000Z" itemprop="datePublished">2020-08-20</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>刚刚解决了一个困扰了我一个晚上的bug❌！！<br>起因的这样子的<br>重新要开始一个vue项目，从gitee上拉取<br>之前运行时，一直正正常常~<br>重新 npm install后便一直报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Module build failed (from .&#x2F;node_modules&#x2F;_sass-loader@7.3.1@sass-loader&#x2F;dist&#x2F;cjs.js)</span><br><span class="line"></span><br><span class="line">    &#x2F;deep&#x2F; .el-select, .el-input, .el-cascader &#123;</span><br><span class="line"> ^</span><br><span class="line">      Expected selector.</span><br><span class="line">    ╷</span><br><span class="line">486 │   &#x2F;deep&#x2F; .el-select, .el-input, .el-cascader&#123;</span><br><span class="line">    │   ^</span><br><span class="line">    ╵</span><br></pre></td></tr></table></figure>
+<p><strong>所有的/deep/穿透全部报错了！</strong></p>
+<a id="more"></a>
+
+<h1 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h1><h2 id="重装"><a href="#重装" class="headerlink" title="重装"></a>重装</h2><h3 id="1-重新安装node-sass和sass-loader"><a href="#1-重新安装node-sass和sass-loader" class="headerlink" title="1.重新安装node-sass和sass-loader"></a>1.重新安装node-sass和sass-loader</h3><blockquote>
+<p>npm install node-sass sass-loader -S-D</p>
+</blockquote>
+<p><strong>不行，仍是报错</strong></p>
+<h3 id="2-cpm重新安装"><a href="#2-cpm重新安装" class="headerlink" title="2.cpm重新安装"></a>2.cpm重新安装</h3><p>防止npm某些依赖包因网速而下载失败</p>
+<blockquote>
+<p>cnpm install node-sass<br>cnpm install sass-loader -D</p>
+</blockquote>
+<p><strong>一样挂了</strong><br>安装时，有两个明显的错误</p>
+<img src="/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/1.png" class>  
+
+<h3 id="3-改变下载淘宝源"><a href="#3-改变下载淘宝源" class="headerlink" title="3.改变下载淘宝源"></a>3.改变下载淘宝源</h3><p>防止淘宝源资源老旧被丢弃</p>
+<blockquote>
+<p>npm config set sass_binary_site=<a href="https://npm.taobao.org/mirrors/node-sass" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node-sass</a></p>
+</blockquote>
+<p><strong>一样是bug！！接近崩溃</strong></p>
+<h2 id="更改样式"><a href="#更改样式" class="headerlink" title="更改样式"></a>更改样式</h2><p>将 /deep/ 更改为::v-deep<br>可以看看思否回答：<a href="https://segmentfault.com/q/1010000020658004" target="_blank" rel="noopener">https://segmentfault.com/q/1010000020658004</a></p>
+<p>但该项目是我和师兄一起维护，不能单方面全局改动样式</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>在sass-loader的官方文档中提到高版本不支持 /deep/ 穿透<br><strong>所以估计得降低版本</strong></p>
+<h2 id="降低版本1"><a href="#降低版本1" class="headerlink" title="降低版本1"></a>降低版本1</h2><blockquote>
+<p>npm uninstall sass-loader（卸载当前版本）<br>npm install <a href="mailto:sass-loader@7.3.1">sass-loader@7.3.1</a> –save-dev</p>
+</blockquote>
+<p>*<em>还是一样报错，不支持 /deep/ *</em></p>
+<h2 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h2><p>重新安装了node-sass并且将sass-loader降低至6.0版本</p>
+<blockquote>
+<p>npm install –save-dev node-sass <a href="mailto:sass-loader@6.0.7">sass-loader@6.0.7</a></p>
+</blockquote>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>经常遇到突然重新npm install后<br>某些模块包不支持当前的语法了<br>这次记录提供一个bug解决思路<br>也要时刻关注更新换代即将被遗弃的语法了<br>希望~小伙伴们越来越少bug<br>遇到bug也简简单单解决！  </p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        
+                                            <!--MOB SHARE BEGIN-->
+<a><div class="-mob-share-open article-share-link">分享</div></a>
+<div class="-mob-share-ui" style="display: none; display: flex; align-items: center; align-content: center;">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+    </ul>
+    <div style="height: 100%; width: 100%">
+        <div class="-mob-share-close" style="position:relative; margin: -26em auto; width: 80px; height: 40px; font-size: 14px; color: #fff; background-color: #4593e9; border-radius: 15px;">取消</div>
+    </div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="/lindada-blog/js/mob-share.js"></script>
+<!--MOB SHARE END-->
+
+                                        
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lindada-blog/tags/bug-sass/" rel="tag">bug sass</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+    
+      <a href="/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">20200806记字节跳动首次实习面试</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+    <div class="vcomments" id="vcomments"></div>
+    
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'vtOOBRQNx6g17peggpfzBROa-9Nh9j0Va',
+                appKey: 'Q1DgaTCfUeYjMOqoTAH8TX9M',
+                notify: 'false',
+                verify: 'true',
+                avatar: 'mp',
+                pageSize: '15',
+                placeholder: '✨悄悄地对小屋说...'
+            })
+        </script>
+        
+                        
+                            
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li>访客数 <i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li>阅读量 <i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 林大大的小屋</li> |
+      <li> Gitee主页 by <a href="https://gitee.com/lin_daren" target="_blank">林大大的Gitee</a></li> |
+      <li> Wechat by <span class="footer-title">dadaLin_0809</span></li>
+      <li> Email by <span class="footer-title">809751956@qq.com</span></li> |
+    </ul>
+  </div>
+</footer>
+
+<style>
+    .footer-title {
+        color: darkcyan;
+        font-weight: bold;
+    }
+</style>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/lindada-blog/images/star.svg" alt="林大大的小屋"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/lindada-blog/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/lindada-blog/js/ocean.js"></script>
+
+
+<script src="/lindada-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/lindada-blog/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360,"top":"-40px","right":"25px"},"mobile":{"show":true}});</script></body>
+</html>

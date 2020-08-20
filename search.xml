@@ -710,6 +710,16 @@
 <p>1.全排列 - 46<br>2.旋转图像 - 48<br>3.有效的数独  </p>
 </blockquote>
 <hr>
+<ol start="112">
+<li>路径总和 - E</li>
+<li>岛屿数量 - M</li>
+<li>字母异位词分组 - M</li>
+<li>Pow(x, n) - M</li>
+<li>单词搜索 - M</li>
+<li>单词接龙 - M</li>
+<li>单词拆分 - M</li>
+<li>摆动排序 II - M</li>
+</ol>
 <h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>提前前挂一个尾言嘻嘻~<br><strong>很开心能与你们分享博客文章哦~</strong><br><a href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89?_blank">博客原文章✨</a></p>
 <hr>
 <p><a href="https://gitee.com/lin_daren/lindada-blog?_blank" target="_blank" rel="noopener">博客项目✨</a>（点一下哦~）<br>花10秒钟进上边链接帮我的博客点个🌟 吧!<br>(悄悄说~ 点了🌟 的你会更加幸运de ！)  </p>
@@ -740,6 +750,47 @@
 ]]></content>
       <tags>
         <tag>微信小程序  简历</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次vue项目sass-loader的/deep/穿透失败</title>
+    <url>/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>刚刚解决了一个困扰了我一个晚上的bug❌！！<br>起因的这样子的<br>重新要开始一个vue项目，从gitee上拉取<br>之前运行时，一直正正常常~<br>重新 npm install后便一直报错</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Module build failed (from .&#x2F;node_modules&#x2F;_sass-loader@7.3.1@sass-loader&#x2F;dist&#x2F;cjs.js)</span><br><span class="line"></span><br><span class="line">    &#x2F;deep&#x2F; .el-select, .el-input, .el-cascader &#123;</span><br><span class="line"> ^</span><br><span class="line">      Expected selector.</span><br><span class="line">    ╷</span><br><span class="line">486 │   &#x2F;deep&#x2F; .el-select, .el-input, .el-cascader&#123;</span><br><span class="line">    │   ^</span><br><span class="line">    ╵</span><br></pre></td></tr></table></figure>
+<p><strong>所有的/deep/穿透全部报错了！</strong></p>
+<a id="more"></a>
+
+<h1 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h1><h2 id="重装"><a href="#重装" class="headerlink" title="重装"></a>重装</h2><h3 id="1-重新安装node-sass和sass-loader"><a href="#1-重新安装node-sass和sass-loader" class="headerlink" title="1.重新安装node-sass和sass-loader"></a>1.重新安装node-sass和sass-loader</h3><blockquote>
+<p>npm install node-sass sass-loader -S-D</p>
+</blockquote>
+<p><strong>不行，仍是报错</strong></p>
+<h3 id="2-cpm重新安装"><a href="#2-cpm重新安装" class="headerlink" title="2.cpm重新安装"></a>2.cpm重新安装</h3><p>防止npm某些依赖包因网速而下载失败</p>
+<blockquote>
+<p>cnpm install node-sass<br>cnpm install sass-loader -D</p>
+</blockquote>
+<p><strong>一样挂了</strong><br>安装时，有两个明显的错误</p>
+<img src="/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/1.png" class>  
+
+<h3 id="3-改变下载淘宝源"><a href="#3-改变下载淘宝源" class="headerlink" title="3.改变下载淘宝源"></a>3.改变下载淘宝源</h3><p>防止淘宝源资源老旧被丢弃</p>
+<blockquote>
+<p>npm config set sass_binary_site=<a href="https://npm.taobao.org/mirrors/node-sass" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node-sass</a></p>
+</blockquote>
+<p><strong>一样是bug！！接近崩溃</strong></p>
+<h2 id="更改样式"><a href="#更改样式" class="headerlink" title="更改样式"></a>更改样式</h2><p>将 /deep/ 更改为::v-deep<br>可以看看思否回答：<a href="https://segmentfault.com/q/1010000020658004" target="_blank" rel="noopener">https://segmentfault.com/q/1010000020658004</a></p>
+<p>但该项目是我和师兄一起维护，不能单方面全局改动样式</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>在sass-loader的官方文档中提到高版本不支持 /deep/ 穿透<br><strong>所以估计得降低版本</strong></p>
+<h2 id="降低版本1"><a href="#降低版本1" class="headerlink" title="降低版本1"></a>降低版本1</h2><blockquote>
+<p>npm uninstall sass-loader（卸载当前版本）<br>npm install <a href="mailto:sass-loader@7.3.1">sass-loader@7.3.1</a> –save-dev</p>
+</blockquote>
+<p>*<em>还是一样报错，不支持 /deep/ *</em></p>
+<h2 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h2><p>重新安装了node-sass并且将sass-loader降低至6.0版本</p>
+<blockquote>
+<p>npm install –save-dev node-sass <a href="mailto:sass-loader@6.0.7">sass-loader@6.0.7</a></p>
+</blockquote>
+<h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>经常遇到突然重新npm install后<br>某些模块包不支持当前的语法了<br>这次记录提供一个bug解决思路<br>也要时刻关注更新换代即将被遗弃的语法了<br>希望~小伙伴们越来越少bug<br>遇到bug也简简单单解决！  </p>
+]]></content>
+      <tags>
+        <tag>bug sass</tag>
       </tags>
   </entry>
   <entry>
