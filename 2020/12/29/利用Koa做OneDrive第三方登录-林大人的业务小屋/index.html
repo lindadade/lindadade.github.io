@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    利用Koa做OneDrive第三方登录-林大人的业务小屋 |
+    
+    林大大的小屋</title>
+  
+    <link rel="shortcut icon" href="/lindada-blog/fav.svg">
+  
+  
+<link rel="stylesheet" href="/lindada-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-利用Koa做OneDrive第三方登录-林大人的业务小屋" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      利用Koa做OneDrive第三方登录-林大人的业务小屋
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2020/12/29/%E5%88%A9%E7%94%A8Koa%E5%81%9AOneDrive%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95-%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/" class="article-date">
+  <time datetime="2020-12-29T08:38:33.000Z" itemprop="datePublished">2020-12-29</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><p>老师布置一个SS级任务 -&gt; 做一个微软OneDrive网盘<br>那就做叭！期间遇到很多很多坑！<br>查阅了很多方法，感觉最后总体还是很粗糙！<br>但起码做了出来，做个记录！<br>也希望有大佬不吝赐教</p>
+<a id="more"></a>
+
+<h1 id="接口介绍"><a href="#接口介绍" class="headerlink" title="接口介绍"></a>接口介绍</h1><h2 id="登录并获取授权码"><a href="#登录并获取授权码" class="headerlink" title="登录并获取授权码"></a>登录并获取授权码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET </span><br><span class="line">https:&#x2F;&#x2F;login.microsoftonline.com&#x2F;common&#x2F;oauth2&#x2F;authorize?response_type&#x3D;code&amp;client_id&#x3D;&#123;client_id&#125;&amp;redirect_uri&#x3D;&#123;redirect_uri&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="必需的查询字符串参数"><a href="#必需的查询字符串参数" class="headerlink" title="必需的查询字符串参数"></a>必需的查询字符串参数</h3><table>
+<thead>
+<tr>
+<th align="left">参数名称</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>client_id</em></td>
+<td align="left">串</td>
+<td align="left">为您的应用创建的客户端ID。</td>
+</tr>
+<tr>
+<td align="left"><em>response_type</em></td>
+<td align="left">串</td>
+<td align="left">指定请求的响应类型。在授权码授予请求中，该值必须是code。</td>
+</tr>
+<tr>
+<td align="left"><em>redirect_uri</em></td>
+<td align="left">串</td>
+<td align="left">身份验证完成后，浏览器将发送到的重定向URL。</td>
+</tr>
+</tbody></table>
+<h3 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h3><p>在成功验证用户身份并授权您的应用程序后，如下面的示例所示，Web浏览器将重定向到您的重定向URL，并在URL中添加了其他参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;myapp.contoso.com&#x2F;myapp&#x2F;callback?code&#x3D;AwABAAAAvPM...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>code</strong>为下一步的授权码。</p>
+</blockquote>
+<h2 id="兑换令牌的授权代码"><a href="#兑换令牌的授权代码" class="headerlink" title="兑换令牌的授权代码"></a>兑换令牌的授权代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">POST </span><br><span class="line">https:&#x2F;&#x2F;login.microsoftonline.com&#x2F;common&#x2F;oauth2&#x2F;token</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">body:</span><br><span class="line">client_id&#x3D;&#123;client_id&#125;&amp;redirect_uri&#x3D;&#123;redirect_uri&#125;&amp;client_secret&#x3D;&#123;client_secret&#125;</span><br><span class="line">&amp;code&#x3D;&#123;code&#125;&amp;grant_type&#x3D;authorization_code&amp;resource&#x3D;&#123;resource_id&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="必需参数"><a href="#必需参数" class="headerlink" title="必需参数"></a>必需参数</h3><p>该请求的主体是URL编码的字符串，带有以下必需参数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名称</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>client_id</em></td>
+<td align="left">串</td>
+<td align="left">为您的应用程序创建的客户端ID值。</td>
+</tr>
+<tr>
+<td align="left"><em>redirect_uri</em></td>
+<td align="left">串</td>
+<td align="left">身份验证完成后，浏览器将发送到的重定向URL。这应该与第一个请求中的<em>redirect_uri相</em>匹配。</td>
+</tr>
+<tr>
+<td align="left"><em>client_secret</em></td>
+<td align="left">串</td>
+<td align="left">为您的应用程序创建的键值之一。</td>
+</tr>
+<tr>
+<td align="left"><em>码</em></td>
+<td align="left">串</td>
+<td align="left">您在第一个身份验证请求中收到的授权码。</td>
+</tr>
+<tr>
+<td align="left"><em>资源</em></td>
+<td align="left">串</td>
+<td align="left">您要访问的资源。</td>
+</tr>
+</tbody></table>
+<h3 id="响应-1"><a href="#响应-1" class="headerlink" title="响应"></a>响应</h3><p>如果调用成功，响应主体是包括JSON字符串access_token，expires_in和refresh_token性能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;expires_in&quot;: 3600,</span><br><span class="line">  &quot;access_token&quot;:&quot;EwCo...AA&#x3D;&#x3D;&quot;,</span><br><span class="line">  &quot;refresh_token&quot;:&quot;eyJh...9323&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：响应中可能还有其他属性。使用API不需要这些属性。</p>
+</blockquote>
+<p><strong>重要提示：在此响应中，access_token和的值应与refresh_token用户密码一样安全地对待。</strong></p>
+<p>该访问令牌仅在expires_in属性中<strong>指定的秒数内有效</strong>。您可以通过使用刷新令牌或从头开始重复身份验证请求来请求新的访问令牌。</p>
+<blockquote>
+<p><strong>至此就可以获取到access_token数据</strong></p>
+</blockquote>
+<h1 id="应用实现"><a href="#应用实现" class="headerlink" title="应用实现"></a>应用实现</h1><h2 id="Koa后端接口"><a href="#Koa后端接口" class="headerlink" title="Koa后端接口"></a>Koa后端接口</h2><h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><blockquote>
+<p>创建文件夹cloud-disk-koa-api</p>
+</blockquote>
+<h3 id="初始化npm仓库"><a href="#初始化npm仓库" class="headerlink" title="初始化npm仓库"></a>初始化npm仓库</h3><ol>
+<li>打开该文件夹终端</li>
+<li>npm init -y（-y: 默认yes配置）</li>
+</ol>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios koa koa-router koa2-cors qs -S</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建启动文件"><a href="#创建启动文件" class="headerlink" title="创建启动文件"></a>创建启动文件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa()</span><br><span class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>)()</span><br><span class="line"><span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">'koa2-cors'</span>)</span><br><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">'axios'</span>)</span><br><span class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">'qs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开启跨域</span></span><br><span class="line"><span class="comment">// 前端vue跨微软域名失败</span></span><br><span class="line">app.use(cors())</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取code接口</span></span><br><span class="line">router.get(<span class="string">'/code'</span>, <span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="comment">// oneDrive配置</span></span><br><span class="line">  <span class="keyword">const</span> oneDriveConfig = &#123;</span><br><span class="line">    client_id: <span class="string">'你的应用ID'</span>,</span><br><span class="line">    scope: <span class="string">'offline_access Files.Read Files.Read.All'</span>,</span><br><span class="line">    response_type: <span class="string">'code'</span>,</span><br><span class="line">    <span class="comment">// 重定向回后端获取token接口</span></span><br><span class="line">    redirect_uri: <span class="string">'http://localhost:7001/token'</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> path = <span class="string">`https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<span class="subst">$&#123;oneDriveConfig.client_id&#125;</span>&amp;scope=<span class="subst">$&#123;oneDriveConfig.scope&#125;</span>&amp;response_type=<span class="subst">$&#123;oneDriveConfig.response_type&#125;</span>&amp;redirect_uri=<span class="subst">$&#123;oneDriveConfig.redirect_uri&#125;</span>`</span></span><br><span class="line">  <span class="comment">// 拼接链接，返回前端进行登陆获取code跳转</span></span><br><span class="line">  ctx.body = path</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取token接口</span></span><br><span class="line">router.get(<span class="string">'/token'</span>, <span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 重定向回前端页面</span></span><br><span class="line">  <span class="keyword">const</span> redirectPath = <span class="string">'http://localhost:2020/login'</span></span><br><span class="line">  <span class="comment">// 获取到 /code返回的code值</span></span><br><span class="line">  <span class="keyword">const</span> &#123; code &#125; = ctx.query</span><br><span class="line">  <span class="comment">// oneDrive配置</span></span><br><span class="line">  <span class="keyword">const</span> oneDriveConfig = &#123;</span><br><span class="line">    grant_type: <span class="string">'authorization_code'</span>,</span><br><span class="line">    client_id: <span class="string">'你的应用ID'</span>,</span><br><span class="line">    redirect_uri: <span class="string">'http://localhost:7001/token'</span>,</span><br><span class="line">    client_secret: <span class="string">'你的应用密匙'</span>,</span><br><span class="line">    code</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> path = <span class="string">'https://login.microsoftonline.com/common/oauth2/v2.0/token'</span></span><br><span class="line">  <span class="comment">// axios post请求接口</span></span><br><span class="line">  <span class="comment">// 利用qs将body的json格式转为form-data格式</span></span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">await</span> axios.post(path, qs.stringify(oneDriveConfig), &#123;</span><br><span class="line">    <span class="comment">// 设置请求头配置 - form-data格式</span></span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">'Accept'</span>: <span class="string">'*/*'</span>,</span><br><span class="line">      <span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">// 获取到access_token数据</span></span><br><span class="line">  <span class="keyword">const</span> token = result.data.access_token</span><br><span class="line">  <span class="comment">// 拼接token值重定向回前端登陆页面</span></span><br><span class="line">  ctx.redirect(<span class="string">`<span class="subst">$&#123;redirectPath&#125;</span>?token=<span class="subst">$&#123;token&#125;</span>`</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开启路由</span></span><br><span class="line">app.use(router.routes(), router.allowedMethods())</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开启7001端口</span></span><br><span class="line">app.listen(<span class="number">7001</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'run on 7001'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node .&#x2F;server.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启成功"><a href="#开启成功" class="headerlink" title="开启成功"></a>开启成功</h3><blockquote>
+<p>终端打印 run on 7001</p>
+</blockquote>
+<h2 id="vue前端"><a href="#vue前端" class="headerlink" title="vue前端"></a>vue前端</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li><p>开启指定<a href="http://localhost:2020端口的前端">http://localhost:2020端口的前端</a></p>
+</li>
+<li><p>创建<a href="http://localhost:2020/login路由前端页面" target="_blank" rel="noopener">http://localhost:2020/login路由前端页面</a></p>
+</li>
+<li><p>login页面get请求<a href="http://localhost:7001/code返回到的登录拼接url" target="_blank" rel="noopener">http://localhost:7001/code返回到的登录拼接url</a></p>
+</li>
+<li><p>跳转到微软登陆拼接的url</p>
+<ol>
+<li><pre><code>location.href = 登录拼接url;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 等待后端token接口获取到token后重定向回http:&#x2F;&#x2F;localhost:2020&#x2F;login页面</span><br><span class="line"></span><br><span class="line">6. 截取token值保存到浏览器cookie中</span><br><span class="line"></span><br><span class="line">7. 去掉地址栏中的token参数</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+window.location.href = 去掉token参数的前端url
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 有个注意</span><br><span class="line"></span><br><span class="line">1. 正浏览B页面(非login登录页面) -&gt; 是当token过期时 -&gt; 显示弹框token过期 -&gt; 跳转回login页面 -&gt; 一顿思路操作后返回token保存到cookie -&gt; 重定向回B页面(而非在login登录页面停留)</span><br><span class="line"></span><br><span class="line">2. 第一次登录(处于login登录页面时) -&gt; 一顿思路操作后返回token保存到cookie -&gt; 重定向回首页</span><br><span class="line"></span><br><span class="line">&gt; 感兴趣可以做一下我觉得是一个必要需求（有点难度）</span><br><span class="line"></span><br><span class="line">实现：利用vuex和vue-router的路由守卫</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line">&#x2F;&#x2F; 主要路由守卫判断代码</span><br><span class="line"></span><br><span class="line">import router from &#39;.&#x2F;router&#39;</span><br><span class="line">import store from &#39;.&#x2F;store&#39;</span><br><span class="line">&#x2F;&#x2F; 各种浏览器cookie的操作</span><br><span class="line">import &#123; getToken, getRedirect, removeRedirect &#125; from &#39;@&#x2F;utils&#x2F;auth&#39; &#x2F;&#x2F; get token from cookie</span><br><span class="line">&#x2F;&#x2F; 获取浏览器标题title</span><br><span class="line">import getPageTitle from &#39;@&#x2F;utils&#x2F;get-page-title&#39;</span><br><span class="line"></span><br><span class="line">const whiteList &#x3D; [&#39;&#x2F;login&#39;] &#x2F;&#x2F; no Redirect whitelist</span><br><span class="line"></span><br><span class="line">router.beforeEach(async(to, from, next) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; set page title</span><br><span class="line">  document.title &#x3D; getPageTitle(to.meta.title)</span><br><span class="line">  &#x2F;&#x2F; determine whether the user has logged in</span><br><span class="line">  const hasToken &#x3D; getToken()</span><br><span class="line">  const hasRedirect &#x3D; getRedirect()</span><br><span class="line">  if (hasToken) &#123;</span><br><span class="line">    if (hasRedirect &amp;&amp; to.path !&#x3D;&#x3D; hasRedirect) &#123;</span><br><span class="line">      await router.push(hasRedirect)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      await removeRedirect()</span><br><span class="line">      next()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    &#x2F;* has no token*&#x2F;</span><br><span class="line">    if (whiteList.indexOf(to.path) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">      &#x2F;&#x2F; in the free login whitelist, go directly</span><br><span class="line">      next()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      if (!hasRedirect) &#123;</span><br><span class="line">        await store.dispatch(&#39;user&#x2F;redirect&#39;, to.path)</span><br><span class="line">      &#125;</span><br><span class="line">      next(&#39;&#x2F;login&#39;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.afterEach(() &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; finish progress bar</span><br><span class="line">  NProgress.done()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>其实也没啥后记<br>但也不能草草结尾呀对吧对吧！</p>
+<hr>
+<p>厚着脸皮的<em>林大人的小屋</em>系列：</p>
+<ul>
+<li><a href="https://juejin.cn/post/6902018662882869256/" target="_blank" rel="noopener">林大人的小屋-利用Koa做OneDrive第三方登录</a></li>
+<li><a href="https://juejin.im/post/6895598896341483534" target="_blank" rel="noopener">林大人的小屋 - Git原理</a></li>
+<li><a href="https://juejin.im/post/6894135344367665159/" target="_blank" rel="noopener">林大人的小屋 - 计算机网络</a></li>
+<li><a href="https://juejin.im/post/6894134248115175437" target="_blank" rel="noopener">林大人的小屋 - Web安全/操作系统/性能优化</a></li>
+<li><a href="https://juejin.im/post/6888610461755899911" target="_blank" rel="noopener">林大人的小屋 - JS基础（下）</a></li>
+<li><a href="https://juejin.im/post/6888610346626449415" target="_blank" rel="noopener">林大人的小屋 - JS基础（上）</a></li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        
+                                            <!--MOB SHARE BEGIN-->
+<a><div class="-mob-share-open article-share-link">分享</div></a>
+<div class="-mob-share-ui" style="display: none; display: flex; align-items: center; align-content: center;">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+    </ul>
+    <div style="height: 100%; width: 100%">
+        <div class="-mob-share-close" style="position:relative; margin: -26em auto; width: 80px; height: 40px; font-size: 14px; color: #fff; background-color: #4593e9; border-radius: 15px;">取消</div>
+    </div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="/lindada-blog/js/mob-share.js"></script>
+<!--MOB SHARE END-->
+
+                                        
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lindada-blog/tags/%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/" rel="tag">业务小屋</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/lindada-blog/2020/12/29/%E5%AE%9E%E7%8E%B0vue%E4%B8%AD%E5%8F%AF%E9%80%89%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAexcel%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            实现vue中可选数据导出excel文件组件-林大人的业务小屋
+          
+        </div>
+      </a>
+    
+    
+      <a href="/lindada-blog/2020/12/29/%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B-Git%E5%8E%9F%E7%90%86/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">林大人的面试小屋-Git原理</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+    <div class="vcomments" id="vcomments"></div>
+    
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'vtOOBRQNx6g17peggpfzBROa-9Nh9j0Va',
+                appKey: 'Q1DgaTCfUeYjMOqoTAH8TX9M',
+                notify: 'false',
+                verify: 'true',
+                avatar: 'mp',
+                pageSize: '15',
+                placeholder: '✨悄悄地对小屋说...'
+            })
+        </script>
+        
+                        
+                            
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li>访客数 <i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li>阅读量 <i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 林大大的小屋</li> |
+      <li> Gitee主页 by <a href="https://gitee.com/lin_daren" target="_blank">林大大的Gitee</a></li> |
+      <li> Wechat by <span class="footer-title">dadaLin_0809</span></li>
+      <li> Email by <span class="footer-title">809751956@qq.com</span></li> |
+    </ul>
+  </div>
+</footer>
+
+<style>
+    .footer-title {
+        color: darkcyan;
+        font-weight: bold;
+    }
+</style>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/lindada-blog/images/star.svg" alt="林大大的小屋"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/lindada-blog/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/lindada-blog/js/ocean.js"></script>
+
+
+<script src="/lindada-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/lindada-blog/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360,"top":"-40px","right":"25px"},"mobile":{"show":true}});</script></body>
+</html>

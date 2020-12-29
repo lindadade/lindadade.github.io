@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    林大人的面试小屋-Git原理 |
+    
+    林大大的小屋</title>
+  
+    <link rel="shortcut icon" href="/lindada-blog/fav.svg">
+  
+  
+<link rel="stylesheet" href="/lindada-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-林大人的面试小屋-Git原理" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      林大人的面试小屋-Git原理
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2020/12/29/%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B-Git%E5%8E%9F%E7%90%86/" class="article-date">
+  <time datetime="2020-12-29T08:35:17.000Z" itemprop="datePublished">2020-12-29</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <img src="/lindada-blog/2020/12/29/%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B-Git%E5%8E%9F%E7%90%86/1.png" class>  
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>总结Git原理<br>整理给有需要的小伙伴们 ✨</p>
+<a id="more"></a>
+
+<h1 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h1><p>学习Git原理，从 <em>存储位置<em>、</em>三个区域<em>、</em>四个对象<em>、</em>存储流程</em> 来浅析Git原理<br>为什么要浅析呢，这样能更好认知整个Git命名操作干了”肾”么。来对应真实的实际案例</p>
+<h1 id="存储位置"><a href="#存储位置" class="headerlink" title="存储位置"></a>存储位置</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>首先看咱创建Git的文件中有啥子</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b3178a2a0f3472097a238860c11ec71~tplv-k3u1fbpfcp-watermark.image" alt><br><strong>注释：在终端中输入 ls -a 显示目录隐藏文件（.git文件夹默认隐藏）</strong></p>
+<blockquote>
+<p>简单介绍一下Git常见的文件夹的作用</p>
+<ul>
+<li>{COMMIT-EDITMSG} 存储最后一次提交的message</li>
+<li>{description} 用于GitWeb程序</li>
+<li>{config} 配置特定于该仓库的设置</li>
+<li>{hooks} 放置客户端或服务端的hook脚本</li>
+<li>{HEAD} 指明当前处于哪个分支</li>
+<li>{objects} Git对象存储目录</li>
+<li>{logs} 用来记录操作信息</li>
+<li>{refs} Git引用存储目录</li>
+<li>{branches} 放置分支引用的目录</li>
+<li>{index} 保存了暂存区域信息</li>
+</ul>
+</blockquote>
+<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><blockquote>
+<p>这里边的文件夹作用通过对应的文件名就基本知道里边是干嘛子的了<br>咱的重点是 <em>objects</em> 这个文件夹中</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da0453e95e46418980e9d7b7cc97447f~tplv-k3u1fbpfcp-watermark.image" alt></p>
+<blockquote>
+<p>可以看到进入 <em>objects</em> 文件夹中全都是两个字符开头的文件夹<br>这一些就是Git通过<em>sha-1*将文件中的内容生成一个 *40</em> 位长度的hash值<br>取头 <em>2</em> 位值作为目录名，<em>38</em> 位值作为文件名（文件内容转换为二进制内容）<br><em>而我们项目的数据存储位置也就是在这个 objects 宝藏文件夹中啦</em></p>
+</blockquote>
+<p><strong>info 文件夹下记录对象存储的附加信息</strong><br><strong>pack 文件夹将修改过的文件打包至一个叫 xxx.pack 的二进制文件来以节省空间并提高效率。</strong></p>
+<h1 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p>Git 中有三个重要的区域：工作区域，暂存区(索引区域)，本地仓库</p>
+<h2 id="详情-1"><a href="#详情-1" class="headerlink" title="详情"></a>详情</h2><blockquote>
+<ul>
+<li>工作区域：操作项目的文件，代码开发和工作都是在这。</li>
+<li>暂存区域: 进行 <em>add</em> 操作后添加到的区域，可以理解为一个暂存区域，这里面的代码会在下一次 <em>commit</em> 被提交到本地数据库。</li>
+<li>本地仓库：<em>commit</em> 后由 Git object 记录着每一次提交的Blob，准备 <em>push</em> 到远程仓库</li>
+</ul>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>再简单梳理下流程为：<br>工作区域 -&gt; (add)暂存区域 -&gt; (commit)本地仓库 -&gt; (push)远程仓库</p>
+<h1 id="四种对象"><a href="#四种对象" class="headerlink" title="四种对象"></a>四种对象</h1><h2 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h2><p>在Git中 有四种对象 ，<em>blob<em>、</em>tree<em>、</em>commit</em> 、<em>tag</em>。</p>
+<h2 id="详情-2"><a href="#详情-2" class="headerlink" title="详情"></a>详情</h2><blockquote>
+<ul>
+<li>blob：来存储文件数据的内容，通常是一个二进制文件。</li>
+<li>tree：相当于一个目录，目录下还会有子目录，管理一些“tree”或“blob”，但<em>最终的节点是blob</em>。</li>
+<li>commit：指向一次提交，也就是只指向一个 tree 对象。还有些时间戳、最近一次提交的作者、指前上次提交（commits）的指针方法。</li>
+<li>tag: 来标记某一个提交(commit) 的方法。</li>
+</ul>
+</blockquote>
+<h1 id="存储流程"><a href="#存储流程" class="headerlink" title="存储流程"></a>存储流程</h1><h2 id="创建-修改文件"><a href="#创建-修改文件" class="headerlink" title="创建/修改文件"></a>创建/修改文件</h2><p>创建和修改文件均在<em>工作区</em>中进行，不会影响到暂存区域和本地仓库</p>
+<h2 id="add-操作"><a href="#add-操作" class="headerlink" title="add 操作"></a>add 操作</h2><blockquote>
+<p>运行 git add a.file 将发生：</p>
+<ol>
+<li>a.file添加到索引区域。</li>
+<li>根据文件内容利用 sha-1 算法计算生成一个 40 位长度的hash值。</li>
+<li>在本地仓库的 objects 目录下创建一个 blob (hash值前两位创建文件夹，剩下38位作为文件名)。</li>
+<li>更新索引将 a.file 指向了新建的blob。</li>
+</ol>
+</blockquote>
+<h2 id="commit操作"><a href="#commit操作" class="headerlink" title="commit操作"></a>commit操作</h2><blockquote>
+<p>运行 git commit -m ‘’ 将发生：</p>
+<ol>
+<li>根据当前的索引生产一个 tree 对象。</li>
+<li>创建一个新的 commit 对象，指向新建的 tree 对象并将上次提交指针指向上一个 commit 形成 log 链</li>
+<li>将当前分支的指针移到新的 commit 结点。</li>
+<li>等待push到对应远程仓库</li>
+</ol>
+</blockquote>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>简简单单的Git原理<br>参考学习如下：<br><a href="https://www.jianshu.com/p/ddef78e9f341" target="_blank" rel="noopener">https://www.jianshu.com/p/ddef78e9f341</a><br><a href="https://juejin.im/post/6844904019245137927" target="_blank" rel="noopener">https://juejin.im/post/6844904019245137927</a></p>
+<hr>
+<p>厚着脸皮的<em>林大人的小屋</em>系列：</p>
+<ul>
+<li><a href="https://juejin.im/post/6895598896341483534" target="_blank" rel="noopener">林大人的小屋 - Git原理</a></li>
+<li><a href="https://juejin.im/post/6894135344367665159/" target="_blank" rel="noopener">林大人的小屋 - 计算机网络</a></li>
+<li><a href="https://juejin.im/post/6894134248115175437" target="_blank" rel="noopener">林大人的小屋 - Web安全/操作系统/性能优化</a></li>
+<li><a href="https://juejin.im/post/6888610461755899911" target="_blank" rel="noopener">林大人的小屋 - JS基础（下）</a></li>
+<li><a href="https://juejin.im/post/6888610346626449415" target="_blank" rel="noopener">林大人的小屋 - JS基础（上）</a></li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        
+                                            <!--MOB SHARE BEGIN-->
+<a><div class="-mob-share-open article-share-link">分享</div></a>
+<div class="-mob-share-ui" style="display: none; display: flex; align-items: center; align-content: center;">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+    </ul>
+    <div style="height: 100%; width: 100%">
+        <div class="-mob-share-close" style="position:relative; margin: -26em auto; width: 80px; height: 40px; font-size: 14px; color: #fff; background-color: #4593e9; border-radius: 15px;">取消</div>
+    </div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="/lindada-blog/js/mob-share.js"></script>
+<!--MOB SHARE END-->
+
+                                        
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lindada-blog/tags/%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B/" rel="tag">面试小屋</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/lindada-blog/2020/12/29/%E5%88%A9%E7%94%A8Koa%E5%81%9AOneDrive%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95-%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            利用Koa做OneDrive第三方登录-林大人的业务小屋
+          
+        </div>
+      </a>
+    
+    
+      <a href="/lindada-blog/2020/12/29/%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">林大人的面试小屋-计算机网络</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+    <div class="vcomments" id="vcomments"></div>
+    
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'vtOOBRQNx6g17peggpfzBROa-9Nh9j0Va',
+                appKey: 'Q1DgaTCfUeYjMOqoTAH8TX9M',
+                notify: 'false',
+                verify: 'true',
+                avatar: 'mp',
+                pageSize: '15',
+                placeholder: '✨悄悄地对小屋说...'
+            })
+        </script>
+        
+                        
+                            
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li>访客数 <i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li>阅读量 <i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 林大大的小屋</li> |
+      <li> Gitee主页 by <a href="https://gitee.com/lin_daren" target="_blank">林大大的Gitee</a></li> |
+      <li> Wechat by <span class="footer-title">dadaLin_0809</span></li>
+      <li> Email by <span class="footer-title">809751956@qq.com</span></li> |
+    </ul>
+  </div>
+</footer>
+
+<style>
+    .footer-title {
+        color: darkcyan;
+        font-weight: bold;
+    }
+</style>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/lindada-blog/images/star.svg" alt="林大大的小屋"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/lindada-blog/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/lindada-blog/js/ocean.js"></script>
+
+
+<script src="/lindada-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/lindada-blog/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360,"top":"-40px","right":"25px"},"mobile":{"show":true}});</script></body>
+</html>
