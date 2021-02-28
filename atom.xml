@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2021-02-05T08:01:52.544Z</updated>
+  <updated>2021-02-28T14:01:19.005Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>（第一二章）我一字一行地重读红宝书</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/02/28/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/02/28/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/</id>
+    <published>2021-02-28T14:00:11.000Z</published>
+    <updated>2021-02-28T14:01:19.005Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;历经两个多月断断续续地读完了JavaScript的经典书籍&lt;strong&gt;红宝书&lt;/strong&gt; -《JavaScript高级程序设计（第4版）&lt;/p&gt;
+&lt;p&gt;详细地读完一遍后发觉整本书知识点全而泛，乍一想每一章的细节，还是略显模糊。&lt;/p&gt;
+&lt;p&gt;于是督促自己计划编写每一章的着重点再次加深印象和理解，顺便记录自己的所学所想所悟。方便自身利用电脑的快速搜索关键词来进行快速定位和学习，也希望能帮助到有需要的同学们哈。&lt;/p&gt;
+&lt;p&gt;若是想要系统仔细的学习，当然还是看原书比较好，我也是强烈推荐的噢！这里内容只当个人复习和总结。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;提示: 一些个人主观认为不重要或不流行的章节将进行删减&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="红宝书" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>三步让Google游览器在YouTube畅通无阻</title>
@@ -421,26 +444,6 @@
     
     
       <category term="简历小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%80%E5%8E%86%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始初尝Three.js</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/</id>
-    <published>2020-06-25T12:12:04.000Z</published>
-    <updated>2021-01-18T09:00:59.392Z</updated>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/lindada-blog/2020/06/25/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9D%E5%B0%9DThree-js/1.gif&quot; class&gt;  
-&lt;p&gt;不经意间看到了某个官网的动态效果~&lt;br&gt;实在是太帅啦！十分地友好&lt;br&gt;查了查实现该效果地技术 —— 原来是&lt;strong&gt;Three.js&lt;/strong&gt;&lt;br&gt;那就让我来从零初尝Three.js动态3D效果吧✨&lt;br&gt;&lt;strong&gt;✨有大量案例和找寻源码的方法噢✨&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Three.js小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/Three-js%E5%B0%8F%E5%B1%8B/"/>
     
   </entry>
   

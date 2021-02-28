@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    （第一二章）我一字一行地重读红宝书 |
+    
+    林大大的小屋</title>
+  
+    <link rel="shortcut icon" href="/lindada-blog/fav.svg">
+  
+  
+<link rel="stylesheet" href="/lindada-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/lindada-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/lindada-blog/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/lindada-blog/atom.xml" title="林大大的小屋" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-（第一二章）我一字一行地重读红宝书" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      （第一二章）我一字一行地重读红宝书
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/lindada-blog/2021/02/28/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/" class="article-date">
+  <time datetime="2021-02-28T14:00:11.000Z" itemprop="datePublished">2021-02-28</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>历经两个多月断断续续地读完了JavaScript的经典书籍<strong>红宝书</strong> -《JavaScript高级程序设计（第4版）</p>
+<p>详细地读完一遍后发觉整本书知识点全而泛，乍一想每一章的细节，还是略显模糊。</p>
+<p>于是督促自己计划编写每一章的着重点再次加深印象和理解，顺便记录自己的所学所想所悟。方便自身利用电脑的快速搜索关键词来进行快速定位和学习，也希望能帮助到有需要的同学们哈。</p>
+<p>若是想要系统仔细的学习，当然还是看原书比较好，我也是强烈推荐的噢！这里内容只当个人复习和总结。</p>
+<p><em>提示: 一些个人主观认为不重要或不流行的章节将进行删减</em></p>
+<a id="more"></a>
+<h1 id="1-什么是-JavaScript"><a href="#1-什么是-JavaScript" class="headerlink" title="1. 什么是 JavaScript"></a>1. 什么是 JavaScript</h1><p>1995年问世，其目的是为了实现在客户端即可处理某些基本的验证。</p>
+<p>JavaScript已被公认为主流的变成语言，能够实现复杂的计算与交互，包括闭包、匿名函数，甚至元编程等特性。</p>
+<p>从简单的出入验证脚本到强大的变成语言，因此这一章就是为了真正学好用好JavaScript来理解其本质、历史及局限性。</p>
+<h2 id="1-1-简短的历史回顾"><a href="#1-1-简短的历史回顾" class="headerlink" title="1.1 简短的历史回顾"></a>1.1 简短的历史回顾</h2><p>1995年，网景一位名叫 Brendan Eich 的工程师开发叫 Mocha（后来改名为LiveScript） 的脚本语言，在服务器端叫 LiveWire。</p>
+<p>网景将 LiveScript 改名为 JavaScript（搭上当时Java的顺风车）。</p>
+<p>1996年，由于 JavaScript1.0 的成功，IE开发了JScript。以至于当时出现两个版本的 JavaScript（Navigator 中的 JavaScript 和 IE 中的 JScript）</p>
+<p>1997年，欧洲计算机制造商协会（Ecma）为了标准化一门通用、跨平台、厂商而打造出 ECMAScript 这个新的脚本语言标准。</p>
+<p>1998年，ISO 和 IEC 两大组织也将 ECMAScript 采纳为标准，至此各大浏览器均以 ECMAScript 作为自己 JavaScript 实现的依据</p>
+<h2 id="1-2-JavaScript-实现"><a href="#1-2-JavaScript-实现" class="headerlink" title="1.2 JavaScript 实现"></a>1.2 JavaScript 实现</h2><p>JavaScript包括</p>
+<ul>
+<li>核心（ECMAScript）</li>
+<li>文档对象模型（DOM）</li>
+<li>浏览器对象模型（BOM）</li>
+</ul>
+<h3 id="1-2-1-ECMAScript"><a href="#1-2-1-ECMAScript" class="headerlink" title="1.2.1 ECMAScript"></a>1.2.1 ECMAScript</h3><p>ECMAScript 即 ECMA-262 定义的语言，Web 浏览器只是 ECMAScript 实现可能存在的一种<strong>宿主环境</strong>。</p>
+<p>在基本的层面，它描述这门语言的如下部分:</p>
+<ul>
+<li>语法</li>
+<li>类型</li>
+<li>语句</li>
+<li>关键字</li>
+<li>保留字</li>
+<li>操作符</li>
+<li>全局对象</li>
+</ul>
+<p>总的来说 ECMAScript 只是对实现这个规范描述的所有方面的一门语言的称呼</p>
+<h3 id="1-2-2-DOM"><a href="#1-2-2-DOM" class="headerlink" title="1.2.2 DOM"></a>1.2.2 DOM</h3><p><strong>文档对象模型（DOM，Document Object Model）</strong>是一个应用编程接口（API），用于在 HTML 中使用扩展的 XML。DOM将整个页面抽象为一组分层节点。HTML 或 XML 页面的每个组成部分都是一种节点，包含不同数据。</p>
+<p>开发者可以使用 DOM API 来轻松地删除、添加、替换、修改节点。</p>
+<h4 id="1-2-2-1-DOM-是必须的"><a href="#1-2-2-1-DOM-是必须的" class="headerlink" title="1.2.2.1 DOM 是必须的"></a>1.2.2.1 DOM 是必须的</h4><p>为了保持 Web 跨平台的本性，万维网（W3C，World Wide Web Consortium）开始了制定 DOM 标准。</p>
+<blockquote>
+<p>注意: DOM 并非只能通过 JavaScript 访问，而且确实被其他很多语言实现了。不过对于浏览器来说，DOM 就是使用 ECMAScript 实现的，如何已经成为 JavaScript 语言的一大组成部分</p>
+</blockquote>
+<ul>
+<li>DOM Level 1<ul>
+<li>DOM Core: 映射XML文档，从而方便访问和操作文档任意部分的方式。</li>
+<li>DOM HTML: 扩展前者，并增加了特定于HTML的对象和方法。</li>
+</ul>
+</li>
+<li>DOM Level 2<ul>
+<li>DOM 视图: 描述追踪文档不同视图（如应用CSS样式前后的文档）的接口。</li>
+<li>DOM 事件: 描述事件及事件处理的接口。</li>
+<li>DOM 样式: 描述处理元素 CSS 样式的接口。</li>
+<li>DOM 遍历和范围: 描述遍历和操作 DOM 树的接口。</li>
+</ul>
+</li>
+<li>DOM Level 3<ul>
+<li>DOM Load and Save: 以统一的方式加载和保存文档的方法。</li>
+<li>DOM Validation: 验证文档的方法。</li>
+<li>DOM Core扩展: 支持了所有 XML 1.0的特性，包括 XML Infoset、XPath 和 XML Base。</li>
+</ul>
+</li>
+<li>DOM4: W3C不再按照 Level 来维护 DOM 了，而是作用 DOM Living Standard 来维护，其快照称为 DOM4。<ul>
+<li>Mutation Observers: 替代 Mutation Events。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意: 并没有一个标准叫 DOM Level 0，这只是 DOM 历史中的一个参照点。可以看作 IE4 和 Netscape Navigator 4 中最初支持的 DHTML。</p>
+</blockquote>
+<h3 id="1-2-3-BOM"><a href="#1-2-3-BOM" class="headerlink" title="1.2.3 BOM"></a>1.2.3 BOM</h3><p><strong>BOM（浏览器对象模型）</strong>用于支持访问和操作浏览器的窗口，开发者可以实现操作浏览器显示页面之外的部分。</p>
+<p>总的来说，BOM 主要针对浏览器窗口和子窗口（frame）不过人们通常会把特定于浏览器的扩展都归在 BOM 的范畴内。</p>
+<ul>
+<li>弹出新浏览器窗口的能力。</li>
+<li>移动、缩放和关闭浏览器窗口的能力。</li>
+<li>navigator 对象，提供关于浏览器的详尽信息。</li>
+<li>location 对象，提供浏览器加载页面的详尽信息。</li>
+<li>screen 对象，提供关于铜壶屏幕分辨率的详尽信息。</li>
+<li>performance 对象，提供浏览器内存占用、导航行为和时间统计的详尽信息。</li>
+<li>对 cookie 的支持。</li>
+<li>其他自定义对象，如 XMLHttpRequest 和 IE 的 ActiveXObject。</li>
+</ul>
+<p>因为 BOM 很多时间内都没有标准，每个浏览器实现的都是自己的 BOM 定义了自己的属性和方法。不过现在有了 HTML5，BOM 的实现细节应该会日趋一致。关于 BOM，后边的章节和详细接招。</p>
+<h2 id="1-3-总结"><a href="#1-3-总结" class="headerlink" title="1.3 总结"></a>1.3 总结</h2><p>JavaScript 是一门用来与网页交互的脚本语言，包含以下三个部分。</p>
+<ul>
+<li>ECMAScript: 由 ECMA-262 定义并提供核心功能。</li>
+<li>DOM（文档对象模型）: 提供与网页内容交互的方法和接口。</li>
+<li>BOM（浏览器对象模型）: 提供与浏览器交互的方法和接口。</li>
+</ul>
+<p>JavaScript 的这三个部分得到了五大 Web 浏览器（IE、Firefox、Chrome、Safari 和 Opera）不同程度的支持。HTML5 中收录的 BOM 也会因浏览器而异。</p>
+<h1 id="2-HTML-中的-JavaScript"><a href="#2-HTML-中的-JavaScript" class="headerlink" title="2. HTML 中的 JavaScript"></a>2. HTML 中的 JavaScript</h1><p>将 JavaScript 引入网页，首先要解决它与网页的主导语言 HTML 的关系问题。也就是引入的同时，不会导致页面在其他浏览器中渲染出问题。</p>
+<h2 id="2-1-lt-script-gt-元素"><a href="#2-1-lt-script-gt-元素" class="headerlink" title="2.1 &lt;script&gt; 元素"></a>2.1 &lt;script&gt; 元素</h2><p>早期将 JavaScript 插入 HTML 的主要方法是使用 &lt;script&gt; 元素。这个元素是由网景公司创造出来，并最早在 Netscape Navigator 2 中实现。后来，被正式加入到 HTML 规范。 &lt;script&gt; 有下列8个属性</p>
+<ul>
+<li>async: 可选。表示应该立即开始下载脚本，但不能阻止其他网页动作，比如下载资源或等待其他脚本加载。只对外部脚本文件有效。</li>
+<li>charset: 可选。使用 src 属性指定的代码字符集。</li>
+<li>crossorigin: 可选。配置相关请求的 CORS（跨源资源共享）设置，默认不使用。</li>
+<li>defer: 可选。表示在文档解析和显示完成后再执行脚本，只对外部脚本有效（在 IE7 及更早版本中，对行内脚本也可指定）。</li>
+<li>integrity: 可选。允许比对接收到的资源和指定的加密签名以验证子资源的完整性，如果接收到的资源的签名与这个属性指定的签名不匹配，则页面会报错，脚本不会执行。这个属性可以用于确保内容分发网络（CDN）不会提供恶意内容。</li>
+<li>src: 可选。表示包含要执行的代码的外部文件。</li>
+<li>type: 可选。替代language，表示代码块中脚本语言的内容类型（也称 MIME 类型）。通常为 “application/x-javascript”，如果该值为 module，则代码会被当成 ES6 模块，而且只有在这个时候代码中才能出现 import 和 export 关键字。</li>
+<li>language: 废弃。</li>
+</ul>
+<p>使用  &lt;script&gt; 的方式有两种:</p>
+<ul>
+<li><p>嵌入行内 JavaScript 代码，直接把代码放在 &lt;script&gt; 元素中就行:</p>
+<ul>
+<li><pre><code class="html"><span class="tag">&lt;<span class="name">script</span>&gt;</span>
+<span class="actionscript">  <span class="function"><span class="keyword">function</span> <span class="title">sayHi</span><span class="params">()</span> </span>{</span>
+<span class="javascript">    <span class="built_in">console</span>.log(<span class="string">'Hi!'</span>);</span>
+  }
+<span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="comment"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 引入外部文件中的 JavaScript 文件</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;html</span><br><span class="line">    &lt;script src&#x3D;&quot;example.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></span>
+
+- 在 XHTML 文档中，可以忽略结束标签，但在 HTML 文件中不能使用
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>要避免同时使用两种方式，若两者都提供的话，则浏览器只会下载并执行脚本文件，从而忽略行内代码。</p>
+<p>不管包含的是什么代码，浏览器都会按照 &lt;script&gt; 在页面中出现的顺序依次解释它们，前提是它们没有使用 defer 和 async 属性。</p>
+</blockquote>
+<h3 id="2-1-1-标签位置"><a href="#2-1-1-标签位置" class="headerlink" title="2.1.1 标签位置"></a>2.1.1 标签位置</h3><p>过去，所有  &lt;script&gt; 元素都被放在页面的 &lt;head&gt; 标签内。这种做法主要是将外部的 CSS 和 JavaScript 文件都集中放到一起。但问题是<strong>将导致页面必须把 &lt;head&gt; 中的所有外部文件下载、解析和解释完成后，才能开始渲染页面</strong>（页面在浏览器解析到 &lt;body&gt; 的起始标签时开始渲染）。因此现代 Web 应用程序通常将<strong>所有 JavaScript 引用放在  &lt;body&gt; 元素中的页面内容后面。</strong>这样一来，用户会感觉页面加载更快了，因为浏览器显示空白页面的时间短了。</p>
+<h3 id="2-1-2-推迟执行脚本"><a href="#2-1-2-推迟执行脚本" class="headerlink" title="2.1.2 推迟执行脚本"></a>2.1.2 推迟执行脚本</h3><p>在  &lt;script&gt; 元素上设置 defer 属性，会告诉浏览器应该立即开始下载（同步），但执行应该推迟，如下列的代码块:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"example1.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"example2.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然  &lt;script&gt; 元素包含在页面的  &lt;head&gt; 中，但它们会在浏览器解析到结束  &lt;/html&gt; 标签后才会执行。</p>
+<blockquote>
+<p>defer 属性只对外部脚本文件才有效，在高浏览器版本中会忽略行内脚本的 defer 属性。</p>
+<p>将要推迟执行的脚本放在页面的底部会比较好。</p>
+<p>对于 XHTML 文档，执行 defer 属性时应该写成 defer=”defer”。</p>
+</blockquote>
+<h3 id="2-1-3-异步执行脚本"><a href="#2-1-3-异步执行脚本" class="headerlink" title="2.1.3 异步执行脚本"></a>2.1.3 异步执行脚本</h3><p>async 属性与 defer 属性类似，两者都只适用于外部脚本，都会告诉浏览器立即开始下载。不过 async 是异步下载（不能保证次序执行）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"example1.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"example2.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>async 异步脚本保证会在页面的 load 事件前执行，但可能会在 DOMContentLoaded（参见第17章）之前或之后。</p>
+<p>使用 async 会告诉页面你不会使用 document.write，不过好的 Web 开发实践根本就不推荐使用这个方法。</p>
+<p>对于 XHTML 文档，执行 defer 属性时应该写成 async=”async”。</p>
+</blockquote>
+<h3 id="2-1-4-动态加载脚本"><a href="#2-1-4-动态加载脚本" class="headerlink" title="2.1.4 动态加载脚本"></a>2.1.4 动态加载脚本</h3><p>通过 DOM API 来向 DOM 中动态添加 script 元素同样可以加载指定的脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>)</span><br><span class="line">script.src = <span class="string">'example1.js'</span></span><br><span class="line"><span class="built_in">document</span>.head.appendChild(script)</span><br></pre></td></tr></table></figure>
+
+<p>以这种方式创建的  &lt;script&gt; 元素是以异步方式加载的，相当于添加了 async 属性。可以通过属性 async = false 进行设置为同步加载。</p>
+<h2 id="2-2-行内代码与外部文件"><a href="#2-2-行内代码与外部文件" class="headerlink" title="2.2 行内代码与外部文件"></a>2.2 行内代码与外部文件</h2><p>虽然可以直接在 HTML 文件中嵌入 JavaScript 代码，但通常认为最佳实践是尽可能将 JavaScript 代码放在外部文件中。推荐理由如下:</p>
+<ul>
+<li>可维护性。JavaScript 文件统一保存代码，更容易维护，这样开发者就可以独立于使用它们的 HTML 页面来编辑代码。</li>
+<li>缓存。浏览器会根据特定的设置缓存所有外部链接的 JavaScript 文件，这意味着多次使用该同一文件，则该文件只需加载一次。</li>
+<li>适应未来。通过把 JavaScript 放在外部文件中，就不必考虑用 XHTML 或注释黑科技来解决兼容问题。</li>
+</ul>
+<blockquote>
+<p>在 SPDY/HTTP2 中，预请求的消耗已显著降低，以轻量、独立 JavaScript 组件形式向客户端送达脚本更具优势。</p>
+<p>原因是浏览器会缓存已下载的轻量、独立 JavaScript 文件。</p>
+</blockquote>
+<h2 id="2-4-lt-noscript-gt-元素"><a href="#2-4-lt-noscript-gt-元素" class="headerlink" title="2.4 &lt;noscript&gt; 元素"></a>2.4 &lt;noscript&gt; 元素</h2><p>  &lt;noscript&gt; 元素，针对早期浏览器不支持 JavaScript 的问题。虽然如今的浏览器已经近乎 100% 支持 JavaScript，但对于禁用 JavaScript 的浏览器来说，这个元素仍然有它的用处。</p>
+<ul>
+<li>&lt;noscript&gt; 元素一般放在  &lt;body&gt; 元素中，可以包含任何出现在  &lt;body&gt; 中的 HTML 元素，  &lt;script&gt; 除外。</li>
+<li>当下列任意两种情况发送时，  &lt;noscript&gt; 元素将发挥作用。否则浏览器将不会渲染  &lt;noscript&gt; 元素。<ul>
+<li>浏览器不支持脚本。</li>
+<li>浏览器对脚本的支持被关闭。</li>
+</ul>
+</li>
+</ul>
+<p>下列是代码🌰片段</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">noscript</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">p</span>&gt;</span>This page requires a JavaScript-enabled browser.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>若该浏览器脚本不可使用，用户将得到提示，否则用户永远不会看到它。</p>
+<h2 id="2-5-总结"><a href="#2-5-总结" class="headerlink" title="2.5 总结"></a>2.5 总结</h2><ul>
+<li>要包含外部 JavaScript 文件，必须将 src 属性设置为文件的 URL。文件可以跟网页在用一台服务器上，也可以位于完全不同域。</li>
+<li>在不使用 defer 和 async 属性的情况下，所有 &lt;script&gt; 元素会依照它们在网页中出现的次序被解释。</li>
+<li>对正常脚本而言，为提升用户感受（让页面渲染更快）。应该把 &lt;script&gt; 元素放到页面末尾（ &lt;/body&gt; 标签前一行）</li>
+<li>可以使用 defer 属性把脚本推迟到文档渲染完毕后再执行，按次序执行。</li>
+<li>可以使用 async 属性表示脚本不需要等待其他脚本，同时也不阻塞文档渲染，即异步加载，不能保证按次序执行。</li>
+<li>通过使用 &lt;noscript&gt; 可以进行提示该浏览器是否执行并启用脚本。</li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        
+                                            <!--MOB SHARE BEGIN-->
+<a><div class="-mob-share-open article-share-link">分享</div></a>
+<div class="-mob-share-ui" style="display: none; display: flex; align-items: center; align-content: center;">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+    </ul>
+    <div style="height: 100%; width: 100%">
+        <div class="-mob-share-close" style="position:relative; margin: -26em auto; width: 80px; height: 40px; font-size: 14px; color: #fff; background-color: #4593e9; border-radius: 15px;">取消</div>
+    </div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="/lindada-blog/js/mob-share.js"></script>
+<!--MOB SHARE END-->
+
+                                        
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lindada-blog/tags/%E7%BA%A2%E5%AE%9D%E4%B9%A6/" rel="tag">红宝书</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+    
+      <a href="/lindada-blog/2021/02/05/%E4%B8%89%E6%AD%A5%E8%AE%A9google%E6%B8%B8%E8%A7%88%E5%99%A8%E5%9C%A8yutube%E7%95%85%E9%80%9A%E6%97%A0%E9%98%BB/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">三步让Google游览器在YouTube畅通无阻</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+    <div class="vcomments" id="vcomments"></div>
+    
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'vtOOBRQNx6g17peggpfzBROa-9Nh9j0Va',
+                appKey: 'Q1DgaTCfUeYjMOqoTAH8TX9M',
+                notify: 'false',
+                verify: 'true',
+                avatar: 'mp',
+                pageSize: '15',
+                placeholder: '✨悄悄地对小屋说...'
+            })
+        </script>
+        
+                        
+                            
+
+</article>
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li>访客数 <i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li>阅读量 <i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2021 林大大的小屋</li> |
+      <li> Gitee主页 by <a href="https://gitee.com/lin_daren" target="_blank">林大大的Gitee</a></li> |
+      <li> Wechat by <span class="footer-title">dadaLin_0809</span></li>
+      <li> Email by <span class="footer-title">809751956@qq.com</span></li> |
+    </ul>
+  </div>
+</footer>
+
+<style>
+    .footer-title {
+        color: darkcyan;
+        font-weight: bold;
+    }
+</style>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/lindada-blog/"><img src="/lindada-blog/images/star.svg" alt="林大大的小屋"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/lindada-blog/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/lindada-blog/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/lindada-blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/lindada-blog/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/lindada-blog/js/lazyload.min.js"></script>
+
+
+<script src="/lindada-blog/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/lindada-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/lindada-blog/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/lindada-blog/js/ocean.js"></script>
+
+
+<script src="/lindada-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/lindada-blog/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360,"top":"-40px","right":"25px"},"mobile":{"show":true}});</script></body>
+</html>
