@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2021-02-28T14:01:19.005Z</updated>
+  <updated>2021-03-03T04:16:10.853Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>（第三章）我一字一行地重读红宝书</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/03/03/%EF%BC%88%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/03/03/%EF%BC%88%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/</id>
+    <published>2021-03-03T04:10:39.000Z</published>
+    <updated>2021-03-03T04:16:10.853Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;历经两个多月断断续续地读完了JavaScript的经典书籍&lt;strong&gt;红宝书&lt;/strong&gt; -《JavaScript高级程序设计（第4版）&lt;/p&gt;
+&lt;p&gt;详细地读完一遍后发觉整本书知识点全而泛，乍一想每一章的细节，还是略显模糊。&lt;/p&gt;
+&lt;p&gt;于是督促自己计划编写每一章的着重点再次加深印象和理解，顺便记录自己的所学所想所悟。方便自身利用电脑的快速搜索关键词来进行快速定位和学习，也希望能帮助到有需要的同学们哈。&lt;/p&gt;
+&lt;p&gt;若是想要系统仔细的学习，当然还是看原书比较好，我也是强烈推荐的噢！这里内容只当个人复习和总结。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;提示: 一些个人主观认为不重要或不流行的章节将进行删减&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="红宝书" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>（第一二章）我一字一行地重读红宝书</title>
@@ -425,25 +448,6 @@
     
     
       <category term="算法小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%97%E6%B3%95%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>带你入职的精美简历制作（免费获取高大上模版教程）</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/06/29/%E5%B8%A6%E4%BD%A0%E5%85%A5%E8%81%8C%E7%9A%84%E7%B2%BE%E7%BE%8E%E7%AE%80%E5%8E%86%E5%88%B6%E4%BD%9C%EF%BC%88%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%8F%96%E9%AB%98%E5%A4%A7%E4%B8%8A%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B%EF%BC%89/</id>
-    <published>2020-06-29T13:34:20.000Z</published>
-    <updated>2020-12-29T08:07:43.008Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;古时候，我们见字如面！&lt;br&gt;到如今，手上的简历可谓见证我们以往的人生。&lt;br&gt;你是否还在对没有一份精美的简历而忧愁&lt;br&gt;是否羡慕那些大牛们高大上的简历&lt;br&gt;看完这一篇文章！&lt;br&gt;你也能打造属于自己的”完美简历”✨&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="简历小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%80%E5%8E%86%E5%B0%8F%E5%B1%8B/"/>
     
   </entry>
   
