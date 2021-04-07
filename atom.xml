@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2021-03-03T04:16:10.853Z</updated>
+  <updated>2021-04-07T04:14:12.794Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Canvas动画小demo（从零到一）</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/04/07/Canvas%E5%8A%A8%E7%94%BB%E5%B0%8Fdemo%EF%BC%88%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%EF%BC%89/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/04/07/Canvas%E5%8A%A8%E7%94%BB%E5%B0%8Fdemo%EF%BC%88%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%EF%BC%89/</id>
+    <published>2021-04-07T04:10:28.000Z</published>
+    <updated>2021-04-07T04:14:12.794Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;因对于 canvas 画布在面试过程中有重复遇见，而自身也仅仅了解和学习过 canvas 的理论知识，那就那就整一个 demo 叭！&lt;/p&gt;
+&lt;p&gt;对应的文件已经整理上传到自己的仓库啦（全部注释讲解了喔）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://gitee.com/lin_daren/the-gorgeous-electronic-clock-of-canvas&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;gitee仓库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/lindadade/the-gorgeous-electronic-clock-of-canvas&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github仓库&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/lindada-blog/2021/04/07/Canvas%E5%8A%A8%E7%94%BB%E5%B0%8Fdemo%EF%BC%88%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%EF%BC%89/canvas.gif&quot; class&gt;  
+
+&lt;p&gt;&lt;strong&gt;跟随 &lt;a href=&quot;https://www.imooc.com/video/2493&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;imooc 系列课程 &lt;/a&gt;学习总结，如果有不清楚的地方，也建议跟我一样从零观看学习喔&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Canvas小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/Canvas%E5%B0%8F%E5%B1%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>（第三章）我一字一行地重读红宝书</title>
@@ -422,32 +449,6 @@
     
     
       <category term="简历小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%80%E5%8E%86%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端JS算法，您看我还有机会嘛？（持续不间断更新）</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
-    <published>2020-07-08T14:39:25.000Z</published>
-    <updated>2021-01-18T09:00:59.353Z</updated>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/lindada-blog/2020/07/08/%E5%89%8D%E7%AB%AFJS%E7%AE%97%E6%B3%95%EF%BC%8C%E6%82%A8%E7%9C%8B%E6%88%91%E8%BF%98%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%98%9B%EF%BC%9F%EF%BC%88%E6%8C%81%E7%BB%AD%E4%B8%8D%E9%97%B4%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/1.png&quot; class&gt;  
-&lt;p&gt;暑假到了…作为算法小渣的我来说&lt;br&gt;很有必要开启算法的上山之路！&lt;br&gt;本文章用于记录在路途中的一步一脚印&lt;br&gt;&lt;em&gt;~不拍照的那种&lt;/em&gt;&lt;br&gt;坚持周期性更新（一天3篇Easy, 一天2篇Mid, 一天1篇Hard）&lt;br&gt;为了两年后毕业后面试的自己打下基础&lt;br&gt;奋进吧！少儿郎…  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;来源：力扣（LeetCode）- 精选 TOP 面试题&lt;br&gt;提示: 每一道题均有实例、解题思路、解答代码、执行结果&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;要是对您有所帮助启发点个小赞噢~  &lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="算法小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%AE%97%E6%B3%95%E5%B0%8F%E5%B1%8B/"/>
     
   </entry>
   
