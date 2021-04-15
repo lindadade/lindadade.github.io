@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>林大大的小屋</title>
+  <title>大大的小屋</title>
   
   <subtitle>| 爱前端 | 爱摄影 | 爱做梦 | 想吃糖 | 爱一切切 ❤ |</subtitle>
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2021-04-13T05:06:54.090Z</updated>
+  <updated>2021-04-15T14:35:47.055Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记《Github漫游指南阅读》有感</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/04/15/%E8%AE%B0%E3%80%8AGithub%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97%E9%98%85%E8%AF%BB%E3%80%8B%E6%9C%89%E6%84%9F/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/04/15/%E8%AE%B0%E3%80%8AGithub%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97%E9%98%85%E8%AF%BB%E3%80%8B%E6%9C%89%E6%84%9F/</id>
+    <published>2021-04-15T14:31:24.000Z</published>
+    <updated>2021-04-15T14:35:47.055Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;今天是可乐喔！！！汽水！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;因为前一阵子的面试，面试官都提到可以往 Github 上优秀的项目学习。正巧今天看文章时读到 &lt;strong&gt;鱼皮老哥哥&lt;/strong&gt; 的一篇文章【 &lt;a href=&quot;https://juejin.cn/post/6946792867960619038&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这本免费小书，带你征服 GitHub！&lt;/a&gt; 】以此学习记录。&lt;/p&gt;
+&lt;p&gt;本人目前大三，只能以大三一名学生的视角和理解来阅读和学习这一篇文章，可能思维想法些许稚嫩，那就总结跟随优秀的前任步伐，总结经验叭。&lt;strong&gt;详情一定要阅读原作者的原文呀！！&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;阅读 &lt;strong&gt;&lt;a href=&quot;http://github.phodal.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub 漫游指南&lt;/a&gt;&lt;/strong&gt; 原文&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E9%9A%8F%E7%AC%94%E5%B0%8F%E5%B1%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>（继承）我一字一行地重读红宝书</title>
@@ -315,7 +341,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/08/20/%E8%AE%B0%E4%B8%80%E6%AC%A1vue%E9%A1%B9%E7%9B%AEsass-loader%E7%9A%84-deep-%E7%A9%BF%E9%80%8F%E5%A4%B1%E8%B4%A5/</id>
     <published>2020-08-20T06:22:29.000Z</published>
-    <updated>2020-12-29T08:07:42.771Z</updated>
+    <updated>2021-04-15T14:34:27.508Z</updated>
     
     <summary type="html">
     
@@ -327,7 +353,7 @@
     
     
     
-      <category term="bug小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/bug%E5%B0%8F%E5%B1%8B/"/>
+      <category term="随笔小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E9%9A%8F%E7%AC%94%E5%B0%8F%E5%B1%8B/"/>
     
   </entry>
   
@@ -416,30 +442,6 @@
 &lt;p&gt;&lt;strong&gt;往期复习&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5f12dd04f265da23033335e4?_blank&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ES6全面复习（一）赋值解构&lt;/a&gt;&lt;br&gt;记录小编认为ES6中不常见，但以后很有用的&lt;br&gt;宝藏新特效&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="ES6小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/ES6%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6全面复习（一）赋值解构</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/</id>
-    <published>2020-07-18T10:30:54.000Z</published>
-    <updated>2020-12-29T08:07:42.840Z</updated>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/lindada-blog/2020/07/18/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E8%B5%8B%E5%80%BC%E8%A7%A3%E6%9E%84/1.png&quot; class&gt;  
-&lt;p&gt;开启ES6全面复习之旅&lt;br&gt;记录自己觉得有用且易遗忘的知识点  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;赋值解构&lt;/strong&gt;  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;新的变量赋值方式&lt;br&gt;优美且简洁的代码&lt;br&gt;保护内容，只可读&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>

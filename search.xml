@@ -2746,6 +2746,626 @@ o = -o;    <span class="comment">// 值变成 1</span>
       </tags>
   </entry>
   <entry>
+    <title>记《Github漫游指南阅读》有感</title>
+    <url>/lindada-blog/2021/04/15/%E8%AE%B0%E3%80%8AGithub%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97%E9%98%85%E8%AF%BB%E3%80%8B%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<blockquote>
+<p>今天是可乐喔！！！汽水！！</p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为前一阵子的面试，面试官都提到可以往 Github 上优秀的项目学习。正巧今天看文章时读到 <strong>鱼皮老哥哥</strong> 的一篇文章【 <a href="https://juejin.cn/post/6946792867960619038" target="_blank" rel="noopener">这本免费小书，带你征服 GitHub！</a> 】以此学习记录。</p>
+<p>本人目前大三，只能以大三一名学生的视角和理解来阅读和学习这一篇文章，可能思维想法些许稚嫩，那就总结跟随优秀的前任步伐，总结经验叭。<strong>详情一定要阅读原作者的原文呀！！</strong></p>
+<blockquote>
+<p>阅读 <strong><a href="http://github.phodal.com/" target="_blank" rel="noopener">GitHub 漫游指南</a></strong> 原文</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="Github-项目"><a href="#Github-项目" class="headerlink" title="Github 项目"></a>Github 项目</h1><h2 id="Github-上创建项目的维度"><a href="#Github-上创建项目的维度" class="headerlink" title="Github 上创建项目的维度"></a>Github 上创建项目的维度</h2><ol>
+<li>快速上手框架来实战，即 demo（学习视频、文章等）</li>
+<li>重构别人的代码</li>
+<li>创建自己可用的框架</li>
+<li>快速构建大型应用</li>
+<li>构建通用的框架</li>
+</ol>
+<blockquote>
+<p>好像易上手的项目更受大家欢迎👏</p>
+</blockquote>
+<h2 id="项目如何成长"><a href="#项目如何成长" class="headerlink" title="项目如何成长"></a>项目如何成长</h2><p>重点是测试，更多测试，试测试测试试测试测试</p>
+<p>会接触更多的东西，如 stub，如 mock，如 fakeserver。</p>
+<h2 id="取一个好名字"><a href="#取一个好名字" class="headerlink" title="取一个好名字"></a>取一个好名字</h2><ol>
+<li>有意义的名字</li>
+<li>简单符合项目的名字</li>
+<li>个性化维持自己一定的命名规则</li>
+</ol>
+<h2 id="挑选好-LICENSE"><a href="#挑选好-LICENSE" class="headerlink" title="挑选好 LICENSE"></a>挑选好 LICENSE</h2><blockquote>
+<p>为了防止自己的软件被竞争对手所使用，大多数厂家停止分发其软件源代码，并开始使用版权和限制性软件许可证，来限制或者禁止软件源代码的复制或再分配。</p>
+<p>随后，便诞生了开源软件的概念，开源的要求比自由软件宽松一些。迄今发布的自由软件源代码都是开源软件，而并非所有的开源软件都是自由软件。这是因为不同的许可（协议）赋予用户不同的权利，如 GPL 协议强制要求开源修改过源码的代码，而宽松一点的 MIT 则不会有这种要求。</p>
+</blockquote>
+<h3 id="简单-LICENSE-例子"><a href="#简单-LICENSE-例子" class="headerlink" title="简单 LICENSE 例子"></a>简单 LICENSE 例子</h3><h4 id="GPL"><a href="#GPL" class="headerlink" title="GPL"></a>GPL</h4><p>由于 GPL 的传染性，便意味着，他人引用我们的代码时，其所写的代码也需要使用 GPL 开源。即：GPL 是有 “传染性” 的 “病毒” ，因为 GPL 条款规定演绎作品也必须是 GPL 的。</p>
+<h4 id="MIT"><a href="#MIT" class="headerlink" title="MIT"></a>MIT</h4><p>因此，一般而言，我使用的是 MIT 协议。至少我保留了一个署名权，即你可以修改我的代码，但是在 LICENSE 里必须加上我的名字。</p>
+<p>选用 MIT 特别有意思，特别是在最近几年里，发生过：</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/25739512" target="_blank" rel="noopener">iView “抄袭” Element UI 事件</a></li>
+<li><a href="https://github.com/JackyAndroid/AndroidTVLauncher/issues/22" target="_blank" rel="noopener">AndroidTVLauncher “抄袭” 事件</a></li>
+</ul>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p><strong>以后非商业的项目，我也要选用这个</strong></p>
+<h3 id="Creative-Commons"><a href="#Creative-Commons" class="headerlink" title="Creative Commons"></a>Creative Commons</h3><p>考虑到未来会以纸质书的形式出现，便会使用 CC-BY-NC-ND 协议：</p>
+<ul>
+<li>CC -&gt; Creative Commons</li>
+<li>BY -&gt; 署名（英语：Attribution，by）</li>
+<li>NC -&gt; 非商业性使用（英语：NonCommercial）</li>
+<li>ND -&gt; 禁止演绎（英语：NoDerivs）。</li>
+</ul>
+<p>即，任何人可以使用我写的电子书来自由复制、散布、展示及演出，但是不得用于商业用途（作者本人可以）。它可以随意地放在他的博客上，他的各个文章里。但是必须标明出自，并且不得改变、转变或更改本作品。</p>
+<p>如果你不介意的话，你可以使用公有领域（Public Domain）。可是这样一来，万一有一天，别人直接拿你的作品出书，你就骂爹了。（对！芜湖！）</p>
+<h5 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h5><p><strong>以后写文字类的东西，要选用这个</strong></p>
+<h1 id="Git-基础和-Github-使用"><a href="#Git-基础和-Github-使用" class="headerlink" title="Git 基础和 Github 使用"></a>Git 基础和 Github 使用</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>从一般开发者的角度来看，Git 有以下功能：</p>
+<ol>
+<li>从服务器上克隆数据库（包括代码和版本信息）到单机上。</li>
+<li>在自己的机器上创建分支，修改代码。</li>
+<li>在单机上自己创建的分支上提交代码。</li>
+<li>在单机上合并分支。</li>
+<li>新建一个分支，把服务器上最新版的代码 fetch 下来，然后跟自己的主分支合并。</li>
+<li>生成补丁（patch），把补丁发送给主开发者。</li>
+<li>看主开发者的反馈，如果主开发者发现两个一般开发者之间有冲突（他们之间可以合作解决的冲突），就会要求他们先解决冲突，然后再由其中一个人提交。如果主开发者可以自己解决，或者没有冲突，就通过。</li>
+<li>一般开发者之间解决冲突的方法，开发者之间可以使用 pull 命令解决冲突，解决完冲突之后再向主开发者提交补丁。</li>
+</ol>
+<p>从主开发者的角度（假设主开发者不用开发代码）看，Git 有以下功能：</p>
+<ol>
+<li>查看邮件或者通过其它方式查看一般开发者的提交状态。</li>
+<li>打上补丁，解决冲突（可以自己解决，也可以要求开发者之间解决以后再重新提交，如果是开源项目，还要决定哪些补丁有用，哪些不用）。</li>
+<li>向公共服务器提交结果，然后通知所有开发人员。</li>
+</ol>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>百科说：</p>
+<blockquote>
+<p>GitHub 是一个共享虚拟主机服务，用于存放使用Git版本控制的软件代码和内容项目。它由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner 使用Ruby on Rails编写而成。</p>
+</blockquote>
+<p>官方说：</p>
+<blockquote>
+<p>Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.</p>
+<p>数以百万计的开发者和公司在全球最大、最先进的开发平台GitHub上构建、发布和维护他们的软件。</p>
+</blockquote>
+<h2 id="Git-与-Github"><a href="#Git-与-Github" class="headerlink" title="Git 与 Github"></a>Git 与 Github</h2><p>首先 Git 是一个<strong>分布式的版本控制系统</strong>，最初由Linus Torvalds编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。目前，包括Rubinius、Merb和Bitcoin在内的很多知名项目都使用了Git。Git同样可以被诸如Capistrano和Vlad the Deployer这样的部署工具所使用。</p>
+<hr>
+<p>GitHub可以托管各种git库，并提供一个web界面，但与其它像 SourceForge或Google Code这样的服务不同，GitHub的独特卖点在于从另外一个项目进行分支的简易性。为一个项目贡献代码非常简单：首先点击项目站点的“fork”的按钮，然后将代码检出并将修改加入到刚才分出的代码库中，最后通过内建的“pull request”机制向项目负责人申请代码合并。已经有人将GitHub称为代码玩家的MySpace（这啥意思）</p>
+<h2 id="流行项目分析"><a href="#流行项目分析" class="headerlink" title="流行项目分析"></a>流行项目分析</h2><p>例如 GitHub 上的 Star 大于 10 万的项目。（截止：2021年4月12日18时。）</p>
+<blockquote>
+<p>约 25 个仓库结果</p>
+</blockquote>
+<h3 id="语言分布"><a href="#语言分布" class="headerlink" title="语言分布"></a>语言分布</h3><table>
+<thead>
+<tr>
+<th>Languages</th>
+<th>number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JavaScript</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Dart</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shell</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id="前十项目"><a href="#前十项目" class="headerlink" title="前十项目"></a>前十项目</h3><table>
+<thead>
+<tr>
+<th align="left">项目名</th>
+<th align="left">Language</th>
+<th align="left">Star</th>
+<th align="left">Url</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">freeCodeCamp</td>
+<td align="left">JavaScript</td>
+<td align="left">323k</td>
+<td align="left"><a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener">https://github.com/freeCodeCamp/freeCodeCamp</a></td>
+</tr>
+<tr>
+<td align="left">996.ICU</td>
+<td align="left">Rust</td>
+<td align="left">256k</td>
+<td align="left"><a href="https://github.com/996icu/996.ICU" target="_blank" rel="noopener">https://github.com/996icu/996.ICU</a></td>
+</tr>
+<tr>
+<td align="left">free-programming-books</td>
+<td align="left"></td>
+<td align="left">183k</td>
+<td align="left"><a href="https://github.com/EbookFoundation/free-programming-books" target="_blank" rel="noopener">https://github.com/EbookFoundation/free-programming-books</a></td>
+</tr>
+<tr>
+<td align="left">vue</td>
+<td align="left">JavaScript</td>
+<td align="left">182k</td>
+<td align="left"><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">https://github.com/vuejs/vue</a></td>
+</tr>
+<tr>
+<td align="left">react</td>
+<td align="left">JavaScript</td>
+<td align="left">167k</td>
+<td align="left"><a href="https://github.com/facebook/react" target="_blank" rel="noopener">https://github.com/facebook/react</a></td>
+</tr>
+<tr>
+<td align="left">coding-interview-university</td>
+<td align="left"></td>
+<td align="left">163k</td>
+<td align="left"><a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="noopener">https://github.com/jwasham/coding-interview-university</a></td>
+</tr>
+<tr>
+<td align="left">awesome</td>
+<td align="left"></td>
+<td align="left">158k</td>
+<td align="left"><a href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener">https://github.com/sindresorhus/awesome</a></td>
+</tr>
+<tr>
+<td align="left">tensorflow</td>
+<td align="left">C++</td>
+<td align="left">155k</td>
+<td align="left"><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener">https://github.com/tensorflow/tensorflow</a></td>
+</tr>
+<tr>
+<td align="left">developer-roadmap</td>
+<td align="left"></td>
+<td align="left">154k</td>
+<td align="left"><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">https://github.com/kamranahmedse/developer-roadmap</a></td>
+</tr>
+<tr>
+<td align="left">bootstrap</td>
+<td align="left">JavaScript</td>
+<td align="left">149k</td>
+<td align="left"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">https://github.com/twbs/bootstrap</a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>发现更多的是各种编程的学习资源，看来大家伙对于在 github 学习的趋势越来越明显了。</p>
+</blockquote>
+<h2 id="Pull-Request"><a href="#Pull-Request" class="headerlink" title="Pull Request"></a>Pull Request</h2><p>给其他的仓库来创建 Pull Request 来做贡献。</p>
+<h3 id="CLA"><a href="#CLA" class="headerlink" title="CLA"></a>CLA</h3><p>CLA 即 Contributor License Agreement，在为一些大的组织、机构提交 Pull Request 的时候，可能需要签署这个协议。他们会在你的 Pull Request 里问你，只有你到他们的网站去注册并同意协议才会接受你的 PR。</p>
+<p>以下是我为 Google 提交的一个 PR</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da92031fec8f4757b90caea8b375b10e~tplv-k3u1fbpfcp-zoom-1.image" alt="img">Google CLA</p>
+<p>以及 Eclipse 的一个 PR</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8eae910341424fbd887f2b5f23a2e1b8~tplv-k3u1fbpfcp-zoom-1.image" alt="img">Eclipse CLA</p>
+<h1 id="构建-Github-项目"><a href="#构建-Github-项目" class="headerlink" title="构建 Github 项目"></a>构建 Github 项目</h1><h2 id="用好-GitHub"><a href="#用好-GitHub" class="headerlink" title="用好 GitHub"></a>用好 GitHub</h2><p>一个良好的 Github 项目，从测试到 CI,再到自动部署.</p>
+<p>组成：</p>
+<ul>
+<li>看板式管理应用程序（如 trello，简单地说就是管理软件功能）</li>
+<li>CI（持续集成）</li>
+<li>测试覆盖率</li>
+<li>代码质量（code smell）</li>
+</ul>
+<blockquote>
+<p>对于一个不是远程的团队（如只有一个人的项目）来说，Trello、Jenkin、Jira不是必需的：</p>
+</blockquote>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>通常我们都会找说明文档时，如果没有的话，更常见的是看测试。</p>
+<p>作用：</p>
+<ul>
+<li>我不希望每次做完一个个新功能的时候，再手动地去测试一个个功能。（自动化测试）</li>
+<li>我不希望在重构的时候发现破坏了原来的功能，而我还一无所知。</li>
+<li>我不敢push代码，因为我没有把握。</li>
+</ul>
+<blockquote>
+<p>看上去似乎每个测试都很小，不过补完每一个测试之后我们就得到了测试覆盖率</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">File</th>
+<th align="left">Statements</th>
+<th align="left">Branches</th>
+<th align="left">Functions</th>
+<th align="left">Lines</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">lettuce.js</td>
+<td align="left">98.58% (209 / 212)</td>
+<td align="left">82.98%(78 / 94)</td>
+<td align="left">100.00% (54 / 54)</td>
+<td align="left">98.58% (209 / 212)</td>
+</tr>
+</tbody></table>
+<h3 id="CI"><a href="#CI" class="headerlink" title="CI"></a>CI</h3><p>CI 对于一个开发者在不同城市开发同一项目上来说是很重要的，这意味着当你添加的部分功能有测试覆盖的时候，项目代码会更加强壮。</p>
+<h3 id="代码质量"><a href="#代码质量" class="headerlink" title="代码质量"></a>代码质量</h3><p>像 <code>jslint</code> 和 <code>eslint</code> 这类的工具，只能保证代码在语法上是正确的，但是不能保证你写了一堆 bad smell 的代码。</p>
+<ul>
+<li>重复代码</li>
+<li>过长的函数</li>
+<li>等等</li>
+</ul>
+<p><code>Code Climate</code> 是一个与 GitHub 集成的工具，我们不仅仅可以看到测试覆盖率，还有代码质量。</p>
+<blockquote>
+<p>这就意味着我们可以对上面的代码进行重构，他们是重复的代码。我们可以进行一定地优化喔。</p>
+</blockquote>
+<h3 id="模块分离与测试"><a href="#模块分离与测试" class="headerlink" title="模块分离与测试"></a>模块分离与测试</h3><p>在之前说到</p>
+<blockquote>
+<p>奋斗了近半个月后，将 fork 的代码读懂、重构、升级版本、调整，添加新功能、添加测试、添加 CI、添加分享之后，终于 almost finish。</p>
+</blockquote>
+<p>今天就来说说是怎样做的，里面有：</p>
+<ul>
+<li>代码质量（Code Climate）</li>
+<li>CI状态（Travis CI）</li>
+<li>测试覆盖率（96%）</li>
+<li>自动化测试（npm test）</li>
+<li>文档</li>
+</ul>
+<p>按照 <a href="https://github.com/phodal/awesome-developer" target="_blank" rel="noopener">Web Developer 路线图</a>来说，我们还需要有：</p>
+<ul>
+<li>版本管理</li>
+<li>自动部署</li>
+<li>等等</li>
+</ul>
+<h3 id="代码模块化"><a href="#代码模块化" class="headerlink" title="代码模块化"></a>代码模块化</h3><p>在 SkillTree 的源码里，大致分为三部分：</p>
+<ul>
+<li>namespace 函数：顾名思义</li>
+<li>Calculator 也就是 TalentTree，主要负责解析、生成 url，头像，依赖等等</li>
+<li>Skill 主要是 tips 部分。</li>
+</ul>
+<blockquote>
+<p>就是要把代码进行模块化地管理，类似于 CommJS、AMD 规范、ES6 模块化或者使用我们工程师工具如 webpack、vite 等来进行代码模块化</p>
+</blockquote>
+<h3 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h3><ul>
+<li>写对应的自动化测试脚本</li>
+<li>在 <code>package.json</code> 里添加脚本</li>
+<li>这样当我们 push 代码的时候便会自动跑所有的测试</li>
+<li>也可以配置对应需要测试的配置文件</li>
+</ul>
+<h3 id="测试示例"><a href="#测试示例" class="headerlink" title="测试示例"></a>测试示例</h3><p>简单地看一下 Book 的测试：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* global describe, it */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> requirejs = <span class="built_in">require</span>(<span class="string">"requirejs"</span>);</span><br><span class="line"><span class="keyword">var</span> assert = <span class="built_in">require</span>(<span class="string">"assert"</span>);</span><br><span class="line"><span class="keyword">var</span> should = <span class="built_in">require</span>(<span class="string">"should"</span>);</span><br><span class="line">requirejs.config(&#123;</span><br><span class="line">  baseUrl: <span class="string">'app/'</span>,</span><br><span class="line">  nodeRequire: <span class="built_in">require</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Book,Link'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> Book, Link;</span><br><span class="line">  before(<span class="function"><span class="keyword">function</span> (<span class="params">done</span>) </span>&#123;</span><br><span class="line">    requirejs([<span class="string">'scripts/Book'</span>、], <span class="function"><span class="keyword">function</span> (<span class="params">Book_Class</span>) </span>&#123;</span><br><span class="line">      Book = Book_Class;</span><br><span class="line">      done();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  describe(<span class="string">'Book Test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    it(<span class="string">'should return book label &amp; url'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> book_name = <span class="string">'Head First HTML与CSS'</span>;</span><br><span class="line">      <span class="keyword">var</span> url = <span class="string">'http://www.phodal.com'</span>;</span><br><span class="line">      <span class="keyword">var</span> books = &#123;</span><br><span class="line">        label: book_name,</span><br><span class="line">        url: url</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> _book = <span class="keyword">new</span> Book(books);</span><br><span class="line">      _book.label.should.equal(book_name);</span><br><span class="line">      _book.url.should.equal(url);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>因为我们用 <code>require.js</code> 来管理浏览器端，在后台写测试来测试的时候，我们也需要用他来管理我们的依赖，这也就是为什么这个测试这么长的原因，多数情况下一个测试类似于这样子的。（用 Jasmine 似乎会是一个更好的主意，但是用习惯 Jasmine 了）</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">describe(<span class="string">'Book Test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">it(<span class="string">'should return book label &amp; url'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> book_name = <span class="string">'Head First HTML与CSS'</span>;</span><br><span class="line">  <span class="keyword">var</span> url = <span class="string">'http://www.phodal.com'</span>;</span><br><span class="line">  <span class="keyword">var</span> books = &#123;</span><br><span class="line">    label: book_name,</span><br><span class="line">    url: url</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> _book = <span class="keyword">new</span> Book(books);</span><br><span class="line">  _book.label.should.equal(book_name);</span><br><span class="line">  _book.url.should.equal(url);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>最后的断言，也算是测试的核心，保证测试是有用的。</p>
+<blockquote>
+<p>感觉自己不太熟悉测试这一类环节</p>
+</blockquote>
+<h1 id="Git-提交信息及几种不同的规范"><a href="#Git-提交信息及几种不同的规范" class="headerlink" title="Git 提交信息及几种不同的规范"></a>Git 提交信息及几种不同的规范</h1><p>谈谈一个好的 Git、SVN 提交信息是怎样规范出来的</p>
+<p>在团队协作中，使用版本管理工具 Git、SVN 几乎都是这个行业的标准。当我们提交代码的时候，需要编写提交信息（commit message）。</p>
+<blockquote>
+<p>而提交信息的主要用途是：<strong>告诉这个项目的人，这次代码提交里做了些什么</strong>。</p>
+<p>并且<strong>防止一次修改中，修改过多的文件，导致后期修改、维护、撤销等等困难</strong>。</p>
+</blockquote>
+<p>而对于不同的团队来说，都会遵循一定的规范，主要会介绍以下几种写法：</p>
+<ul>
+<li>工作写法</li>
+<li>常规写法</li>
+<li>开源库写法</li>
+</ul>
+<h2 id="工作写法"><a href="#工作写法" class="headerlink" title="工作写法"></a>工作写法</h2><p>当项目里，有一个唯一标识的 key，我们就可以使用 key 来规范我们的提交信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[key] 提交人 &amp; 开发者: do something</span><br></pre></td></tr></table></figure>
+
+<p>比如：<code>[PHODAL-0001] ladohp &amp; phodal: update documents</code>，解释如下：</p>
+<ul>
+<li><code>PHODAL-0001</code>，该项目的 key，它可以帮我们找到某个业务修改的原因，即点出相应 bug 的来源</li>
+<li><code>ladohp &amp; phodal</code> ，结对编程的两个人的名字，后者（phodal）一般是写代码的人，出于礼貌就放在后面了。由于 Git 的提交人只显示一个，所以写上两个的名字。当提交的人不在时，就可以问另外一个人修改的原因。</li>
+<li><code>update documents</code>，我们做了什么事情</li>
+</ul>
+<p>缺点：而对于其他团队来说，并不知道对应 key 值这种东西，因此就需要一种额外的作法。</p>
+<h2 id="常规写法"><a href="#常规写法" class="headerlink" title="常规写法"></a>常规写法</h2><p>对于我来说，我则习惯这种的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[任务分类] 主要修改组件（可选）：修改内容</span><br></pre></td></tr></table></figure>
+
+<p>示例 1，<code>[T] tabs: add icons</code> 。</p>
+<ul>
+<li>其中的 <code>T</code> 表示这是一个技术卡</li>
+<li><code>tabs</code> 表示修改的是 Tabs</li>
+<li><code>add icons</code> 则表示添加了图标。</li>
+</ul>
+<p>示例 2，<code>[SkillTree] detail: add link data</code>。</p>
+<ul>
+<li><code>SkillTree</code> 表示修改的是技能树 Tab 下的内容</li>
+<li><code>detail</code> 则表示修改的是详情页</li>
+<li><code>add link data</code> 则表示是添加了技能的数据</li>
+</ul>
+<p>这样做的主要原因是，它可以轻松也帮我 <strong>filter 出相应业务的内容</strong>。</p>
+<p>缺点：要这样做需要团队达到一致，因此付出一些额外的约束成本。</p>
+<h2 id="开源应用、开源库写法（本人推荐）"><a href="#开源应用、开源库写法（本人推荐）" class="headerlink" title="开源应用、开源库写法（本人推荐）"></a>开源应用、开源库写法（本人推荐）</h2><p>与我们日常工作稍有不同的是：工作中的 Release 计划一般都是事先安排好的，不需要一些 CHANGELOG 什么的。而开源应用、开源库需要有对应的 CHANELOG，则添加了什么功能、修改了什么等等。毕竟有很多东西是由社区来维护的。</p>
+<p>因此，这里以做得比较好的开源项目 Angular 为例展示。Angular 团队建议采用以下的形式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;footer&gt;</span><br></pre></td></tr></table></figure>
+
+<p>诸如：<code>docs(changelog): update change log to beta.5</code> 中：</p>
+<ul>
+<li>docs 则对应修改的类型</li>
+<li>changelog 则是影响的范围</li>
+<li>subject 则是对应做的事件</li>
+</ul>
+<p>对应的类型有：</p>
+<ul>
+<li>build：影响构建系统或外部依赖关系的更改（示例范围：gulp，broccoli，npm）</li>
+<li>ci：更改我们的持续集成文件和脚本（示例范围：Travis，Circle，BrowserStack，SauceLabs）</li>
+<li>docs：仅文档更改</li>
+<li>feat：一个新功能</li>
+<li>fix：修复错误</li>
+<li>perf：改进性能的代码更改</li>
+<li>refactor：代码更改，既不修复错误也不添加功能</li>
+<li>style：不影响代码含义的变化（空白，格式化，缺少分号等）</li>
+<li>test：添加缺失测试或更正现有测试</li>
+</ul>
+<p>同时还对应了 20+ 的 Scope，可以说这种提交比上面的提交更有挑战。</p>
+<p>而这样做的优点是，它可以轻松地生成一个 CHANGELOG。与此同时还有一个名为 <code>Conventional Commits</code> 的规范，建议采用相似的形式。</p>
+<blockquote>
+<p>目前我在项目中运用的最多的是 feat</p>
+</blockquote>
+<h1 id="创建项目文档"><a href="#创建项目文档" class="headerlink" title="创建项目文档"></a>创建项目文档</h1><p>我们需要为我们的项目创建一个文档，通常我们可以将核心代码以外的东西都称为文档：</p>
+<ol>
+<li>README</li>
+<li>文档</li>
+<li>示例</li>
+<li>测试</li>
+</ol>
+<h2 id="README"><a href="#README" class="headerlink" title="README"></a>README</h2><p>README 通常会显示在 GitHub 项目的下面，当创建仓库的时候也会建议添加。</p>
+<p>通常在这个 README 里，还会有：</p>
+<ul>
+<li>项目简介</li>
+<li>针对人群</li>
+<li>安装指南</li>
+<li>示例</li>
+<li>运行的平台</li>
+<li>如何参与贡献</li>
+<li>协议</li>
+</ul>
+<h2 id="官方首页与在线文档"><a href="#官方首页与在线文档" class="headerlink" title="官方首页与在线文档"></a>官方首页与在线文档</h2><p>很多开源项目都会有自己的网站，并在上面有一个文档，而有的则会放在<a href="https://readthedocs.org/。" target="_blank" rel="noopener">https://readthedocs.org/。</a></p>
+<blockquote>
+<p>在一个开源项目中，良好和专业的文档是相当重要的，有时他可能会比软件还会重要。因为如果一个开源项目好用的话，多数人可能不会去查看软件的代码。这就意味着，多数时候他在和你的文档打交道。</p>
+</blockquote>
+<p>文档一般会有：API 文档、 配置文档、帮助文档、用户手册、教程等等</p>
+<p>写文档的软件有很多，如 Markdown、Doxygen、Docbook 等等。</p>
+<h2 id="可用示例"><a href="#可用示例" class="headerlink" title="可用示例"></a>可用示例</h2><p>一个简单上手的示例非常重要，特别是通常我们是在为着某个目的而去使用一个开源项目的是时候，我们希望能马上使用到我们的项目中。而不是需要繁琐的步骤才能进行下一步。</p>
+<h1 id="改善-GitHub-项目代码质量：重构"><a href="#改善-GitHub-项目代码质量：重构" class="headerlink" title="改善 GitHub 项目代码质量：重构"></a>改善 GitHub 项目代码质量：重构</h1><p>每个程序员都不可避免地是一个 Coder，一个没有掌握好技能的 Coder，算不上是手工艺人，但是手工艺人，需要有创造性的方法。</p>
+<h2 id="为什么重构？"><a href="#为什么重构？" class="headerlink" title="为什么重构？"></a>为什么重构？</h2><blockquote>
+<p>为了更好的代码。</p>
+</blockquote>
+<ul>
+<li>修 Bug 需要更好的技术。</li>
+<li>如果你没办法理解当时为什么这么做，你的修改只会带来更多的 Bug。</li>
+<li>写代码容易，读代码难。</li>
+</ul>
+<blockquote>
+<p>假设我们写这些代码只要半天，而别人读起来要一天。为什么不试着用一天的时候去写这些代码，让别人花半天或者更少的时间来理解。</p>
+</blockquote>
+<p>如果你的代码已经上线，虽然是一坨坨的。但是不要轻易尝试<code>没有测试的重构</code>。</p>
+<h3 id="一般重构方法"><a href="#一般重构方法" class="headerlink" title="一般重构方法"></a>一般重构方法</h3><h4 id="Rename"><a href="#Rename" class="headerlink" title="Rename"></a>Rename</h4><p>重命名且语义化，更好理解和维护。</p>
+<h4 id="Extract-Method"><a href="#Extract-Method" class="headerlink" title="Extract Method"></a>Extract Method</h4><p>扩展方法：将方法扩展模块组件化，更易理解以及追踪维护。</p>
+<h4 id="Inline-Method"><a href="#Inline-Method" class="headerlink" title="Inline Method"></a>Inline Method</h4><p>内联方法：与扩展方法相对应，在分割的代码中，若扩展方法没有多余必要，或需将方法写一起更易理解，那么推荐使用内联方法。</p>
+<h1 id="如何推广"><a href="#如何推广" class="headerlink" title="如何推广"></a>如何推广</h1><ul>
+<li>擅长编写 md 电子书来攒 Star</li>
+<li><strong>开源并不是你把软件、README 写好就行了，还有详细的文档、示例程序等等</strong>。</li>
+<li><strong>开源也不是你的项目好了，就会有一堆人参与进来</strong>。</li>
+<li><strong>开源还要你帮助别人解决 Bug，……</strong>。</li>
+</ul>
+<h2 id="Marketing-First"><a href="#Marketing-First" class="headerlink" title="Marketing First"></a>Marketing First</h2><blockquote>
+<p>Vue 不是因为好用，而一下子火了。这一点我印象特别深，当时在 GitHub Trending 上看到了这个项目，发现它还不能很好地 work。</p>
+</blockquote>
+<p>而如文章 《<a href="http://blog.evanyou.me/2014/02/11/first-week-of-launching-an-oss-project/" target="_blank" rel="noopener">FIRST WEEK OF LAUNCHING VUE.JS</a>》所说，项目刚开始的时候作者做了一系列的营销计划：</p>
+<ul>
+<li>HackerNews</li>
+<li>Reddit /r/javascript</li>
+<li>EchoJS</li>
+<li>The DailyJS blog</li>
+<li>JavaScript Weekly</li>
+<li>Maintain a project Twitter account（维护项目的 Vue 账户）</li>
+</ul>
+<p>除此，文中还提到了一篇文章《<a href="https://hacks.mozilla.org/2013/05/how-to-spread-the-word-about-your-code/?utm_source=statuscode&utm_medium=email" target="_blank" rel="noopener">How to Spread The Word About Your Code</a>》 。</p>
+<p>要在不同的社会平台，介绍并且宣传以及提供功能。国内比较好的平台有：</p>
+<ul>
+<li>掘金</li>
+<li>极客头条</li>
+<li>开发者头条</li>
+<li>v2ex</li>
+<li>知乎</li>
+<li>不成器的微博</li>
+</ul>
+<h2 id="编写一个好的-README"><a href="#编写一个好的-README" class="headerlink" title="编写一个好的 README"></a>编写一个好的 README</h2><p>在一个开源项目里，README 是最重要的内容。它快速地介绍了这个项目，并决定了它能不能吸引用户：</p>
+<ul>
+<li><strong>这个项目做什么？</strong></li>
+<li><strong>它解决了什么问题</strong></li>
+<li><strong>它有什么特性</strong></li>
+<li><strong>hello, world 示例</strong></li>
+</ul>
+<h3 id="这个项目做什么——一句话文案"><a href="#这个项目做什么——一句话文案" class="headerlink" title="这个项目做什么——一句话文案"></a>这个项目做什么——一句话文案</h3><p>这一句话，必须简单明了也介绍，它是干什么的。</p>
+<p>如 Angular 的一句话方案是：One framework. Mobile &amp; desktop.</p>
+<p>而 React 是：A declarative, efficient, and flexible JavaScript library for building user interfaces.</p>
+<p>Vue 则是：A progressive, incrementally-adoptable JavaScript framework for building UI on the web.</p>
+<h3 id="它解决了什么问题"><a href="#它解决了什么问题" class="headerlink" title="它解决了什么问题"></a>它解决了什么问题</h3><p>在一句话文案之后，在描述中，写出它能解决什么问题。</p>
+<h3 id="它有什么特性"><a href="#它有什么特性" class="headerlink" title="它有什么特性"></a>它有什么特性</h3><p>当我们有 A、B、C 几个不同的框架的时候，作为一个开发人员，就需要对比他们的特性。</p>
+<h3 id="安装及-hello-world-示例"><a href="#安装及-hello-world-示例" class="headerlink" title="安装及 hello, world 示例"></a>安装及 hello, world 示例</h3><p>在我们看完了上面的介绍之后，要接一个简单的安装教程和 hello, world 的示例。</p>
+<h2 id="技术文档"><a href="#技术文档" class="headerlink" title="技术文档"></a>技术文档</h2><p>好了，依一个开发人员的角度，如果上面的步骤一切顺利的话，接下来，便是使用这个开源项目来完成我们的功能。这个时候，我们开始转移注意力到文档上了。</p>
+<h3 id="技术文档-1"><a href="#技术文档-1" class="headerlink" title="技术文档"></a>技术文档</h3><p>对于一个复杂的开源项目来说，文档上要写明安装、编译、配置等等的过程。</p>
+<h3 id="更多的示例程序"><a href="#更多的示例程序" class="headerlink" title="更多的示例程序"></a>更多的示例程序</h3><p>示例代码本身也是文档的一部分</p>
+<blockquote>
+<p>没有多多示例，敢说自己是好用的开源项目？（作者说的有道理）</p>
+</blockquote>
+<h3 id="编写技术文章、书籍"><a href="#编写技术文章、书籍" class="headerlink" title="编写技术文章、书籍"></a>编写技术文章、书籍</h3><p>到目前为止，我们做了一系列 markdown 相关的工作，却也还没有结束。要知道只有真正写过一系列开源项目的人，才能体会到什么是 markdown 程序员~~。</p>
+<p>官方文档，一般要以比较正式的口吻来描述过程，这种写法相当的压抑。</p>
+<p>如果要用轻松诙谐的口气，那么就可以写一系列的技术文章。</p>
+<p>假如这是一个前端框架，那么我们可以介绍它如何与某个后端框架配合使用；又或者是，它与某个框架的对比等等。</p>
+<h2 id="鼓励、吸引贡献者"><a href="#鼓励、吸引贡献者" class="headerlink" title="鼓励、吸引贡献者"></a>鼓励、吸引贡献者</h2><p>要吸引其它开发人员来到你的项目，不是一件容易的事。</p>
+<p>你需要不断地鼓励他/她们，并适时地帮他/她们解决问题，以避免他/她们在提 pull request 的过程中放弃了。</p>
+<p>这一点特别的有意思，当有一个开发人员发现了项目中的 bug，那么他/她会尝试去解决这个问题。与此同时，他/她还会为你的项目带来 pull request，但是在这个过程中，因为测试等等的问题，可能会阻碍他的 PR。这个时候，就需要我们主要去提示/教他们怎么做，又或者是帮他/她们解决完剩下的问题。那么，下次他/她提一个 PR 的时候，他/她就能解决问题了。</p>
+<h1 id="Git-与-GitHub-工具推荐"><a href="#Git-与-GitHub-工具推荐" class="headerlink" title="Git 与 GitHub 工具推荐"></a>Git 与 GitHub 工具推荐</h1><h2 id="Git-命令行增强"><a href="#Git-命令行增强" class="headerlink" title="Git 命令行增强"></a>Git 命令行增强</h2><h3 id="diff-so-fancy"><a href="#diff-so-fancy" class="headerlink" title="diff-so-fancy"></a><a href="https://github.com/so-fancy/diff-so-fancy" target="_blank" rel="noopener">diff-so-fancy</a></h3><h3 id="git-extras"><a href="#git-extras" class="headerlink" title="git-extras"></a><a href="https://github.com/tj/git-extras" target="_blank" rel="noopener">git-extras</a></h3><p><strong>Ubuntu</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-extras</span><br></pre></td></tr></table></figure>
+
+<p><strong>Mac OS X with Homebrew</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install git-extras</span><br><span class="line">$ git-summary</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> project  : github-roam</span><br><span class="line"> repo age : 2 years, 7 months</span><br><span class="line"> active   : 40 days</span><br><span class="line"> commits  : 124</span><br><span class="line"> files    : 101</span><br><span class="line"> authors  :</span><br><span class="line">    72  Fengda HUANG  58.1%</span><br><span class="line">    29  Fengda Huang  23.4%</span><br><span class="line">     8  Phodal HUANG  6.5%</span><br><span class="line">     3  Phodal Huang  2.4%</span><br><span class="line">     2  yangpei3720   1.6%</span><br><span class="line">     2  WangXiaolong  1.6%</span><br><span class="line">     2  TZS           1.6%</span><br><span class="line">     1  安正超        0.8%</span><br><span class="line">     1  Li            0.8%</span><br><span class="line">     1  Qiuer         0.8%</span><br><span class="line">     1  SCaffrey      0.8%</span><br><span class="line">     1  oncealong     0.8%</span><br><span class="line">     1  zminds        0.8%</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git、GitHub桌面增强"><a href="#Git、GitHub桌面增强" class="headerlink" title="Git、GitHub桌面增强"></a>Git、GitHub桌面增强</h2><h3 id="SourceTree"><a href="#SourceTree" class="headerlink" title="SourceTree"></a>SourceTree</h3><h3 id="GitHub-Desktop"><a href="#GitHub-Desktop" class="headerlink" title="GitHub Desktop"></a>GitHub Desktop</h3><h1 id="如何在-GitHub-“寻找灵感（fork）”"><a href="#如何在-GitHub-“寻找灵感（fork）”" class="headerlink" title="如何在 GitHub “寻找灵感（fork）”"></a>如何在 GitHub “寻找灵感（fork）”</h1><blockquote>
+<p>重造轮子是重新创造一个已有的或是已被其他人优化的基本方法。</p>
+</blockquote>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><blockquote>
+<p>要一直询问自己为啥需要着一些别人项目中的需求</p>
+</blockquote>
+<p>如</p>
+<ul>
+<li>为什么我只需要 jQuery 里的选择器、Ajax 要引入那么重的库呢？</li>
+<li>为什么我只需要一个 Template，却想着用 Mustache</li>
+<li>为什么我需要一个 Router，却要用 Backbone 呢？</li>
+<li>为什么我需要的是一个 isObject 函数，却要用到整个 Underscore？</li>
+</ul>
+<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>这时候我参考了一本电子书《Build JavaScript FrameWork》，加上一些平时的需求，于是很快的就知道自己需要什么样的功能：</p>
+<ul>
+<li>Promise 支持</li>
+<li>Class类（PS：没有一个好的类使用的方式）</li>
+<li>Template 一个简单的模板引擎</li>
+<li>Router 用来控制页面的路由</li>
+<li>Ajax 基本的 Ajax Get/Post 请求</li>
+</ul>
+<p>在做一些实际的项目中，还遇到了这样的一些功能支持：</p>
+<ul>
+<li>Effect 简单的一些页面效果</li>
+<li>AMD 支持</li>
+</ul>
+<p>而我们有一个前提是要保持这个库尽可能的小、同时我们还需要有测试。</p>
+<h3 id="实现第一个需求"><a href="#实现第一个需求" class="headerlink" title="实现第一个需求"></a>实现第一个需求</h3><p>简单说说是如何实现一个简单的需求。</p>
+<h4 id="生成框架"><a href="#生成框架" class="headerlink" title="生成框架"></a>生成框架</h4><p>因为 Yeoman 可以生成一个简单的轮廓，所以我们可以用它来生成这个项目的骨架。</p>
+<ul>
+<li>Gulp</li>
+<li>Jasmine</li>
+</ul>
+<h4 id="寻找"><a href="#寻找" class="headerlink" title="寻找"></a>寻找</h4><p>在 GitHub 上搜索了一个看到了下面的几个结果：</p>
+<ul>
+<li><a href="https://github.com/then/promise" target="_blank" rel="noopener">https://github.com/then/promise</a></li>
+<li><a href="https://github.com/reactphp/promise" target="_blank" rel="noopener">https://github.com/reactphp/promise</a></li>
+<li><a href="https://github.com/kriskowal/q" target="_blank" rel="noopener">https://github.com/kriskowal/q</a></li>
+<li><a href="https://github.com/petkaantonov/bluebird" target="_blank" rel="noopener">https://github.com/petkaantonov/bluebird</a></li>
+<li><a href="https://github.com/cujojs/when" target="_blank" rel="noopener">https://github.com/cujojs/when</a></li>
+</ul>
+<p>但是显然，他们都太重了。事实上，对于一个库来说，80% 的人只需要其中 20% 的代码。</p>
+<blockquote>
+<p>然后借鉴代码或原生代码来实现我们的功能</p>
+</blockquote>
+<h1 id="如何以“正确的姿势”阅读开源软件代码"><a href="#如何以“正确的姿势”阅读开源软件代码" class="headerlink" title="如何以“正确的姿势”阅读开源软件代码"></a>如何以“正确的姿势”阅读开源软件代码</h1><blockquote>
+<p>所有让你直接看最新源码的文章都是在扯淡，你应该从“某个版本”开始阅读代码。</p>
+</blockquote>
+<p>我们并不建议所有的读者都直接看最新的代码，正确的姿势应该是：</p>
+<ul>
+<li>clone 某个项目的代码到本地</li>
+<li>查看这个项目的 release 列表</li>
+<li>找到一个看得懂的 release 版本，如 1.0 或者更早的版本</li>
+<li>读懂上一个版本的代码</li>
+<li>向后阅读大版本的源码</li>
+<li>读最新的源码</li>
+</ul>
+<p>最好的在这个过程中，<strong>可以自己造轮子来实现一遍</strong>。</p>
+<h1 id="GitHub-寻宝指南"><a href="#GitHub-寻宝指南" class="headerlink" title="GitHub 寻宝指南"></a>GitHub 寻宝指南</h1><p>作为一个资深的咨询师、程序员，GitHub 是我用过的最好工具，GitHub 是一个宝藏库，可没有藏宝图，GitHub 一1亿的仓库也和你没有关系。这么一些年下来，也算是掌握了一定的技巧，写篇文章记录一下，也就顺其自然了。</p>
+<p>总结一句话便是：GitHub 来搜索 Google 搜索不到的。它们可以 work 的原因，都是因为<strong>我们想做的事情，已经有人已经走过</strong>。如果你走的是一条新的路，那么这篇文章对你来说，意义可能没有那么大。</p>
+<h2 id="寻找-Demo-节省时间"><a href="#寻找-Demo-节省时间" class="headerlink" title="寻找 Demo 节省时间"></a>寻找 Demo 节省时间</h2><blockquote>
+<p><strong>技术栈的关键字搜索，并按更新时间进行排序</strong>，以查找是否有合适的 Demo。</p>
+</blockquote>
+<blockquote>
+<p><strong>温馨提醒</strong>：<strong>对于简单的项目来说，自己直接写 Demo 会更加方便。</strong> 尝试项目需要成本，若是需要尝试使用多个项目，那么有可能就浪费时间。</p>
+</blockquote>
+<h2 id="寻找脚手架：加快前期开发"><a href="#寻找脚手架：加快前期开发" class="headerlink" title="寻找脚手架：加快前期开发"></a>寻找脚手架：加快前期开发</h2><blockquote>
+<p><strong>温馨提醒</strong>：我们需要衡量：<strong>修改脚手架的成本，是否比自己重头写快</strong>。</p>
+</blockquote>
+<h2 id="寻找-awesome-xxx：探索可能性"><a href="#寻找-awesome-xxx：探索可能性" class="headerlink" title="寻找 awesome-xxx：探索可能性"></a>寻找 awesome-xxx：探索可能性</h2><p>练习新的框架，我总习惯于，<strong>编写一系列相关的 DEMO 项目，然后使用 awesome-xxx 探索可能性。</strong></p>
+<p>Awesome-xxx 系列，是 GitHub 上最容易赚 Star 的类型。</p>
+<p>在这样的项目里，都以一定的知识体系整理出来的，从索引和查阅上相应的方便。如果你想进入一个新的领域，会尝试新的东西就搜索 <code>awesome xxx</code> 吧。</p>
+<blockquote>
+<p><strong>温馨提醒</strong>：awesome-xxx 只意味着它们包含尽可能多的资料，并不代表它们拥有所有相关的库。</p>
+</blockquote>
+<h2 id="模仿轮子的轮子"><a href="#模仿轮子的轮子" class="headerlink" title="模仿轮子的轮子"></a><strong>模仿轮子</strong>的轮子</h2><p>学习一个成熟的框架，直接阅读现有源码的成本太高，毕竟也不经济。</p>
+<p>最好的方式，就是去造轮子。从模仿轮子之上，再去造轮子，是最省力气的方式。再配合 《<a href="https://www.phodal.com/blog/create-framework-from-github/" target="_blank" rel="noopener">造轮子与从Github生成轮子</a>》 一文，怕是能写一系列的框架。而造一个相似轮子的想法，往往很多人都有。尤其是一个成熟的框架，往往有很多仿制品。</p>
+<p>于是，当你想了解一个框架，造个轮子，不妨试试搜索 <code>xxx-like</code> 或者 <code>xxx-like framework</code>，中文便是 <code>仿 react 框架</code> 或者 <code>类 react</code>。如我们在 Google 上搜索 <code>react-like</code> 就会搜索到 <code>inferno</code>。不过，按 GitHub 的尿性，要搜索到这样的框架，并不是一件容易的事。这时 Google 往往比 GitHub 搜索好用。</p>
+<blockquote>
+<p>所以建议：<strong>平时上班休息时，搜索相关的轮子，回家就可以造轮子了。</strong></p>
+</blockquote>
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><p>GitHub 上拥有大量的学习资源，从各类的文章到笔记，还有各式各样的电子书。如：</p>
+<ol>
+<li>只需要搜索：<code>类型 + 笔记</code>，如 <code>操作系统 笔记</code> 就能找到一些操作系统相关的笔记。</li>
+<li>只需要搜索：<code>书名</code> 就能找到一些和这本书相关的资源，如 <code>重构 改善既有代码的设计</code>。</li>
+</ol>
+<p>与此同时，GitHub 上还会搜索到各种 <strong>未经授权</strong>英文书籍的翻译，又或者是各种电子书的 PDF 版。作为多本书的作译者，当然不鼓励 GitHub 上找到一些盗版书。</p>
+<p>而在 GitHub 上又有一些库，可以提供相应的学习资源，如 <a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="noopener">free-programming-books-zh_CN</a>，即免费的编程中文书籍索引。</p>
+<p>建议：<strong>请尊重版权</strong>，哈哈哈。</p>
+<h1 id="GitHub-获-Star-指南"><a href="#GitHub-获-Star-指南" class="headerlink" title="GitHub 获 Star 指南"></a>GitHub 获 Star 指南</h1><blockquote>
+<p>每天打开 GitHub Trending，都是各种面试指南，这样的生活真难受。如果你的项目是金子，那么请读读这篇文章。</p>
+</blockquote>
+<h2 id="为什么我们-Star-一个项目"><a href="#为什么我们-Star-一个项目" class="headerlink" title="为什么我们 Star 一个项目"></a>为什么我们 Star 一个项目</h2><ul>
+<li><p>在 GitHub 获得 Star 的重点是，<strong>碰触人们的 G 点</strong>——人们只对和自己有关的事情感兴趣。或是证明自己是对这个感兴趣，或是觉得这个项目不错可以收藏，或者是觉得作者不容易鼓励一下作者。</p>
+</li>
+<li><p>获得 Star 的核心是：<strong>你有人们想要的东西，你分享了人们想要的内容</strong>。</p>
+</li>
+</ul>
+<h2 id="GitHub-流量分析"><a href="#GitHub-流量分析" class="headerlink" title="GitHub 流量分析"></a>GitHub 流量分析</h2><p>流量主要来源于几部分：</p>
+<ul>
+<li>GitHub 项目的直接访问</li>
+<li>GitHub 的直接访问</li>
+<li>来源于知乎等社交网站的</li>
+<li>来自于 GitHub Pages 的访问</li>
+<li>来自其它社交网站的访问</li>
+</ul>
+<p>大抵原因有两个：</p>
+<ol>
+<li>用户看的都是 GitHub Pages 上的内容</li>
+<li>从数量上来看，受众并不多</li>
+</ol>
+<blockquote>
+<p>核心的部分：<strong>你分享了人们想要的代码、内容</strong>。否则，你带来了大量的流量，并不一定能转化为你想要的关注度。</p>
+</blockquote>
+<h2 id="GitHub-获-Star-指南技巧"><a href="#GitHub-获-Star-指南技巧" class="headerlink" title="GitHub 获 Star 指南技巧"></a>GitHub 获 Star 指南技巧</h2><h3 id="技巧一：结合-SEO-技巧"><a href="#技巧一：结合-SEO-技巧" class="headerlink" title="技巧一：结合 SEO 技巧"></a>技巧一：结合 SEO 技巧</h3><p>搜索引擎优化（Search Engine Optimization）。稍有不同的是，GitHub 在实践的过程中，帮助我们优化了很多细节。它可以让我们更关注于核心的要素。</p>
+<p>若是想获得来自于 Google 等搜索引擎的访问，那么要掌握的技巧有：</p>
+<ul>
+<li>简单实用的项目名。项目名在 Google 搜索结果里是放在最前面的部分，它与 URL 同在。</li>
+<li>写好项目的 <code>Description</code>。不管怎样，你一定要为你的项目写好 Description，让看到的人知道它在做什么。</li>
+<li>设置好相应的 <code>topics</code>。GitHub 为项目设计了一个 Topics 页面，这些页面会被拉入相应的索引中，可以从 Google 等搜索引擎和 GitHub 中搜索到。</li>
+<li>作为外链加入文章中。作为 SEO 技巧的一部分，你需要在你的博客和文章里，适当地引用你的 GitHub 项目，它会你的项目带来流量。</li>
+<li>合适的外链标题。作为链接存在时，需要注意链接的标题（与项目主题一致），它会在某种程度上影响搜索结果。</li>
+</ul>
+<p>这些只是一些基本的内容，算不上是技巧，但是做好基础很重要。</p>
+<h3 id="技巧二：完整、易读的-README"><a href="#技巧二：完整、易读的-README" class="headerlink" title="技巧二：完整、易读的 README"></a>技巧二：完整、易读的 README</h3><p>让我们再强调一下，好的 README 真的很重要，重要、重要！重要。</p>
+<p>GitHub 是一个人的简历，<strong>而开源项目的 README，就好像是一个项目的简历</strong>。在这份简历里，你需要好好地写你的项目：</p>
+<ul>
+<li><strong>这个项目做什么？</strong>？</li>
+<li><strong>它解决了什么问题</strong>？</li>
+<li><strong>它有什么特性 — hello, world 示例</strong>？</li>
+<li><strong>怎么使用这个项目</strong>？</li>
+<li><strong>这个项目使用的是什么协议</strong>，是否允许商用？</li>
+</ul>
+<h3 id="技巧三：社交分享"><a href="#技巧三：社交分享" class="headerlink" title="技巧三：社交分享"></a>技巧三：社交分享</h3><p>分享频率，要适度，适量。</p>
+<h3 id="技巧四：文章"><a href="#技巧四：文章" class="headerlink" title="技巧四：文章"></a>技巧四：文章</h3><p>既然我写了一个这么好的开源项目，那么最好的方式，还是写一篇文章介绍一下这个项目吧。blabla，写完了一篇项目的使用文档：</p>
+<ul>
+<li><strong>为什么需要这个项目？</strong></li>
+<li><strong>这个项目是什么？</strong></li>
+<li><strong>这个项目能解决什么问题？</strong></li>
+<li><strong>这个项目要怎么用啊？</strong></li>
+</ul>
+<h3 id="技巧五：把握-GitHub-Trending"><a href="#技巧五：把握-GitHub-Trending" class="headerlink" title="技巧五：把握 GitHub Trending"></a>技巧五：把握 GitHub Trending</h3><p>万一，我是说万一，你的项目上了 GitHub Trending。截个图，然后你可以再写一篇文章（ 我的项目是如何上 GitHub Trending，毕竟上 Trending 很简单），发一条微博，写一个想法，录个小视频，大家快来看这是我的项目。</p>
+<p>理论上上 GitHub Trending 会吸引来更多的用户——有大量的网站、自动化微博等，会每天去介绍这些新的上的 Trending 项目，没有意外的话，它会为你带来更多的流量——意味着更多的关注度。</p>
+<h3 id="不是技巧的技巧：持续性"><a href="#不是技巧的技巧：持续性" class="headerlink" title="不是技巧的技巧：持续性"></a>不是技巧的技巧：持续性</h3><p>事实上，如你所知，我在 GitHub 上获得大量 Star 的原因，并不是说我有一个优秀的项目。而在于我在持续的更新，持续不断地在 GitHub 上做自己喜欢的项目，投入时间分享相关的技巧，还有一系列相关的开源项目。</p>
+<p>我们一直在持续变好，打造一个自由的互联网世界，打造一个个自己喜欢的工具。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>笔者看完这一篇 <a href="http://github.phodal.com/" target="_blank" rel="noopener">GitHub 漫游指南</a> 感觉找到一个新的方向或者说是开阔视野吧。实际起来其实对于目前在校生的我还是有些许困难和难以理解，那就兴趣使然，个人习惯于让压力使自己驱动起来。开始计划计划！</p>
+]]></content>
+      <tags>
+        <tag>随笔小屋</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三步让Google游览器在YouTube畅通无阻</title>
     <url>/lindada-blog/2021/02/05/%E4%B8%89%E6%AD%A5%E8%AE%A9google%E6%B8%B8%E8%A7%88%E5%99%A8%E5%9C%A8yutube%E7%95%85%E9%80%9A%E6%97%A0%E9%98%BB/</url>
     <content><![CDATA[<img src="/lindada-blog/2021/02/05/%E4%B8%89%E6%AD%A5%E8%AE%A9google%E6%B8%B8%E8%A7%88%E5%99%A8%E5%9C%A8yutube%E7%95%85%E9%80%9A%E6%97%A0%E9%98%BB/1.png" class>  
@@ -5024,7 +5644,7 @@ npm i webpack webpack-cli -D —— 项目开发依赖安装webpack和脚手架<
 <h1 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h1><p>经常遇到突然重新npm install后<br>某些模块包不支持当前的语法了<br>这次记录提供一个bug解决思路<br>也要时刻关注更新换代即将被遗弃的语法了<br>希望~小伙伴们越来越少bug<br>遇到bug也简简单单解决！  </p>
 ]]></content>
       <tags>
-        <tag>bug小屋</tag>
+        <tag>随笔小屋</tag>
       </tags>
   </entry>
   <entry>
