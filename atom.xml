@@ -6,7 +6,7 @@
   <link href="/lindada-blog/atom.xml" rel="self"/>
   
   <link href="https://lin_daren.gitee.io/lindada-blog/"/>
-  <updated>2021-04-15T14:35:47.055Z</updated>
+  <updated>2021-04-19T06:56:03.852Z</updated>
   <id>https://lin_daren.gitee.io/lindada-blog/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【变量、作用域与内存】-我一字一行地重读红宝书（四）</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/04/19/%E3%80%90%E5%8F%98%E9%87%8F%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E3%80%91-%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/04/19/%E3%80%90%E5%8F%98%E9%87%8F%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E3%80%91-%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6%EF%BC%88%E5%9B%9B%EF%BC%89/</id>
+    <published>2021-04-19T06:54:27.000Z</published>
+    <updated>2021-04-19T06:56:03.852Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;历经两个多月断断续续地读完了JavaScript的经典书籍&lt;strong&gt;红宝书&lt;/strong&gt; -《JavaScript高级程序设计（第4版）&lt;/p&gt;
+&lt;p&gt;详细地读完一遍后发觉整本书知识点全而泛，乍一想每一章的细节，还是略显模糊。&lt;/p&gt;
+&lt;p&gt;于是督促自己计划编写每一章的着重点再次加深印象和理解，顺便记录自己的所学所想所悟。方便自身利用电脑的快速搜索关键词来进行快速定位和学习，也希望能帮助到有需要的同学们哈。&lt;/p&gt;
+&lt;p&gt;若是想要系统仔细的学习，当然还是看原书比较好，我也是强烈推荐的噢！这里内容只当个人复习和总结。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;提示: 一些个人主观认为不重要或不流行的章节将进行删减&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="红宝书" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二本获得实习offer经历-准备篇（已获阿里意向书）</title>
+    <link href="https://lin_daren.gitee.io/lindada-blog/2021/04/19/%E4%BA%8C%E6%9C%AC%E8%8E%B7%E5%BE%97%E5%AE%9E%E4%B9%A0offer%E7%BB%8F%E5%8E%86-%E5%87%86%E5%A4%87%E7%AF%87%EF%BC%88%E5%B7%B2%E8%8E%B7%E9%98%BF%E9%87%8C%E6%84%8F%E5%90%91%E4%B9%A6%EF%BC%89/"/>
+    <id>https://lin_daren.gitee.io/lindada-blog/2021/04/19/%E4%BA%8C%E6%9C%AC%E8%8E%B7%E5%BE%97%E5%AE%9E%E4%B9%A0offer%E7%BB%8F%E5%8E%86-%E5%87%86%E5%A4%87%E7%AF%87%EF%BC%88%E5%B7%B2%E8%8E%B7%E9%98%BF%E9%87%8C%E6%84%8F%E5%90%91%E4%B9%A6%EF%BC%89/</id>
+    <published>2021-04-19T06:51:43.000Z</published>
+    <updated>2021-04-19T06:52:39.550Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;近期经过自己的努力（真的一直在努力呜呜呜），获得了阿里的意向书，很多同学和朋友感到了意外（但我自己并不感到意外），也特地地来询问关于这一方面的事情。想想自己为面试准备的这一年半载，也当是一次总结和一次不辜负自己。当然，也可以给自己身边的朋友或者一样努力的人儿相互学习，来获得一种&lt;strong&gt;自我认知存在感的意义&lt;/strong&gt;。这一篇是准备篇，也就是非面试技术相关的。&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;简单说一下本人的背景叭，坐标于广东深圳，学籍于广州一所普通二本的高校 22 届软件工程专业的学生。为什么要强调学籍呢，因为报考期间我选择了特殊的一种培养方式：&lt;strong&gt;就是学籍在广州，就读在广东深圳&lt;/strong&gt;。当时经过自己很多深思熟虑的考量，也经受了很多长辈和朋友同学们的质疑（因为当时成绩可以报考北方的重本）。或许自己从小比较独立的原因，也深刻地问过自己，认清了自己，也就不在乎外界是是非非，也就自我内心坚定了许多，懂得什么是自己真正想要。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以一定要认知，认清自己。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="面试小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/%E9%9D%A2%E8%AF%95%E5%B0%8F%E5%B1%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>记《Github漫游指南阅读》有感</title>
@@ -47,7 +93,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2021/04/13/%EF%BC%88%E7%BB%A7%E6%89%BF%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2021/04/13/%EF%BC%88%E7%BB%A7%E6%89%BF%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/</id>
     <published>2021-04-13T05:04:20.000Z</published>
-    <updated>2021-04-13T05:06:54.090Z</updated>
+    <updated>2021-04-19T06:57:00.593Z</updated>
     
     <summary type="html">
     
@@ -94,7 +140,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2021/03/03/%EF%BC%88%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2021/03/03/%EF%BC%88%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/</id>
     <published>2021-03-03T04:10:39.000Z</published>
-    <updated>2021-03-03T04:16:10.853Z</updated>
+    <updated>2021-04-19T06:56:58.241Z</updated>
     
     <summary type="html">
     
@@ -117,7 +163,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2021/02/28/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2021/02/28/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0%EF%BC%89%E6%88%91%E4%B8%80%E5%AD%97%E4%B8%80%E8%A1%8C%E5%9C%B0%E9%87%8D%E8%AF%BB%E7%BA%A2%E5%AE%9D%E4%B9%A6/</id>
     <published>2021-02-28T14:00:11.000Z</published>
-    <updated>2021-02-28T14:01:19.005Z</updated>
+    <updated>2021-04-19T06:56:55.290Z</updated>
     
     <summary type="html">
     
@@ -180,7 +226,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/12/29/%E5%AE%9E%E7%8E%B0vue%E4%B8%AD%E5%8F%AF%E9%80%89%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAexcel%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/12/29/%E5%AE%9E%E7%8E%B0vue%E4%B8%AD%E5%8F%AF%E9%80%89%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BAexcel%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E6%9E%97%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%B0%8F%E5%B1%8B/</id>
     <published>2020-12-29T08:41:01.000Z</published>
-    <updated>2021-01-18T09:02:35.763Z</updated>
+    <updated>2021-04-19T06:56:39.366Z</updated>
     
     <summary type="html">
     
@@ -362,7 +408,7 @@
     <link href="https://lin_daren.gitee.io/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
     <id>https://lin_daren.gitee.io/lindada-blog/2020/08/06/20200806%E8%AE%B0%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%A6%96%E6%AC%A1%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</id>
     <published>2020-08-06T10:29:49.000Z</published>
-    <updated>2020-12-29T08:07:42.990Z</updated>
+    <updated>2021-04-19T06:58:26.169Z</updated>
     
     <summary type="html">
     
@@ -401,54 +447,6 @@
     
     
       <category term="http小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/http%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从0开始的TypeScript基础大全</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/22/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84TypeScript%E5%9F%BA%E7%A1%80%E5%A4%A7%E5%85%A8/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/07/22/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84TypeScript%E5%9F%BA%E7%A1%80%E5%A4%A7%E5%85%A8/</id>
-    <published>2020-07-22T10:40:37.000Z</published>
-    <updated>2020-12-29T08:07:42.520Z</updated>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/lindada-blog/2020/07/22/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84TypeScript%E5%9F%BA%E7%A1%80%E5%A4%A7%E5%85%A8/1.png&quot; class&gt;  
-
-&lt;p&gt;&lt;strong&gt;往期复习&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5f12dd04f265da23033335e4?_blank&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ES6全面复习（一）赋值解构&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://juejin.im/post/5f13e25b5188252e415f6a21?_blank&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ES6全面复习（二）隐形的技能&lt;/a&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;记录从零开始的TypeScript基础&lt;br&gt;简要概括在学习过程中的&lt;strong&gt;重点难点&lt;/strong&gt;&lt;br&gt;作为今后复习的文章 ✨&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="TypeScript小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/TypeScript%E5%B0%8F%E5%B1%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6全面复习（二）隐形的技能</title>
-    <link href="https://lin_daren.gitee.io/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/"/>
-    <id>https://lin_daren.gitee.io/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/</id>
-    <published>2020-07-19T04:39:12.000Z</published>
-    <updated>2020-12-29T08:07:42.801Z</updated>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/lindada-blog/2020/07/19/ES6%E5%85%A8%E9%9D%A2%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9A%90%E5%BD%A2%E7%9A%84%E6%8A%80%E8%83%BD/1.png&quot; class&gt;  
-&lt;p&gt;&lt;strong&gt;往期复习&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5f12dd04f265da23033335e4?_blank&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ES6全面复习（一）赋值解构&lt;/a&gt;&lt;br&gt;记录小编认为ES6中不常见，但以后很有用的&lt;br&gt;宝藏新特效&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="ES6小屋" scheme="https://lin_daren.gitee.io/lindada-blog/tags/ES6%E5%B0%8F%E5%B1%8B/"/>
     
   </entry>
   
